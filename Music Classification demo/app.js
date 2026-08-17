@@ -46,7 +46,7 @@ function renderTrack(track) {
 }
 
 function modelCard(name, result, referenceGenre) {
-  const card = document.createElement("article"); card.className = "card model-card";
+  const card = document.createElement("article"); card.className = `card model-card model-${name.toLowerCase()}`;
   const topScores = result.top_three.map(({genre, score}) => `<div class="top-score"><span>${genre}</span><div class="bar-track"><div class="bar-fill" style="width:${score * 100}%"></div></div><strong>${percent(score)}</strong></div>`).join("");
   card.innerHTML = `<div class="model-name"><h2>${name}</h2></div><div class="prediction">${result.prediction}</div><div class="match">${result.prediction === referenceGenre ? "Matches actual genre" : `Differs from actual genre: ${referenceGenre}`}</div>${topScores}`;
   return card;
@@ -78,9 +78,9 @@ function drawFeatures() {
   buffer.getContext("2d").putImageData(image, 0, 0); context.imageSmoothingEnabled = true;
   context.drawImage(buffer, plot.x, plot.y, plot.w, plot.h);
   const attention = state.track.results[state.attentionModel].attention;
-  context.strokeStyle = "#35f0cf"; context.lineWidth = 3; context.beginPath();
+  context.strokeStyle = "#f3a38f"; context.lineWidth = 3; context.beginPath();
   attention.forEach((value, index) => { const x = plot.x + index * plot.w / (attention.length - 1), y = plot.y + plot.h * (1 - value); index ? context.lineTo(x, y) : context.moveTo(x, y); });
-  context.stroke(); context.fillStyle = "#49615e"; context.font = "14px system-ui";
+  context.stroke(); context.fillStyle = "#62556b"; context.font = "14px system-ui";
   context.save(); context.translate(20, plot.y + plot.h / 2); context.rotate(-Math.PI / 2); context.textAlign = "center"; context.fillText("Mel feature bin", 0, 0); context.restore(); context.textAlign = "start";
   context.fillText("0s", plot.x, height - 18); context.fillText("15s", plot.x + plot.w / 2 - 10, height - 18); context.fillText("30s", plot.x + plot.w - 22, height - 18);
 }
