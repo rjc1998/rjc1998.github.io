@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare LSTM and GRU music-genre classifications on unseen songs.">
+  <title>GRU vs LSTM Genre Classification</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <a class="portfolio-link" href="../index.html">&#8592; Ryan Chang portfolio</a>
+      <h1>GRU vs LSTM Genre Classification</h1>
+      <p class="lede">Choose a song to see how an LSTM and GRU classify the same 30-second recording.</p>
+    </header>
+
+    <section class="song-panel card" aria-labelledby="song-heading">
+      <div class="song-heading-row">
+        <div>
+          <label for="song-select">Choose a song</label>
+          <select id="song-select"></select>
+        </div>
+      </div>
+      <div class="track-title-row">
+        <div>
+          <h2 id="song-heading"></h2>
+          <p class="actual-genre">Actual genre: <strong id="actual-genre"></strong></p>
+          <p id="track-meta" class="muted"></p>
+        </div>
+      </div>
+      <audio id="audio-player" controls preload="metadata"></audio>
+      <div id="agreement" class="notice" role="status"></div>
+    </section>
+
+    <section id="comparison-panel" class="content-section">
+      <div id="model-cards" class="model-grid"></div>
+      <section class="card score-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">Classification probabilities</p><h2>How likely is each genre?</h2><p class="muted score-explanation">Each bar shows the probability that the selected song belongs to that genre, according to each model.</p></div>
+          <div class="legend"><span class="lstm-dot"></span>LSTM <span class="gru-dot"></span>GRU</div>
+        </div>
+        <div id="score-chart" class="score-chart"></div>
+      </section>
+    </section>
+
+    <section id="features-panel" class="content-section">
+      <section class="card feature-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">Model input</p><h2>Normalized AST mel features</h2></div>
+          <div class="segmented" aria-label="Attention model">
+            <button class="attention-choice active" data-model="lstm">LSTM</button>
+            <button class="attention-choice" data-model="gru">GRU</button>
+          </div>
+        </div>
+        <div class="canvas-wrap"><canvas id="feature-canvas" width="1024" height="430"></canvas></div>
+        <p class="muted">The heatmap is the normalized feature representation consumed by the models, not a raw spectrogram. The turquoise line shows relative attention and is not a causal explanation.</p>
+      </section>
+    </section>
+
+    <details class="card info-card">
+      <summary>Credits &amp; licenses</summary>
+      <div id="credits"></div>
+      <p><a id="dataset-source" href="#" target="_blank" rel="noreferrer">FMA dataset source</a></p>
+    </details>
+  </main>
+  <noscript>This demo requires JavaScript to display precomputed model results.</noscript>
+</body>
+</html>

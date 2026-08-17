@@ -1,0 +1,2221 @@
+{
+  "schema_version": 1,
+  "title": "Learning to See Birds",
+  "dataset": "Caltech-UCSD Birds-200-2011",
+  "default_model": "proxynca",
+  "default_sample": "sample-01",
+  "models": {
+    "proxynca": {
+      "name": "ProxyNCA",
+      "description": "Supervised metric learning that pulls images toward learned class proxies.",
+      "embedding_dimensions": 64,
+      "top1_accuracy": 0.7974,
+      "top5_accuracy": 0.9254
+    },
+    "simclr": {
+      "name": "SimCLR",
+      "description": "Self-supervised contrastive learning from paired augmentations of each bird image.",
+      "embedding_dimensions": 2048,
+      "top1_accuracy": 0.6049,
+      "top5_accuracy": 0.8749
+    }
+  },
+  "samples": [
+    {
+      "id": "sample-01",
+      "image_id": 824,
+      "source_path": "015.Lazuli_Bunting/Lazuli_Bunting_0037_15021.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-01.webp",
+      "true_class_id": 14,
+      "true_class": "Lazuli Bunting",
+      "results": {
+        "simclr": {
+          "predicted_class": "Orchard Oriole",
+          "predicted_class_id": 96,
+          "confidence": 0.5610797,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 96,
+              "class_name": "Orchard Oriole",
+              "probability": 0.5610797
+            },
+            {
+              "rank": 2,
+              "class_id": 135,
+              "class_name": "Barn Swallow",
+              "probability": 0.0504137
+            },
+            {
+              "rank": 3,
+              "class_id": 20,
+              "class_name": "Eastern Towhee",
+              "probability": 0.0348059
+            },
+            {
+              "rank": 4,
+              "class_id": 136,
+              "class_name": "Cliff Swallow",
+              "probability": 0.0269727
+            },
+            {
+              "rank": 5,
+              "class_id": 19,
+              "class_name": "Yellow breasted Chat",
+              "probability": 0.0148557
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-01.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 2255,
+              "class_id": 39,
+              "class_name": "Olive sided Flycatcher",
+              "similarity": 0.495881,
+              "image": "assets/neighbors/train-02255.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 1905,
+              "class_id": 33,
+              "class_name": "Gray crowned Rosy Finch",
+              "similarity": 0.475121,
+              "image": "assets/neighbors/train-01905.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 9116,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "similarity": 0.464274,
+              "image": "assets/neighbors/train-09116.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 6617,
+              "class_id": 113,
+              "class_name": "Black throated Sparrow",
+              "similarity": 0.460088,
+              "image": "assets/neighbors/train-06617.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 2251,
+              "class_id": 39,
+              "class_name": "Olive sided Flycatcher",
+              "similarity": 0.44983,
+              "image": "assets/neighbors/train-02251.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Lazuli Bunting",
+          "predicted_class_id": 14,
+          "confidence": 0.0710643,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 14,
+              "class_name": "Lazuli Bunting",
+              "probability": 0.0710643
+            },
+            {
+              "rank": 2,
+              "class_id": 135,
+              "class_name": "Barn Swallow",
+              "probability": 0.0130301
+            },
+            {
+              "rank": 3,
+              "class_id": 157,
+              "class_name": "Bay breasted Warbler",
+              "probability": 0.0109573
+            },
+            {
+              "rank": 4,
+              "class_id": 40,
+              "class_name": "Scissor tailed Flycatcher",
+              "probability": 0.0103646
+            },
+            {
+              "rank": 5,
+              "class_id": 97,
+              "class_name": "Scott Oriole",
+              "probability": 0.0096266
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-01.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 813,
+              "class_id": 14,
+              "class_name": "Lazuli Bunting",
+              "similarity": 0.887874,
+              "image": "assets/neighbors/train-00813.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 791,
+              "class_id": 14,
+              "class_name": "Lazuli Bunting",
+              "similarity": 0.828039,
+              "image": "assets/neighbors/train-00791.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 833,
+              "class_id": 14,
+              "class_name": "Lazuli Bunting",
+              "similarity": 0.827004,
+              "image": "assets/neighbors/train-00833.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 794,
+              "class_id": 14,
+              "class_name": "Lazuli Bunting",
+              "similarity": 0.817447,
+              "image": "assets/neighbors/train-00794.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 819,
+              "class_id": 14,
+              "class_name": "Lazuli Bunting",
+              "similarity": 0.815074,
+              "image": "assets/neighbors/train-00819.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-02",
+      "image_id": 839,
+      "source_path": "016.Painted_Bunting/Painted_Bunting_0004_16641.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-02.webp",
+      "true_class_id": 15,
+      "true_class": "Painted Bunting",
+      "results": {
+        "simclr": {
+          "predicted_class": "Painted Bunting",
+          "predicted_class_id": 15,
+          "confidence": 0.5260602,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "probability": 0.5260602
+            },
+            {
+              "rank": 2,
+              "class_id": 41,
+              "class_name": "Vermilion Flycatcher",
+              "probability": 0.1933344
+            },
+            {
+              "rank": 3,
+              "class_id": 16,
+              "class_name": "Cardinal",
+              "probability": 0.0599403
+            },
+            {
+              "rank": 4,
+              "class_id": 138,
+              "class_name": "Scarlet Tanager",
+              "probability": 0.0373582
+            },
+            {
+              "rank": 5,
+              "class_id": 139,
+              "class_name": "Summer Tanager",
+              "probability": 0.031484
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-02.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 861,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "similarity": 0.624645,
+              "image": "assets/neighbors/train-00861.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 860,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "similarity": 0.60456,
+              "image": "assets/neighbors/train-00860.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 2385,
+              "class_id": 41,
+              "class_name": "Vermilion Flycatcher",
+              "similarity": 0.571607,
+              "image": "assets/neighbors/train-02385.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 2396,
+              "class_id": 41,
+              "class_name": "Vermilion Flycatcher",
+              "similarity": 0.556852,
+              "image": "assets/neighbors/train-02396.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 2398,
+              "class_id": 41,
+              "class_name": "Vermilion Flycatcher",
+              "similarity": 0.546363,
+              "image": "assets/neighbors/train-02398.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Painted Bunting",
+          "predicted_class_id": 15,
+          "confidence": 0.0920331,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "probability": 0.0920331
+            },
+            {
+              "rank": 2,
+              "class_id": 179,
+              "class_name": "Wilson Warbler",
+              "probability": 0.0099356
+            },
+            {
+              "rank": 3,
+              "class_id": 181,
+              "class_name": "Yellow Warbler",
+              "probability": 0.0094631
+            },
+            {
+              "rank": 4,
+              "class_id": 178,
+              "class_name": "Tennessee Warbler",
+              "probability": 0.0093624
+            },
+            {
+              "rank": 5,
+              "class_id": 79,
+              "class_name": "Green Kingfisher",
+              "probability": 0.0092235
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-02.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 871,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "similarity": 0.946363,
+              "image": "assets/neighbors/train-00871.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 843,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "similarity": 0.941844,
+              "image": "assets/neighbors/train-00843.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 875,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "similarity": 0.935974,
+              "image": "assets/neighbors/train-00875.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 855,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "similarity": 0.932704,
+              "image": "assets/neighbors/train-00855.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 859,
+              "class_id": 15,
+              "class_name": "Painted Bunting",
+              "similarity": 0.931939,
+              "image": "assets/neighbors/train-00859.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-03",
+      "image_id": 1859,
+      "source_path": "033.Yellow_billed_Cuckoo/Yellow_Billed_Cuckoo_0119_26550.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-03.webp",
+      "true_class_id": 32,
+      "true_class": "Yellow billed Cuckoo",
+      "results": {
+        "simclr": {
+          "predicted_class": "Yellow billed Cuckoo",
+          "predicted_class_id": 32,
+          "confidence": 0.139769,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 32,
+              "class_name": "Yellow billed Cuckoo",
+              "probability": 0.139769
+            },
+            {
+              "rank": 2,
+              "class_id": 177,
+              "class_name": "Swainson Warbler",
+              "probability": 0.1200261
+            },
+            {
+              "rank": 3,
+              "class_id": 152,
+              "class_name": "Philadelphia Vireo",
+              "probability": 0.0735467
+            },
+            {
+              "rank": 4,
+              "class_id": 153,
+              "class_name": "Red eyed Vireo",
+              "probability": 0.0729676
+            },
+            {
+              "rank": 5,
+              "class_id": 30,
+              "class_name": "Black billed Cuckoo",
+              "probability": 0.0538902
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-03.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 9853,
+              "class_id": 167,
+              "class_name": "Kentucky Warbler",
+              "similarity": 0.578338,
+              "image": "assets/neighbors/train-09853.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 8943,
+              "class_id": 152,
+              "class_name": "Philadelphia Vireo",
+              "similarity": 0.570213,
+              "image": "assets/neighbors/train-08943.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 10426,
+              "class_id": 176,
+              "class_name": "Prothonotary Warbler",
+              "similarity": 0.551354,
+              "image": "assets/neighbors/train-10426.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 9447,
+              "class_id": 160,
+              "class_name": "Blue winged Warbler",
+              "similarity": 0.550766,
+              "image": "assets/neighbors/train-09447.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 9963,
+              "class_id": 169,
+              "class_name": "Mourning Warbler",
+              "similarity": 0.536459,
+              "image": "assets/neighbors/train-09963.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Yellow billed Cuckoo",
+          "predicted_class_id": 32,
+          "confidence": 0.0175761,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 32,
+              "class_name": "Yellow billed Cuckoo",
+              "probability": 0.0175761
+            },
+            {
+              "rank": 2,
+              "class_id": 165,
+              "class_name": "Golden winged Warbler",
+              "probability": 0.0105729
+            },
+            {
+              "rank": 3,
+              "class_id": 30,
+              "class_name": "Black billed Cuckoo",
+              "probability": 0.0090472
+            },
+            {
+              "rank": 4,
+              "class_id": 177,
+              "class_name": "Swainson Warbler",
+              "probability": 0.0082445
+            },
+            {
+              "rank": 5,
+              "class_id": 108,
+              "class_name": "American Redstart",
+              "probability": 0.0082001
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-03.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 1827,
+              "class_id": 32,
+              "class_name": "Yellow billed Cuckoo",
+              "similarity": 0.640183,
+              "image": "assets/neighbors/train-01827.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 1872,
+              "class_id": 32,
+              "class_name": "Yellow billed Cuckoo",
+              "similarity": 0.620901,
+              "image": "assets/neighbors/train-01872.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 1834,
+              "class_id": 32,
+              "class_name": "Yellow billed Cuckoo",
+              "similarity": 0.613732,
+              "image": "assets/neighbors/train-01834.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 1817,
+              "class_id": 32,
+              "class_name": "Yellow billed Cuckoo",
+              "similarity": 0.608241,
+              "image": "assets/neighbors/train-01817.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 1870,
+              "class_id": 32,
+              "class_name": "Yellow billed Cuckoo",
+              "similarity": 0.60335,
+              "image": "assets/neighbors/train-01870.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-04",
+      "image_id": 3045,
+      "source_path": "053.Western_Grebe/Western_Grebe_0009_36477.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-04.webp",
+      "true_class_id": 52,
+      "true_class": "Western Grebe",
+      "results": {
+        "simclr": {
+          "predicted_class": "Western Grebe",
+          "predicted_class_id": 52,
+          "confidence": 0.5794077,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "probability": 0.5794077
+            },
+            {
+              "rank": 2,
+              "class_id": 50,
+              "class_name": "Horned Grebe",
+              "probability": 0.1436286
+            },
+            {
+              "rank": 3,
+              "class_id": 51,
+              "class_name": "Pied billed Grebe",
+              "probability": 0.0642804
+            },
+            {
+              "rank": 4,
+              "class_id": 85,
+              "class_name": "Pacific Loon",
+              "probability": 0.0533747
+            },
+            {
+              "rank": 5,
+              "class_id": 49,
+              "class_name": "Eared Grebe",
+              "probability": 0.0382148
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-04.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 3026,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "similarity": 0.688621,
+              "image": "assets/neighbors/train-03026.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 5019,
+              "class_id": 85,
+              "class_name": "Pacific Loon",
+              "similarity": 0.676738,
+              "image": "assets/neighbors/train-05019.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 4975,
+              "class_id": 85,
+              "class_name": "Pacific Loon",
+              "similarity": 0.672708,
+              "image": "assets/neighbors/train-04975.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 2932,
+              "class_id": 50,
+              "class_name": "Horned Grebe",
+              "similarity": 0.66908,
+              "image": "assets/neighbors/train-02932.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 1374,
+              "class_id": 24,
+              "class_name": "Pelagic Cormorant",
+              "similarity": 0.666649,
+              "image": "assets/neighbors/train-01374.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Western Grebe",
+          "predicted_class_id": 52,
+          "confidence": 0.0853965,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "probability": 0.0853965
+            },
+            {
+              "rank": 2,
+              "class_id": 24,
+              "class_name": "Pelagic Cormorant",
+              "probability": 0.0131843
+            },
+            {
+              "rank": 3,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "probability": 0.0108854
+            },
+            {
+              "rank": 4,
+              "class_id": 147,
+              "class_name": "Green tailed Towhee",
+              "probability": 0.0097618
+            },
+            {
+              "rank": 5,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "probability": 0.0092715
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-04.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 3028,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "similarity": 0.878852,
+              "image": "assets/neighbors/train-03028.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 3014,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "similarity": 0.873647,
+              "image": "assets/neighbors/train-03014.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 3031,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "similarity": 0.850315,
+              "image": "assets/neighbors/train-03031.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 3035,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "similarity": 0.848055,
+              "image": "assets/neighbors/train-03035.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 3027,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "similarity": 0.847841,
+              "image": "assets/neighbors/train-03027.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-05",
+      "image_id": 3840,
+      "source_path": "067.Anna_Hummingbird/Anna_Hummingbird_0126_55983.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-05.webp",
+      "true_class_id": 66,
+      "true_class": "Anna Hummingbird",
+      "results": {
+        "simclr": {
+          "predicted_class": "Ruby throated Hummingbird",
+          "predicted_class_id": 67,
+          "confidence": 0.6535672,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "probability": 0.6535672
+            },
+            {
+              "rank": 2,
+              "class_id": 68,
+              "class_name": "Rufous Hummingbird",
+              "probability": 0.2509117
+            },
+            {
+              "rank": 3,
+              "class_id": 66,
+              "class_name": "Anna Hummingbird",
+              "probability": 0.0749378
+            },
+            {
+              "rank": 4,
+              "class_id": 69,
+              "class_name": "Green Violetear",
+              "probability": 0.0129498
+            },
+            {
+              "rank": 5,
+              "class_id": 197,
+              "class_name": "Rock Wren",
+              "probability": 0.0025041
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-05.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 3932,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "similarity": 0.690959,
+              "image": "assets/neighbors/train-03932.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 3839,
+              "class_id": 66,
+              "class_name": "Anna Hummingbird",
+              "similarity": 0.667915,
+              "image": "assets/neighbors/train-03839.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 3981,
+              "class_id": 68,
+              "class_name": "Rufous Hummingbird",
+              "similarity": 0.665186,
+              "image": "assets/neighbors/train-03981.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 3997,
+              "class_id": 68,
+              "class_name": "Rufous Hummingbird",
+              "similarity": 0.663572,
+              "image": "assets/neighbors/train-03997.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 3948,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "similarity": 0.656084,
+              "image": "assets/neighbors/train-03948.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Ruby throated Hummingbird",
+          "predicted_class_id": 67,
+          "confidence": 0.1731439,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "probability": 0.1731439
+            },
+            {
+              "rank": 2,
+              "class_id": 68,
+              "class_name": "Rufous Hummingbird",
+              "probability": 0.0148388
+            },
+            {
+              "rank": 3,
+              "class_id": 104,
+              "class_name": "Whip poor Will",
+              "probability": 0.0115382
+            },
+            {
+              "rank": 4,
+              "class_id": 142,
+              "class_name": "Caspian Tern",
+              "probability": 0.0091973
+            },
+            {
+              "rank": 5,
+              "class_id": 0,
+              "class_name": "Black footed Albatross",
+              "probability": 0.0089157
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-05.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 3956,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "similarity": 0.966555,
+              "image": "assets/neighbors/train-03956.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 3915,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "similarity": 0.959982,
+              "image": "assets/neighbors/train-03915.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 3897,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "similarity": 0.955715,
+              "image": "assets/neighbors/train-03897.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 3906,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "similarity": 0.955648,
+              "image": "assets/neighbors/train-03906.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 3902,
+              "class_id": 67,
+              "class_name": "Ruby throated Hummingbird",
+              "similarity": 0.95412,
+              "image": "assets/neighbors/train-03902.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-06",
+      "image_id": 5216,
+      "source_path": "090.Red_breasted_Merganser/Red_Breasted_Merganser_0012_79425.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-06.webp",
+      "true_class_id": 89,
+      "true_class": "Red breasted Merganser",
+      "results": {
+        "simclr": {
+          "predicted_class": "Red breasted Merganser",
+          "predicted_class_id": 89,
+          "confidence": 0.9730043,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "probability": 0.9730043
+            },
+            {
+              "rank": 2,
+              "class_id": 50,
+              "class_name": "Horned Grebe",
+              "probability": 0.0108573
+            },
+            {
+              "rank": 3,
+              "class_id": 49,
+              "class_name": "Eared Grebe",
+              "probability": 0.0077815
+            },
+            {
+              "rank": 4,
+              "class_id": 85,
+              "class_name": "Pacific Loon",
+              "probability": 0.0021086
+            },
+            {
+              "rank": 5,
+              "class_id": 51,
+              "class_name": "Pied billed Grebe",
+              "probability": 0.0010751
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-06.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 5211,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.865203,
+              "image": "assets/neighbors/train-05211.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 5244,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.860127,
+              "image": "assets/neighbors/train-05244.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 5262,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.852291,
+              "image": "assets/neighbors/train-05262.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 5215,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.85056,
+              "image": "assets/neighbors/train-05215.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 5261,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.84455,
+              "image": "assets/neighbors/train-05261.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Red breasted Merganser",
+          "predicted_class_id": 89,
+          "confidence": 0.079005,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "probability": 0.079005
+            },
+            {
+              "rank": 2,
+              "class_id": 50,
+              "class_name": "Horned Grebe",
+              "probability": 0.0157114
+            },
+            {
+              "rank": 3,
+              "class_id": 16,
+              "class_name": "Cardinal",
+              "probability": 0.0117354
+            },
+            {
+              "rank": 4,
+              "class_id": 57,
+              "class_name": "Pigeon Guillemot",
+              "probability": 0.0102432
+            },
+            {
+              "rank": 5,
+              "class_id": 185,
+              "class_name": "Cedar Waxwing",
+              "probability": 0.0086388
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-06.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 5230,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.90037,
+              "image": "assets/neighbors/train-05230.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 5206,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.880256,
+              "image": "assets/neighbors/train-05206.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 5211,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.875087,
+              "image": "assets/neighbors/train-05211.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 5237,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.8742,
+              "image": "assets/neighbors/train-05237.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 5215,
+              "class_id": 89,
+              "class_name": "Red breasted Merganser",
+              "similarity": 0.871133,
+              "image": "assets/neighbors/train-05215.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-07",
+      "image_id": 6766,
+      "source_path": "116.Chipping_Sparrow/Chipping_Sparrow_0050_108441.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-07.webp",
+      "true_class_id": 115,
+      "true_class": "Chipping Sparrow",
+      "results": {
+        "simclr": {
+          "predicted_class": "Black throated Sparrow",
+          "predicted_class_id": 113,
+          "confidence": 0.2028403,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 113,
+              "class_name": "Black throated Sparrow",
+              "probability": 0.2028403
+            },
+            {
+              "rank": 2,
+              "class_id": 131,
+              "class_name": "White crowned Sparrow",
+              "probability": 0.1102396
+            },
+            {
+              "rank": 3,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "probability": 0.0979297
+            },
+            {
+              "rank": 4,
+              "class_id": 129,
+              "class_name": "Tree Sparrow",
+              "probability": 0.0911259
+            },
+            {
+              "rank": 5,
+              "class_id": 192,
+              "class_name": "Bewick Wren",
+              "probability": 0.0749082
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-07.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 7696,
+              "class_id": 131,
+              "class_name": "White crowned Sparrow",
+              "similarity": 0.703776,
+              "image": "assets/neighbors/train-07696.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 7706,
+              "class_id": 131,
+              "class_name": "White crowned Sparrow",
+              "similarity": 0.641029,
+              "image": "assets/neighbors/train-07706.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 7761,
+              "class_id": 132,
+              "class_name": "White throated Sparrow",
+              "similarity": 0.639609,
+              "image": "assets/neighbors/train-07761.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 4961,
+              "class_id": 84,
+              "class_name": "Horned Lark",
+              "similarity": 0.630885,
+              "image": "assets/neighbors/train-04961.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 4941,
+              "class_id": 84,
+              "class_name": "Horned Lark",
+              "similarity": 0.628091,
+              "image": "assets/neighbors/train-04941.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Chipping Sparrow",
+          "predicted_class_id": 115,
+          "confidence": 0.0778202,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "probability": 0.0778202
+            },
+            {
+              "rank": 2,
+              "class_id": 147,
+              "class_name": "Green tailed Towhee",
+              "probability": 0.0199825
+            },
+            {
+              "rank": 3,
+              "class_id": 192,
+              "class_name": "Bewick Wren",
+              "probability": 0.0184714
+            },
+            {
+              "rank": 4,
+              "class_id": 129,
+              "class_name": "Tree Sparrow",
+              "probability": 0.0119084
+            },
+            {
+              "rank": 5,
+              "class_id": 52,
+              "class_name": "Western Grebe",
+              "probability": 0.0116891
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-07.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 6770,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "similarity": 0.866576,
+              "image": "assets/neighbors/train-06770.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 6753,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "similarity": 0.86502,
+              "image": "assets/neighbors/train-06753.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 6779,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "similarity": 0.859337,
+              "image": "assets/neighbors/train-06779.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 6756,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "similarity": 0.844729,
+              "image": "assets/neighbors/train-06756.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 6754,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "similarity": 0.829219,
+              "image": "assets/neighbors/train-06754.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-08",
+      "image_id": 9548,
+      "source_path": "163.Cape_May_Warbler/Cape_May_Warbler_0129_163157.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-08.webp",
+      "true_class_id": 162,
+      "true_class": "Cape May Warbler",
+      "results": {
+        "simclr": {
+          "predicted_class": "Cape May Warbler",
+          "predicted_class_id": 162,
+          "confidence": 0.1029632,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 162,
+              "class_name": "Cape May Warbler",
+              "probability": 0.1029632
+            },
+            {
+              "rank": 2,
+              "class_id": 175,
+              "class_name": "Prairie Warbler",
+              "probability": 0.0749209
+            },
+            {
+              "rank": 3,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "probability": 0.0490381
+            },
+            {
+              "rank": 4,
+              "class_id": 123,
+              "class_name": "Le Conte Sparrow",
+              "probability": 0.0372822
+            },
+            {
+              "rank": 5,
+              "class_id": 152,
+              "class_name": "Philadelphia Vireo",
+              "probability": 0.0332599
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-08.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 10266,
+              "class_id": 174,
+              "class_name": "Pine Warbler",
+              "similarity": 0.476188,
+              "image": "assets/neighbors/train-10266.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 10311,
+              "class_id": 175,
+              "class_name": "Prairie Warbler",
+              "similarity": 0.465882,
+              "image": "assets/neighbors/train-10311.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 8738,
+              "class_id": 148,
+              "class_name": "Brown Thrasher",
+              "similarity": 0.464159,
+              "image": "assets/neighbors/train-08738.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 4562,
+              "class_id": 78,
+              "class_name": "Belted Kingfisher",
+              "similarity": 0.462631,
+              "image": "assets/neighbors/train-04562.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 10119,
+              "class_id": 171,
+              "class_name": "Nashville Warbler",
+              "similarity": 0.448158,
+              "image": "assets/neighbors/train-10119.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Spotted Catbird",
+          "predicted_class_id": 17,
+          "confidence": 0.0104666,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 17,
+              "class_name": "Spotted Catbird",
+              "probability": 0.0104666
+            },
+            {
+              "rank": 2,
+              "class_id": 87,
+              "class_name": "Western Meadowlark",
+              "probability": 0.0092282
+            },
+            {
+              "rank": 3,
+              "class_id": 170,
+              "class_name": "Myrtle Warbler",
+              "probability": 0.0091096
+            },
+            {
+              "rank": 4,
+              "class_id": 189,
+              "class_name": "Red cockaded Woodpecker",
+              "probability": 0.0089326
+            },
+            {
+              "rank": 5,
+              "class_id": 154,
+              "class_name": "Warbling Vireo",
+              "probability": 0.0083782
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-08.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 11147,
+              "class_id": 189,
+              "class_name": "Red cockaded Woodpecker",
+              "similarity": 0.543394,
+              "image": "assets/neighbors/train-11147.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 11134,
+              "class_id": 189,
+              "class_name": "Red cockaded Woodpecker",
+              "similarity": 0.48211,
+              "image": "assets/neighbors/train-11134.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 11179,
+              "class_id": 189,
+              "class_name": "Red cockaded Woodpecker",
+              "similarity": 0.448216,
+              "image": "assets/neighbors/train-11179.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 11174,
+              "class_id": 189,
+              "class_name": "Red cockaded Woodpecker",
+              "similarity": 0.436451,
+              "image": "assets/neighbors/train-11174.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 11148,
+              "class_id": 189,
+              "class_name": "Red cockaded Woodpecker",
+              "similarity": 0.433421,
+              "image": "assets/neighbors/train-11148.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-09",
+      "image_id": 9711,
+      "source_path": "166.Golden_winged_Warbler/Golden_Winged_Warbler_0035_164362.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-09.webp",
+      "true_class_id": 165,
+      "true_class": "Golden winged Warbler",
+      "results": {
+        "simclr": {
+          "predicted_class": "Bohemian Waxwing",
+          "predicted_class_id": 184,
+          "confidence": 0.0859465,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 184,
+              "class_name": "Bohemian Waxwing",
+              "probability": 0.0859465
+            },
+            {
+              "rank": 2,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "probability": 0.0774739
+            },
+            {
+              "rank": 3,
+              "class_id": 37,
+              "class_name": "Great Crested Flycatcher",
+              "probability": 0.0680725
+            },
+            {
+              "rank": 4,
+              "class_id": 97,
+              "class_name": "Scott Oriole",
+              "probability": 0.0403686
+            },
+            {
+              "rank": 5,
+              "class_id": 79,
+              "class_name": "Green Kingfisher",
+              "probability": 0.038008
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-09.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 9402,
+              "class_id": 159,
+              "class_name": "Black throated Blue Warbler",
+              "similarity": 0.44657,
+              "image": "assets/neighbors/train-09402.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 6773,
+              "class_id": 115,
+              "class_name": "Chipping Sparrow",
+              "similarity": 0.444259,
+              "image": "assets/neighbors/train-06773.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 10246,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "similarity": 0.436855,
+              "image": "assets/neighbors/train-10246.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 10245,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "similarity": 0.428223,
+              "image": "assets/neighbors/train-10245.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 10842,
+              "class_id": 184,
+              "class_name": "Bohemian Waxwing",
+              "similarity": 0.425254,
+              "image": "assets/neighbors/train-10842.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Myrtle Warbler",
+          "predicted_class_id": 170,
+          "confidence": 0.0102649,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 170,
+              "class_name": "Myrtle Warbler",
+              "probability": 0.0102649
+            },
+            {
+              "rank": 2,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "probability": 0.0101724
+            },
+            {
+              "rank": 3,
+              "class_id": 165,
+              "class_name": "Golden winged Warbler",
+              "probability": 0.0092893
+            },
+            {
+              "rank": 4,
+              "class_id": 161,
+              "class_name": "Canada Warbler",
+              "probability": 0.0089229
+            },
+            {
+              "rank": 5,
+              "class_id": 54,
+              "class_name": "Evening Grosbeak",
+              "probability": 0.0087074
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-09.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 9158,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "similarity": 0.458595,
+              "image": "assets/neighbors/train-09158.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 9117,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "similarity": 0.456668,
+              "image": "assets/neighbors/train-09117.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 9129,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "similarity": 0.455868,
+              "image": "assets/neighbors/train-09129.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 9146,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "similarity": 0.447343,
+              "image": "assets/neighbors/train-09146.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 9156,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "similarity": 0.447179,
+              "image": "assets/neighbors/train-09156.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-10",
+      "image_id": 9870,
+      "source_path": "168.Kentucky_Warbler/Kentucky_Warbler_0036_795872.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-10.webp",
+      "true_class_id": 167,
+      "true_class": "Kentucky Warbler",
+      "results": {
+        "simclr": {
+          "predicted_class": "Kentucky Warbler",
+          "predicted_class_id": 167,
+          "confidence": 0.1371409,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 167,
+              "class_name": "Kentucky Warbler",
+              "probability": 0.1371409
+            },
+            {
+              "rank": 2,
+              "class_id": 160,
+              "class_name": "Blue winged Warbler",
+              "probability": 0.1087129
+            },
+            {
+              "rank": 3,
+              "class_id": 46,
+              "class_name": "American Goldfinch",
+              "probability": 0.0872318
+            },
+            {
+              "rank": 4,
+              "class_id": 169,
+              "class_name": "Mourning Warbler",
+              "probability": 0.0734482
+            },
+            {
+              "rank": 5,
+              "class_id": 152,
+              "class_name": "Philadelphia Vireo",
+              "probability": 0.073382
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-10.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 9973,
+              "class_id": 169,
+              "class_name": "Mourning Warbler",
+              "similarity": 0.491877,
+              "image": "assets/neighbors/train-09973.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 9427,
+              "class_id": 160,
+              "class_name": "Blue winged Warbler",
+              "similarity": 0.473471,
+              "image": "assets/neighbors/train-09427.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 2698,
+              "class_id": 46,
+              "class_name": "American Goldfinch",
+              "similarity": 0.445692,
+              "image": "assets/neighbors/train-02698.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 9898,
+              "class_id": 168,
+              "class_name": "Magnolia Warbler",
+              "similarity": 0.431051,
+              "image": "assets/neighbors/train-09898.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 2663,
+              "class_id": 46,
+              "class_name": "American Goldfinch",
+              "similarity": 0.430914,
+              "image": "assets/neighbors/train-02663.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Magnolia Warbler",
+          "predicted_class_id": 168,
+          "confidence": 0.035803,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 168,
+              "class_name": "Magnolia Warbler",
+              "probability": 0.035803
+            },
+            {
+              "rank": 2,
+              "class_id": 97,
+              "class_name": "Scott Oriole",
+              "probability": 0.0121586
+            },
+            {
+              "rank": 3,
+              "class_id": 152,
+              "class_name": "Philadelphia Vireo",
+              "probability": 0.0108171
+            },
+            {
+              "rank": 4,
+              "class_id": 161,
+              "class_name": "Canada Warbler",
+              "probability": 0.0099721
+            },
+            {
+              "rank": 5,
+              "class_id": 42,
+              "class_name": "Yellow bellied Flycatcher",
+              "probability": 0.0096635
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-10.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 9909,
+              "class_id": 168,
+              "class_name": "Magnolia Warbler",
+              "similarity": 0.813149,
+              "image": "assets/neighbors/train-09909.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 9902,
+              "class_id": 168,
+              "class_name": "Magnolia Warbler",
+              "similarity": 0.804137,
+              "image": "assets/neighbors/train-09902.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 9890,
+              "class_id": 168,
+              "class_name": "Magnolia Warbler",
+              "similarity": 0.792893,
+              "image": "assets/neighbors/train-09890.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 9893,
+              "class_id": 168,
+              "class_name": "Magnolia Warbler",
+              "similarity": 0.785734,
+              "image": "assets/neighbors/train-09893.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 9923,
+              "class_id": 168,
+              "class_name": "Magnolia Warbler",
+              "similarity": 0.779763,
+              "image": "assets/neighbors/train-09923.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-11",
+      "image_id": 10235,
+      "source_path": "174.Palm_Warbler/Palm_Warbler_0039_170894.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-11.webp",
+      "true_class_id": 173,
+      "true_class": "Palm Warbler",
+      "results": {
+        "simclr": {
+          "predicted_class": "White eyed Vireo",
+          "predicted_class_id": 155,
+          "confidence": 0.1265987,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "probability": 0.1265987
+            },
+            {
+              "rank": 2,
+              "class_id": 156,
+              "class_name": "Yellow throated Vireo",
+              "probability": 0.124571
+            },
+            {
+              "rank": 3,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "probability": 0.1001836
+            },
+            {
+              "rank": 4,
+              "class_id": 172,
+              "class_name": "Orange crowned Warbler",
+              "probability": 0.0973841
+            },
+            {
+              "rank": 5,
+              "class_id": 42,
+              "class_name": "Yellow bellied Flycatcher",
+              "probability": 0.047869
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-11.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 10280,
+              "class_id": 174,
+              "class_name": "Pine Warbler",
+              "similarity": 0.570127,
+              "image": "assets/neighbors/train-10280.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 10595,
+              "class_id": 179,
+              "class_name": "Wilson Warbler",
+              "similarity": 0.564919,
+              "image": "assets/neighbors/train-10595.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 9185,
+              "class_id": 156,
+              "class_name": "Yellow throated Vireo",
+              "similarity": 0.560396,
+              "image": "assets/neighbors/train-09185.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 9161,
+              "class_id": 155,
+              "class_name": "White eyed Vireo",
+              "similarity": 0.555219,
+              "image": "assets/neighbors/train-09161.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 9867,
+              "class_id": 167,
+              "class_name": "Kentucky Warbler",
+              "similarity": 0.553923,
+              "image": "assets/neighbors/train-09867.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Palm Warbler",
+          "predicted_class_id": 173,
+          "confidence": 0.0162305,
+          "correct": true,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "probability": 0.0162305
+            },
+            {
+              "rank": 2,
+              "class_id": 76,
+              "class_name": "Tropical Kingbird",
+              "probability": 0.0111083
+            },
+            {
+              "rank": 3,
+              "class_id": 97,
+              "class_name": "Scott Oriole",
+              "probability": 0.0091725
+            },
+            {
+              "rank": 4,
+              "class_id": 152,
+              "class_name": "Philadelphia Vireo",
+              "probability": 0.0077853
+            },
+            {
+              "rank": 5,
+              "class_id": 127,
+              "class_name": "Seaside Sparrow",
+              "probability": 0.0077461
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-11.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 10213,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "similarity": 0.818017,
+              "image": "assets/neighbors/train-10213.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 10246,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "similarity": 0.808156,
+              "image": "assets/neighbors/train-10246.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 10220,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "similarity": 0.780253,
+              "image": "assets/neighbors/train-10220.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 10194,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "similarity": 0.771571,
+              "image": "assets/neighbors/train-10194.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 10227,
+              "class_id": 173,
+              "class_name": "Palm Warbler",
+              "similarity": 0.767857,
+              "image": "assets/neighbors/train-10227.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-12",
+      "image_id": 11502,
+      "source_path": "196.House_Wren/House_Wren_0016_188006.jpg",
+      "split": "test",
+      "image": "assets/queries/sample-12.webp",
+      "true_class_id": 195,
+      "true_class": "House Wren",
+      "results": {
+        "simclr": {
+          "predicted_class": "Western Wood Pewee",
+          "predicted_class_id": 101,
+          "confidence": 0.4881785,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 101,
+              "class_name": "Western Wood Pewee",
+              "probability": 0.4881785
+            },
+            {
+              "rank": 2,
+              "class_id": 37,
+              "class_name": "Great Crested Flycatcher",
+              "probability": 0.062491
+            },
+            {
+              "rank": 3,
+              "class_id": 117,
+              "class_name": "House Sparrow",
+              "probability": 0.0351918
+            },
+            {
+              "rank": 4,
+              "class_id": 118,
+              "class_name": "Field Sparrow",
+              "probability": 0.034359
+            },
+            {
+              "rank": 5,
+              "class_id": 39,
+              "class_name": "Olive sided Flycatcher",
+              "probability": 0.033949
+            }
+          ],
+          "heatmap": "assets/heatmaps/simclr-sample-12.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 2215,
+              "class_id": 38,
+              "class_name": "Least Flycatcher",
+              "similarity": 0.544228,
+              "image": "assets/neighbors/train-02215.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 7608,
+              "class_id": 129,
+              "class_name": "Tree Sparrow",
+              "similarity": 0.515404,
+              "image": "assets/neighbors/train-07608.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 6961,
+              "class_id": 118,
+              "class_name": "Field Sparrow",
+              "similarity": 0.514804,
+              "image": "assets/neighbors/train-06961.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 5962,
+              "class_id": 101,
+              "class_name": "Western Wood Pewee",
+              "similarity": 0.506032,
+              "image": "assets/neighbors/train-05962.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 4448,
+              "class_id": 76,
+              "class_name": "Tropical Kingbird",
+              "similarity": 0.504287,
+              "image": "assets/neighbors/train-04448.webp",
+              "split": "train"
+            }
+          ]
+        },
+        "proxynca": {
+          "predicted_class": "Western Wood Pewee",
+          "predicted_class_id": 101,
+          "confidence": 0.0095977,
+          "correct": false,
+          "top_classes": [
+            {
+              "rank": 1,
+              "class_id": 101,
+              "class_name": "Western Wood Pewee",
+              "probability": 0.0095977
+            },
+            {
+              "rank": 2,
+              "class_id": 113,
+              "class_name": "Black throated Sparrow",
+              "probability": 0.0093816
+            },
+            {
+              "rank": 3,
+              "class_id": 192,
+              "class_name": "Bewick Wren",
+              "probability": 0.0089775
+            },
+            {
+              "rank": 4,
+              "class_id": 147,
+              "class_name": "Green tailed Towhee",
+              "probability": 0.008681
+            },
+            {
+              "rank": 5,
+              "class_id": 153,
+              "class_name": "Red eyed Vireo",
+              "probability": 0.0083438
+            }
+          ],
+          "heatmap": "assets/heatmaps/proxynca-sample-12.webp",
+          "neighbors": [
+            {
+              "rank": 1,
+              "image_id": 5939,
+              "class_id": 101,
+              "class_name": "Western Wood Pewee",
+              "similarity": 0.62448,
+              "image": "assets/neighbors/train-05939.webp",
+              "split": "train"
+            },
+            {
+              "rank": 2,
+              "image_id": 5946,
+              "class_id": 101,
+              "class_name": "Western Wood Pewee",
+              "similarity": 0.554663,
+              "image": "assets/neighbors/train-05946.webp",
+              "split": "train"
+            },
+            {
+              "rank": 3,
+              "image_id": 5958,
+              "class_id": 101,
+              "class_name": "Western Wood Pewee",
+              "similarity": 0.532928,
+              "image": "assets/neighbors/train-05958.webp",
+              "split": "train"
+            },
+            {
+              "rank": 4,
+              "image_id": 5943,
+              "class_id": 101,
+              "class_name": "Western Wood Pewee",
+              "similarity": 0.530589,
+              "image": "assets/neighbors/train-05943.webp",
+              "split": "train"
+            },
+            {
+              "rank": 5,
+              "image_id": 5980,
+              "class_id": 102,
+              "class_name": "Sayornis",
+              "similarity": 0.527088,
+              "image": "assets/neighbors/train-05980.webp",
+              "split": "train"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
