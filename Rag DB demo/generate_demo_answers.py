@@ -23,7 +23,7 @@ from pipeline.retrieve import VectorRetriever
 
 QUESTIONS = ROOT / "data" / "questions" / "evaluation_questions.json"
 OUTPUT = ROOT / "demo" / "data" / "demo_results.json"
-K_VALUES = (3,)
+K_VALUES = (5,)
 
 
 def baseline_prompt(question: str) -> str:
@@ -55,7 +55,7 @@ def generate(prompt: str, model: str, ollama_url: str) -> tuple[str, float]:
 
 
 def main() -> None:
-    """Generate 25 baseline and 125 RAG responses, resuming when possible."""
+    """Generate 25 baseline and 25 fixed-k RAG responses, resuming safely."""
     load_dotenv(ROOT / ".env")
     database_url = os.getenv("DATABASE_URL")
     if not database_url:
@@ -65,7 +65,10 @@ def main() -> None:
     questions = json.loads(QUESTIONS.read_text(encoding="utf-8"))["unseen"]
     existing = {}
     if OUTPUT.exists():
-        existing = {item["id"]: item for item in json.loads(OUTPUT.read_text(encoding="utf-8"))}
+        existing = {
+            item["id"]: item
+            for item in json.loads(OUTPUT.read_text(encoding="utf-8-sig"))
+        }
 
     retriever = VectorRetriever(database_url, local_files_only=True)
     payload = []
@@ -96,7 +99,7 @@ def main() -> None:
             "fact_date": question["fact_date"],
             "source_urls": question.get("source_urls", []),
             "baseline": baseline,
-            "rag": rag["3"],
+            "rag": rag["5"],
             # Named copies make interrupted runs safely resumable without
             # mistaking old evaluation-prompt exports for demo generations.
             "demo_baseline": baseline,

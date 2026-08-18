@@ -6,12 +6,12 @@ from typing import Any
 
 ROOT=Path(__file__).resolve().parents[1]
 QUESTIONS=ROOT/"data"/"questions"/"evaluation_questions.json"
-RESPONSES=ROOT/"data"/"results"/"eval_responses.jsonl"
+RESPONSES=ROOT/"data"/"results"/"cisa_kev"/"eval_responses.jsonl"
 OUTPUT=Path(__file__).resolve().parent/"data"/"demo_results.json"
-K_VALUE=3
+K_VALUE=5
 
 def build_demo_payload(questions_path:Path=QUESTIONS,responses_path:Path=RESPONSES)->list[dict[str,Any]]:
-    """Join each unseen benchmark item to its baseline and five RAG runs."""
+    """Join each unseen benchmark item to baseline and fixed-k RAG runs."""
     questions=json.loads(questions_path.read_text(encoding="utf-8"))["unseen"]
     responses={row["response_id"]:row for line in responses_path.read_text(encoding="utf-8").splitlines() if line.strip() for row in [json.loads(line)]}
     payload=[]
