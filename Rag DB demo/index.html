@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare Llama 3 8B with and without a Resident Evil Requiem RAG knowledge base.">
+  <title>Raccoon City Knowledge Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="hero" id="top">
+    <nav><a class="brand" href="#top"><span class="brand-mark">RC</span><span>Knowledge Lab</span></a><a class="method-link" href="#method">How it works ↘</a></nav>
+    <div class="hero-grid"><div><p class="eyebrow"><span class="status-dot"></span> Experiment archive</p><h1>Can an older model answer questions about a <em>new</em> game?</h1><p class="lede">Compare Llama 3 8B alone against the same model grounded in three post-cutoff Resident Evil Requiem passages.</p></div><div class="hero-stat"><span class="stat-value">25</span><span class="stat-label">Post-cutoff questions</span><span class="stat-rule"></span><span class="stat-value">3</span><span class="stat-label">Passages per answer</span></div></div>
+  </header>
+  <main>
+    <section class="experiment" aria-labelledby="experiment-title">
+      <div class="section-heading"><p class="step">01 / Run the comparison</p><h2 id="experiment-title">Choose a question.</h2></div>
+      <div class="control-panel">
+        <div><label for="question-select">Resident Evil Requiem question</label><div class="select-wrap"><select id="question-select"></select><span>⌄</span></div></div>
+        <div class="fixed-setting"><span class="fixed-k">k = 3</span><p>Three semantically similar passages ground every RAG answer.</p></div>
+      </div>
+      <div class="comparison-grid" aria-live="polite">
+        <article class="answer-card baseline-card"><header><div><p class="card-index">A / CONTROL</p><h3>Without RAG</h3></div><span class="model-tag">Llama 3 8B</span></header><div class="answer-body"><p id="baseline-answer"></p></div><footer><span>No external context</span><span id="baseline-time"></span></footer></article>
+        <article class="answer-card rag-card"><header><div><p class="card-index">B / EXPERIMENT</p><h3>With RAG</h3></div><span class="model-tag active">pgvector + Llama</span></header><div class="answer-body"><p id="rag-answer"></p></div><footer><span>3 retrieved passages</span><span id="rag-time"></span></footer></article>
+      </div>
+      <details class="reference-panel"><summary>Reveal benchmark answer <span>+</span></summary><div><p id="reference-answer"></p><a id="reference-source" href="#" target="_blank" rel="noopener">View benchmark source ↗</a></div></details>
+    </section>
+    <section class="evidence-section" aria-labelledby="evidence-title">
+      <div class="section-heading evidence-heading"><div><p class="step">02 / Inspect the retrieval</p><h2 id="evidence-title">Sample retrieved passages.</h2></div><p class="evidence-note" id="evidence-note">Showing up to three top-ranked passages that were supplied to the model.</p></div>
+      <div id="evidence-list" class="evidence-list"></div>
+    </section>
+    <section class="method" id="method" aria-labelledby="method-title">
+      <p class="step">03 / Method</p><h2 id="method-title">Same model. One controlled difference.</h2>
+      <div class="method-grid"><div><span>01</span><h3>Ask</h3><p>Select a post-cutoff question from the 25-question Requiem evaluation set.</p></div><div><span>02</span><h3>Retrieve</h3><p>all-mpnet-base-v2 embeds it. PostgreSQL and pgvector return the top three wiki passages.</p></div><div><span>03</span><h3>Compare</h3><p>Llama 3 8B answers with and without those passages using deterministic settings.</p></div></div>
+      <p class="archive-note">This GitHub Pages demo replays outputs from the completed local experiment. PostgreSQL and Ollama ran locally and are not exposed to the public web.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>Resident Evil RAG Study</span><span>Python · PostgreSQL · pgvector · Ollama</span></footer>
+</body>
+</html>

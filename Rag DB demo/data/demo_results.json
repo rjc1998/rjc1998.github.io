@@ -1,0 +1,1302 @@
+﻿[
+    {
+        "id":  "unseen_001",
+        "question":  "In Resident Evil Requiem, whose melee system is primarily knife-based rather than featuring Leon\u0027s extensive unarmed contextual moveset?",
+        "reference_answer":  "Grace Ashcroft\u0027s melee system is primarily knife-based.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Melee_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "Chris Redfield\u0027s melee system in Resident Evil: Requiem is primarily knife-based, unlike Leon\u0027s extensive unarmed contextual moveset.",
+                         "generation_seconds":  4.283
+                     },
+        "rag":  {
+                    "answer":  "According to passage [3], Grace\u0027s melee system is primarily knife-based and does not have Leon\u0027s extensive unarmed contextual moveset.",
+                    "generation_seconds":  2.367,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  5147,
+                                                 "text":  "Melee (Requiem) â€” Introduction\n\nThis page is for information about the Melee mechanics in Resident Evil Requiem .\n\nResident Evil Requiem features a melee system used by both playable characters, Leon S. Kennedy and Grace Ashcroft . The two characters have substantially different melee systems.\n\nLeon uses a hatchet as his primary melee weapon and can perform contextual melee attacks against staggered enemies, as well as character-specific finishing attacks. His melee system is heavily influenced by the combat mechanics of Resident Evil 4 .\n\nGrace uses knives as her primary melee weapons. Her knife attacks can be performed directly and can also be used against staggered enemies.",
+                                                 "similarity":  0.7814385760687947,
+                                                 "source_date":  "2026-08-12",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Melee_(Requiem)",
+                                                 "source_title":  "Melee (Requiem)",
+                                                 "section_title":  "Introduction",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  5158,
+                                                 "text":  "Melee (Requiem) â€” Leon S. Kennedy\n\nLeon has the more advanced melee system of the two protagonists.\n\nHis combat hatchet can be swung freely and can be used to perform stronger attacks. Shooting an enemy in the head or legs can create a stagger state, allowing Leon to follow up with a melee attack.\n\nLeon can also perform contextual melee attacks based on the environment, including attacks near walls, obstacles, uneven ground, and ledges.\n\nHis melee system includes his characteristic roundhouse kick in addition to his hatchet-based attacks.",
+                                                 "similarity":  0.768964955416169,
+                                                 "source_date":  "2026-08-12",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Melee_(Requiem)",
+                                                 "source_title":  "Melee (Requiem)",
+                                                 "section_title":  "Leon S. Kennedy",
+                                                 "chunk_index":  11
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  5153,
+                                                 "text":  "Melee (Requiem) â€” Character attacks\n\nLeon retains his characteristic roundhouse kick as part of his contextual melee moveset. His combat is designed around shooting enemies to create melee opportunities, followed by powerful close-range attacks.\n\nGrace\u0027s melee system is primarily knife-based and does not have Leon\u0027s extensive unarmed contextual moveset.",
+                                                 "similarity":  0.765326321125036,
+                                                 "source_date":  "2026-08-12",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Melee_(Requiem)",
+                                                 "source_title":  "Melee (Requiem)",
+                                                 "section_title":  "Character attacks",
+                                                 "chunk_index":  6
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_002",
+        "question":  "In Resident Evil Requiem, which character can craft 12.7x55mm Ammo?",
+        "reference_answer":  "Only Grace can craft 12.7x55mm Ammo.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/12.7x55mm_Ammo"
+                        ],
+        "baseline":  {
+                         "answer":  "Chris Redfield.",
+                         "generation_seconds":  2.252
+                     },
+        "rag":  {
+                    "answer":  "According to passage [2], 12.7x55mm Ammo can only be crafted by Grace.",
+                    "generation_seconds":  2.358,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4816,
+                                                 "text":  "12.7x55mm Ammo â€” Appears in\n\n12.7x55mm Ammo ( 12.7Ã—55mmå¼¾ , 12. 7 Ã— 55 Mm-dan ) is a ammunition type in Resident Evil Requiem , that can only be used to reload magnum weapons such as Requiem and Ghost Grudge. The item can only be crafted by Grace, and had to be scoured by Leon in his separate sections in Rhodes Hill Chronic Care Center, East Raccoon City and ARK.",
+                                                 "similarity":  0.7603627443313653,
+                                                 "source_date":  "2026-08-14",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/12.7x55mm_Ammo",
+                                                 "source_title":  "12.7x55mm Ammo",
+                                                 "section_title":  "Appears in",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4817,
+                                                 "text":  "12.7x55mm Ammo â€” Gameplay\n\n12.7x55mm Ammo is the special type of magnum ammunition reserved for high-power Magnums such as Requiem and Ghost Grudge . They can not only be found at various locations in the game in units of different rounds. However, this item can only be crafted by Grace, and they are rarely found throughout the game, usually in large weapon or silver cases. In addition, Leon cannot buy 12.7x55mm Ammo from Supply Box but can resell it for 400 â’¸.\n\nThe recipe for this ammunition is unlocked through discovering and analyzing Blood Specimen (Converged) which can be found in the closet of Waiting Room on the East Wing of Care Center 1F. 12.7x55mm Ammo can be crafted through 1x Rare Metal and 80x Infected Blood. Upon the weapon Requiem being passed over to Leon, he would received all the 12.7x55mm ammunition in her sections.",
+                                                 "similarity":  0.6977769316567831,
+                                                 "source_date":  "2026-08-14",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/12.7x55mm_Ammo",
+                                                 "source_title":  "12.7x55mm Ammo",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4814,
+                                                 "text":  "Rifle Ammo (Requiem) â€” Gameplay\n\nRifle Ammo is the standard ammunition for Rifles such as Classic 70 , Marksman 1A , Redemption . In addition, they can only be found and crafted by Leon at various locations in the game in units of different rounds. They can also be dropped by enemies the players killed along the way. In addition, Leon can also buy extra Rifle Ammo from Supply Box when he first reached abandoned BSAA camp in East Raccoon City for 900 â’¸ and resell it for 100 â’¸.",
+                                                 "similarity":  0.6473962488894166,
+                                                 "source_date":  "2026-08-02",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Rifle_Ammo_(Requiem)",
+                                                 "source_title":  "Rifle Ammo (Requiem)",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_003",
+        "question":  "In Resident Evil Requiem, where does Grace return the Requiem magnum to Leon?",
+        "reference_answer":  "She returns it in the Water Treatment Facility behind Rhodes Hill Chronic Care Center, after The Girl is killed there.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Requiem_(Magnum)"
+                        ],
+        "baseline":  {
+                         "answer":  "According to my knowledge, in Resident Evil: Requiem, Grace returns the Requiem magnum to Leon in the church.",
+                         "generation_seconds":  2.381
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], Grace returns the Requiem Magnum to Leon in the Water Treatment Facility behind Rhodes Hill Chronic Care Center, where she tossed it back to him after being killed.",
+                    "generation_seconds":  2.466,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4525,
+                                                 "text":  "Requiem (Magnum) â€” Location\n\nThe Requiem is available in Leon\u0027s starting inventory, alongside Alligator Snapper and Hatchet . Upon saving Grace from The Girl , he gives her the Requiem. It remains with her until The Girl was killed in the Water Treatment Facility behind Rhodes Hill Chronic Care Center , where she tossed it back to Leon who used the weapon for the remainder of game.",
+                                                 "similarity":  0.8087483644485474,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Requiem_(Magnum)",
+                                                 "source_title":  "Requiem (Magnum)",
+                                                 "section_title":  "Location",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4524,
+                                                 "text":  "Requiem (Magnum) â€” Gameplay\n\nAt the starting point, Leon will start the game with five bullets. However, regardless of how many shots were fired or how many bullets were conserved, Grace will always receive the weapon with one bullet remained in its chamber. When Grace fires Requiem for the first time, she has a unique animation where she momentarily shakes her hand due to its intense recoil, showcasing her limited firearms experience. The player can reduce Requiem\u0027s recoil in Grace\u0027s hands if they frequently use Antique Coin to buy Stabilizer .\n\nRequiem is great at one-shotting most common enemies, and stunning most bosses. However, 12.7x55mm Ammo are extremely hard to come by as Grace, with most materials locked behind drawers that required a lockpick. As for Leon, he can only buy its ammunition from Supply Boxes in East Raccoon City and ARK, and cannot craft it himself. It\u0027s recommended to use in tight situations, and stun bosses when the player is cornered.",
+                                                 "similarity":  0.6759456782405808,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Requiem_(Magnum)",
+                                                 "source_title":  "Requiem (Magnum)",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  771,
+                                                 "text":  "East office â€” Resident Evil Requiem\n\nThe East office is the key location in the Police Station part of Leon\u0027s gameplay where he must find Grace who was with Zeno. To access this area, one must first get the Mechanic Jack from the library in order to open the shutter door.",
+                                                 "similarity":  0.6170978406551118,
+                                                 "source_date":  "2026-08-16",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/East_office",
+                                                 "source_title":  "East office",
+                                                 "section_title":  "Resident Evil Requiem",
+                                                 "chunk_index":  6
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_004",
+        "question":  "According to Resident Evil Requiem director Nakanishi, what percentage of players chose the third-person perspective for Leon\u0027s campaign on their first playthrough?",
+        "reference_answer":  "90% of players chose the third-person perspective for Leon\u0027s campaign.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Resident_Evil_Requiem/gameplay"
+                        ],
+        "baseline":  {
+                         "answer":  "I\u0027m not aware of any information about Resident Evil Requiem or its director Nakanishi. Resident Evil: Requiem is not a real game, and I couldn\u0027t find any information about a director named Nakanishi. Therefore, I can\u0027t provide an answer to this question.",
+                         "generation_seconds":  2.616
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], 90% of players chose the third-person perspective for Leon\u0027s campaign on their first playthrough.",
+                    "generation_seconds":  2.398,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4441,
+                                                 "text":  "Resident Evil Requiem/gameplay â€” Camera \u0026 Controls\n\nthat is balanced out to the fact the stalker enemy is noticeably catching Grace less compared to first-person, in first-person view Grace does not stumble whilst running but is more vulnerable to the stalker enemy.\n\nAccording to Resident Evil Requiem director Nakanishi , 90% of players chose the third-person perspective for Leonâ€™s campaign, and 40% chose it for Graceâ€™s campaign on their first playthrough. Meaning only 10% of players chose first-person perspective for Leon, and 60% chose it for Grace.",
+                                                 "similarity":  0.6891257948204413,
+                                                 "source_date":  "2026-06-12",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Resident_Evil_Requiem/gameplay",
+                                                 "source_title":  "Resident Evil Requiem/gameplay",
+                                                 "section_title":  "Camera \u0026 Controls",
+                                                 "chunk_index":  11
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  2273,
+                                                 "text":  "Leon A â€” Introduction\n\nLeon A , known in Japan as Leon first part ( ãƒ¬ã‚ªãƒ³è¡¨ , Reon-omote ) , is a story scenario for Resident Evil 2 , forming a larger story with Claire B . This story was created at the end of games development on orders of director Hideki Kamiya , who had originally envisioned having branching plots paths like in Resident Evil . Because of this, neither of the A/B combinations represented the official canon, with later writers instead picking and choosing elements of either.",
+                                                 "similarity":  0.5230695889550702,
+                                                 "source_date":  "2023-10-22",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Leon_A",
+                                                 "source_title":  "Leon A",
+                                                 "section_title":  "Introduction",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4440,
+                                                 "text":  "Resident Evil Requiem/gameplay â€” Camera \u0026 Controls\n\nFor the first in the series, Resident Evil Requiem is designed in first person and third person perspective that can be optionally switched in the menu. First person perspective is designed in a similar manner as Resident Evil 7: Biohazard , being a first person game with survival horror gameplay mechanics and third person perspective uses an over-the-shoulder third person shooter camera angle which bears resemblance more to the Resident Evil 2 and 3 remakes.\n\nAlthough It\u0027s suggested within the game to play in first-person which is the default option, both point of view\u0027s have unique interact ability within the environment, in third-person Grace is seen to be stumbling and falling to the ground occasionally but that is balanced out to the fact the stalker enemy is noticeably catching Grace less compared to first-person, in first-person view Grace does not stumble whilst running but is more vulnerable to the stalker enemy.",
+                                                 "similarity":  0.5144826156517726,
+                                                 "source_date":  "2026-06-12",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Resident_Evil_Requiem/gameplay",
+                                                 "source_title":  "Resident Evil Requiem/gameplay",
+                                                 "section_title":  "Camera \u0026 Controls",
+                                                 "chunk_index":  10
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_005",
+        "question":  "Unlike Resident Evil 7: Biohazard, what gameplay system does Resident Evil Requiem include for weapons?",
+        "reference_answer":  "It includes a weapon improvement/upgrade system.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Weapons_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "Resident Evil Requiem does not exist. The correct game is Resident Evil 6, which includes a \"Weapon Mod\" system that allows players to upgrade and customize their weapons.",
+                         "generation_seconds":  2.466
+                     },
+        "rag":  {
+                    "answer":  "Resident Evil Requiem features both first-person and third-person perspectives depending on the playable character. Players can aim firearms manually and target enemy weak points to maximize damage. [3]\n\nNote: I\u0027m not making an inference, as the passage explicitly states the gameplay system.",
+                    "generation_seconds":  2.569,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  5116,
+                                                 "text":  "Weapons (Requiem) â€” Combat\n\nCombat in Resident Evil Requiem combines the survival horror approach of classic Resident Evil with the more action-oriented combat style associated with Leon Kennedy.\n\nGrace relies on limited firearms, stealth, and careful decision-making, while Leon has access to a wider selection of weapons designed for stronger combat encounters.\n\nThe game features traditional weapon categories including handguns, shotguns, submachine guns, rifles, and special weapons.",
+                                                 "similarity":  0.801002025604248,
+                                                 "source_date":  "2026-08-07",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Weapons_(Requiem)",
+                                                 "source_title":  "Weapons (Requiem)",
+                                                 "section_title":  "Combat",
+                                                 "chunk_index":  3
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  5113,
+                                                 "text":  "Weapons (Requiem) â€” Description\n\nWeapons are the player\u0027s primary means of survival against the various infected creatures, B.O.W.s, and hostile entities encountered throughout Resident Evil Requiem . The game features two different gameplay styles through its playable protagonists, Grace Ashcroft and Leon S. Kennedy , resulting in different approaches to combat.\n\nGrace\u0027s sections focus on traditional survival horror gameplay, emphasizing limited resources, exploration, and careful use of weapons, while Leon\u0027s sections feature a more combat-oriented style with a larger arsenal and stronger emphasis on firearms.\n\nWeapons can be obtained through exploration, story progression, supply locations, and special unlocks. Certain weapons can also be upgraded through supply systems during Leon\u0027s sections.",
+                                                 "similarity":  0.7626959540066706,
+                                                 "source_date":  "2026-08-07",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Weapons_(Requiem)",
+                                                 "source_title":  "Weapons (Requiem)",
+                                                 "section_title":  "Description",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  5114,
+                                                 "text":  "Weapons (Requiem) â€” Aiming\n\nResident Evil Requiem features both first-person and third-person perspectives depending on the playable character.\n\nGrace\u0027s gameplay uses a first-person survival horror perspective, where weapons are limited and encounters encourage careful resource management. Leon\u0027s gameplay uses a more action-focused style, featuring stronger firearms and more direct combat encounters.\n\nPlayers can aim firearms manually and target enemy weak points to maximize damage. Headshots and precision attacks remain an important part of conserving ammunition and surviving encounters.",
+                                                 "similarity":  0.7218021154403687,
+                                                 "source_date":  "2026-08-07",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Weapons_(Requiem)",
+                                                 "source_title":  "Weapons (Requiem)",
+                                                 "section_title":  "Aiming",
+                                                 "chunk_index":  1
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_006",
+        "question":  "In Resident Evil Requiem, what item does the enemy Selena Corey drop upon defeat?",
+        "reference_answer":  "She drops an antique coin.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Selena_Corey"
+                        ],
+        "baseline":  {
+                         "answer":  "The item that Selena Corey drops upon defeat in Resident Evil: Requiem is a Magnum.",
+                         "generation_seconds":  2.362
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], Selena Corey drops an antique coin upon defeat.",
+                    "generation_seconds":  2.323,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4649,
+                                                 "text":  "Selena Corey â€” Gameplay\n\nSelena will initialy patrol the bar \u0026 lounge, but will eventually patrol the hall leading to the stairwell. She can be distraced with bottles, and, on lower difficulties, be killed with one shot from the Requiem . Her primary attack is a scream, which can momentarily stun the player, preventing them from running and adding a lot more sway to the aiming animation. Upon defeat she drops an antique coin.",
+                                                 "similarity":  0.6322563886642456,
+                                                 "source_date":  "2026-08-04",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Selena_Corey",
+                                                 "source_title":  "Selena Corey",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  2
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  3525,
+                                                 "text":  "Stun Rod (Resident Evil 5) â€” Description\n\na single shock. However, stronger enemies like the Executioner Majini and the Chainsaw Majini are more likely to withstand the normally deadly discharge and not easily immobilized. Enemies stunned are open targets to reaction commands.\n\nIt is one of the few weapons that doesn\u0027t makes an appearance in The Mercenaries minigame, but it is used in The Mercenaries Reunion by Chris in his Heavy Metal costume.",
+                                                 "similarity":  0.5202805995941162,
+                                                 "source_date":  "2025-02-10",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Stun_Rod_(Resident_Evil_5)",
+                                                 "source_title":  "Stun Rod (Resident Evil 5)",
+                                                 "section_title":  "Description",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4525,
+                                                 "text":  "Requiem (Magnum) â€” Location\n\nThe Requiem is available in Leon\u0027s starting inventory, alongside Alligator Snapper and Hatchet . Upon saving Grace from The Girl , he gives her the Requiem. It remains with her until The Girl was killed in the Water Treatment Facility behind Rhodes Hill Chronic Care Center , where she tossed it back to Leon who used the weapon for the remainder of game.",
+                                                 "similarity":  0.5075279474258423,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Requiem_(Magnum)",
+                                                 "source_title":  "Requiem (Magnum)",
+                                                 "section_title":  "Location",
+                                                 "chunk_index":  1
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_007",
+        "question":  "In Resident Evil Requiem, how many joint plugs are there throughout the Basement of the Care Center?",
+        "reference_answer":  "There are three joint plugs.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Joint_Plug_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "I\u0027m not familiar with Resident Evil Requiem, but I can try to answer based on my general knowledge. However, I must emphasize that my answer is purely speculative and not based on any specific information.\n\nFrom what I know, Resident Evil Requiem is a movie in the Resident Evil franchise, and it\u0027s possible that it features a Care Center with a Basement. Without any specific information about the movie, I\u0027ll take a wild guess.\n\nThere might be 5-7 joint plugs throughout the Basement of the Care Center in Resident Evil Requiem. Please note that this is purely speculative and not based on any concrete information.",
+                         "generation_seconds":  3.047
+                     },
+        "rag":  {
+                    "answer":  "According to the evidence, there are three joint plugs throughout the Basement of the Care Center. [1]",
+                    "generation_seconds":  2.365,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4823,
+                                                 "text":  "Joint Plug (Requiem) â€” Purpose\n\nThere are three joint plugs throughout the Basement of the Care Center. Its purpose is to mainly restore power to various areas and unlock various doors. There are up to 7 rooms, the players can unlock with these power joints. The end goal is to input all three to restart the Basement\u0027s power, therefore unlocking Emily\u0027s cell and restore power to the elevator and resurface back to 1F.\n\nOne is used at the west end of the Holding Cells to control access to the Workshop.\n\nOne is used in the Furnace to control access to the \u0027L\u0027 Passage .\n\nOne is used in the Elevator Passage to control access to the Fuel Storage .\n\nOne is used in the Central Passage to control access to the Boiler Room and Bunkroom .\n\nTwo are used in the Collection Pool to control access to the Ventilation Passage .\n\nOne is used in the Construction Storage to control access to the Inspection room .",
+                                                 "similarity":  0.7234028793395427,
+                                                 "source_date":  "2026-08-06",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Joint_Plug_(Requiem)",
+                                                 "source_title":  "Joint Plug (Requiem)",
+                                                 "section_title":  "Purpose",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4824,
+                                                 "text":  "Joint Plug (Requiem) â€” Purpose\n\naccess to the Boiler Room and Bunkroom .\n\nTwo are used in the Collection Pool to control access to the Ventilation Passage .\n\nOne is used in the Construction Storage to control access to the Inspection room .\n\nOne is used on the south platform of the Processing room to control access to the Ventilation Passage and the Processing Office .",
+                                                 "similarity":  0.6019278944113226,
+                                                 "source_date":  "2026-08-06",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Joint_Plug_(Requiem)",
+                                                 "source_title":  "Joint Plug (Requiem)",
+                                                 "section_title":  "Purpose",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  770,
+                                                 "text":  "East office â€” Resident Evil 2 (2019)\n\nThe room must be entered using the bolt cutter in the east door, since the west door is blocked from the inside. At first there is a single zombie inside, but more may enter through the windows or coming from the lobby that surrounds the office.\n\nBesides some supply items like ammo and gunpowder, the player will find the valve handle in the small office. When playing the 1st scenario, the fuse (main hall) can be found over a table near the west door.",
+                                                 "similarity":  0.4846002622306167,
+                                                 "source_date":  "2026-08-16",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/East_office",
+                                                 "source_title":  "East office",
+                                                 "section_title":  "Resident Evil 2 (2019)",
+                                                 "chunk_index":  5
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_008",
+        "question":  "According to Resident Evil Requiem, on what date was the Hound Wolf Squad deployed into the Raccoon City quarantine zone alongside BSAA forces?",
+        "reference_answer":  "They were deployed on October 9, 2026.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Hound_Wolf_Squad"
+                        ],
+        "baseline":  {
+                         "answer":  "October 13th.",
+                         "generation_seconds":  2.243
+                     },
+        "rag":  {
+                    "answer":  "According to [1], the Hound Wolf Squad was deployed alongside BSAA forces into the ruins of the Raccoon City quarantine zone on October 9, 2026.",
+                    "generation_seconds":  2.468,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  3990,
+                                                 "text":  "Hound Wolf Squad â€” Appears in:\n\nResident Evil Village\n\nResident Evil Requiem\n\nThe Hound Wolf Squad ( ãƒã‚¦ãƒ³ãƒ‰ã‚¦ãƒ«ãƒ• éšŠ , haundo urufu-tai ) (HWS) is an elite task force unit operating within the BSAA . Originally operating as their own separate unit, in 2018 founding BSAA member and former SOU Captain Chris Redfield , who grew distrustful of the organization after they chose to cover up the Baker House Incident in order to save face for their failure to eliminate Eveline in Munich before she could board the Annabelle , commandeered the unit without HQ approval and spent the next three years hunting down Mother Miranda , effectively making the unit rogue.\n\nIn February 9, 2021, they undertook a mission to kill Mother Miranda and her cult as well as evacuate the Winters family . Despite their apparent rogue status following the Village incident, the Hound Wolf Squad was deployed alongside BSAA forces into the ruins of the Raccoon City quarantine zone on October 9, 2026. Acting under direct orders from their captain, the unit was tasked with locating Elpis , securing the ARK facility, and rescuing DSO agent Leon S. Kennedy and FBI analyst Grace Ashcroft .",
+                                                 "similarity":  0.7415684461593628,
+                                                 "source_date":  "2026-06-17",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Hound_Wolf_Squad",
+                                                 "source_title":  "Hound Wolf Squad",
+                                                 "section_title":  "Appears in:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  3996,
+                                                 "text":  "Hound Wolf Squad â€” The Search for Elpis (2026)\n\nIn October 9, 2026, the Hound Wolf Squad was deployed by Redfield to ARK , located in the ruins of Raccoon City to safely extract DSO agent Leon Scott Kennedy, FBI intelligence analyst Grace Ashcroft, and recovered Elpis samples. Despite their rogue status, the squad was deployed alongside BSAA North American branch to secure ARK\u0027s ruin. Ultimately, the operation was successful. During the extraction, squad member Umber Eyes informed Kennedy his captain had a message for him. Following completion of their objectives, the Hound Wolf Squad withdrew from the area, leaving standard BSAA forces to secure the remaining sections of the ARK facility. Their departure, however, created a security vacuum. A Connections Special Operations unit, the Elite Guard subsequently infiltrated the site, eliminated the remaining BSAA personnel stationed in the area, and recovered their objectives before executing a tactical withdrawal, afraid the wolves would be sent in behind them.",
+                                                 "similarity":  0.6373780369758606,
+                                                 "source_date":  "2026-06-17",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Hound_Wolf_Squad",
+                                                 "source_title":  "Hound Wolf Squad",
+                                                 "section_title":  "The Search for Elpis (2026)",
+                                                 "chunk_index":  6
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4100,
+                                                 "text":  "Rolando Elba â€” The Search for Elpis (2026)\n\nIn October 2026, Elba and his fellow members of Hound Wolf Squad were deployed to the ruins of the Raccoon City quarantine zone following Redfield\u0027s knowledge of ARK, Elpis, and DSO agent Leon Scott Kennedy \u0027s involvement. The squadâ€™s primary objective was to extract Kennedy and FBI analyst Grace Ashcroft . A secondary directive tasked the unit with recovering antiviral agent Elpis samples from the underground ARK facility on behalf of the BSAA. In Redfieldâ€™s absence, Elba was placed as operational commander of the squad. Notably, despite having operated independently of the BSAA since 2021, the Hound Wolf Squad was deployed in coordination with regular BSAA units during the mission.\n\nThe team arrived after the destruction of the ARK facility, rappelling into the devastated structure and located Kennedy and Ashcroft alive. With the remainder of the squad securing the perimeter, Elba radioed his commander Redfield, and confirm the agentsâ€™ survival. Approaching Kennedy, Elba relayed the message Redfield had for him. Upon completion of their objectives, the Hound Wolf Squad extracted Kennedy and Ashcroft from the area, leaving other BSAA operatives to secure the area.",
+                                                 "similarity":  0.6005333304087334,
+                                                 "source_date":  "2026-06-03",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Rolando_Elba",
+                                                 "source_title":  "Rolando Elba",
+                                                 "section_title":  "The Search for Elpis (2026)",
+                                                 "chunk_index":  3
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_009",
+        "question":  "In Resident Evil Requiem, how many bullets can a single box of Machine Gun Ammo hold?",
+        "reference_answer":  "A single box can carry up to 100 bullets.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Machine_Gun_Ammo_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "Based on my existing knowledge, a single box of Machine Gun Ammo in Resident Evil: Requiem can hold 120 bullets.",
+                         "generation_seconds":  2.45
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], a single box of Machine Gun Ammo can hold up to 100 bullets.",
+                    "generation_seconds":  2.375,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4815,
+                                                 "text":  "Machine Gun Ammo (Requiem) â€” Gameplay\n\nMachine Gun Ammo is the standard ammunition for Assault Rifles and Sub-Machine guns such as Clatter Carbine , Stiri REVO3 A1 , Gal . In addition, they can only be found and crafted by Leon at various locations in the game in units of different rounds. Each box of ammo takes up two inventory spaces (1x2), and can carry up to 100 bullets per box. They can also be dropped by enemies the players killed along the way. In addition, Leon can also buy Machine Gun Ammo from Supply Box when he first reached abandoned BSAA camp in East Raccoon City for 800 â’¸ and resell it for 20 â’¸.",
+                                                 "similarity":  0.7182067372552521,
+                                                 "source_date":  "2026-08-02",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Machine_Gun_Ammo_(Requiem)",
+                                                 "source_title":  "Machine Gun Ammo (Requiem)",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4816,
+                                                 "text":  "12.7x55mm Ammo â€” Appears in\n\n12.7x55mm Ammo ( 12.7Ã—55mmå¼¾ , 12. 7 Ã— 55 Mm-dan ) is a ammunition type in Resident Evil Requiem , that can only be used to reload magnum weapons such as Requiem and Ghost Grudge. The item can only be crafted by Grace, and had to be scoured by Leon in his separate sections in Rhodes Hill Chronic Care Center, East Raccoon City and ARK.",
+                                                 "similarity":  0.6570801343274142,
+                                                 "source_date":  "2026-08-14",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/12.7x55mm_Ammo",
+                                                 "source_title":  "12.7x55mm Ammo",
+                                                 "section_title":  "Appears in",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4817,
+                                                 "text":  "12.7x55mm Ammo â€” Gameplay\n\n12.7x55mm Ammo is the special type of magnum ammunition reserved for high-power Magnums such as Requiem and Ghost Grudge . They can not only be found at various locations in the game in units of different rounds. However, this item can only be crafted by Grace, and they are rarely found throughout the game, usually in large weapon or silver cases. In addition, Leon cannot buy 12.7x55mm Ammo from Supply Box but can resell it for 400 â’¸.\n\nThe recipe for this ammunition is unlocked through discovering and analyzing Blood Specimen (Converged) which can be found in the closet of Waiting Room on the East Wing of Care Center 1F. 12.7x55mm Ammo can be crafted through 1x Rare Metal and 80x Infected Blood. Upon the weapon Requiem being passed over to Leon, he would received all the 12.7x55mm ammunition in her sections.",
+                                                 "similarity":  0.6395370197848104,
+                                                 "source_date":  "2026-08-14",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/12.7x55mm_Ammo",
+                                                 "source_title":  "12.7x55mm Ammo",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  1
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_010",
+        "question":  "In Resident Evil Requiem, how many upgrades does it take to raise Grace Ashcroft\u0027s maximum health from 800 to 1200?",
+        "reference_answer":  "It takes four upgrades.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Health_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "I\u0027m not familiar with Resident Evil Requiem, but I can try to help. After some thought, I\u0027m going to take a guess: 4 upgrades.",
+                         "generation_seconds":  2.459
+                     },
+        "rag":  {
+                    "answer":  "According to [1], it takes four upgrades to raise Grace Ashcroft\u0027s maximum health from 800 to 1200 through the use of Steroids.",
+                    "generation_seconds":  2.448,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  5021,
+                                                 "text":  "Health (Requiem) â€” Grace Ashcroft\n\nGrace begins the game with a lower maximum health pool than Leon, emphasizing survival horror over direct combat. Her maximum health can be permanently increased by using Steroids , eventually increasing her maximum health from 800 to 1200 through four upgrades.\n\nSteroids are obtained through exploration and crafting. Later in the game they may be crafted using an Empty Injector together with sufficient quantities of infected blood after obtaining the required crafting recipe. Because Empty Injectors are limited, players must choose between crafting Steroids or other injectable upgrades such as Stabilizers.\n\nGrace also possesses a hidden \"mercy\" mechanic. Under most circumstances, attacks that would otherwise be fatal instead leave her with 1 HP provided the incoming damage does not exceed an internal threshold. Certain instant-kill attacks bypass this mechanic entirely. Community testing has confirmed this behavior, although it is not documented by Capcom.",
+                                                 "similarity":  0.6659171779727098,
+                                                 "source_date":  "2026-07-27",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Health_(Requiem)",
+                                                 "source_title":  "Health (Requiem)",
+                                                 "section_title":  "Grace Ashcroft",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  5024,
+                                                 "text":  "Health (Requiem) â€” Maximum health\n\nGrace permanently increases her maximum health by using Steroids .\n\nLeon cannot increase his maximum health directly, instead relying on armor upgrades to improve survivability. This marks the first mainline title in which two playable protagonists use completely different long-term health progression systems.",
+                                                 "similarity":  0.5817401235777127,
+                                                 "source_date":  "2026-07-27",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Health_(Requiem)",
+                                                 "source_title":  "Health (Requiem)",
+                                                 "section_title":  "Maximum health",
+                                                 "chunk_index":  4
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  5020,
+                                                 "text":  "Health (Requiem) â€” Summary\n\nResident Evil Requiem features two distinct health systems corresponding to its two playable protagonists, Grace Ashcroft and Leon S. Kennedy . Both systems share the traditional Resident Evil condition states of Fine , Caution and Danger , but differ in their presentation and progression. Grace\u0027s condition is displayed using an ECG monitor reminiscent of earlier entries in the series, while Leon\u0027s is represented by a segmented circular health indicator on the heads-up display.\n\nHealth is depleted when damage is received and restored through healing items. Unlike Resident Evil Village , both protagonists use separate progression systems: Grace can permanently increase her maximum health through Steroids , while Leon begins the game with a fixed maximum health and instead improves his survivability through armor upgrades.",
+                                                 "similarity":  0.5782042914093822,
+                                                 "source_date":  "2026-07-27",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Health_(Requiem)",
+                                                 "source_title":  "Health (Requiem)",
+                                                 "section_title":  "Summary",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_011",
+        "question":  "Which actor provided the English voice and motion capture for Oswell E. Spencer in Resident Evil Requiem?",
+        "reference_answer":  "James Clyde (James Daniel McCallum Clyde) provided the voice and motion capture.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/James_Clyde"
+                        ],
+        "baseline":  {
+                         "answer":  "Jewel Staite.",
+                         "generation_seconds":  2.297
+                     },
+        "rag":  {
+                    "answer":  "According to [2], James Clyde provided the English voice and motion capture for Oswell E. Spencer, Earl Spencer in Resident Evil Requiem.",
+                    "generation_seconds":  2.427,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  137,
+                                                 "text":  "Oswell E. Spencer, Earl Spencer â€” Voice:\n\nAdam D. Clark (English: RE5 )\n\nTime Winters (English: Resistance )\n\nJames Clyde (English: Resident Evil Requiem )\n\nIssei Futamata (Japanese: Resistance )\n\nRyÅ«sei Nakao (Japanese: Requiem )\n\nPhilippe Ariotti (French: Resistance , Requiem )\n\nCesare Rasini (Italian: Resistance )\n\nMario Scarabelli (Italian Requiem )\n\nRudolf Danielewicz (German: Resistance , Requiem )\n\nLuis MÃ¡s (Spanish: Resistance )\n\nAlfonso VallÃ©s (Spanish: Requiem )\n\nVictor Duroc (Latin American Spanish: Requiem )\n\nNi Kang (Mandarin Chinese: Resistance )\n\nXiaobing Wang (Mandarin Chinese: Requiem )\n\nCarlos Campanile (Brazilian Portuguese: Requiem )\n\nDenis Nekrasov (Russian: Requiem )",
+                                                 "similarity":  0.7554304374626178,
+                                                 "source_date":  "2026-08-16",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Oswell_E._Spencer,_Earl_Spencer",
+                                                 "source_title":  "Oswell E. Spencer, Earl Spencer",
+                                                 "section_title":  "Voice:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4730,
+                                                 "text":  "James Clyde â€” Roles:\n\nJames Daniel McCallum Clyde is an English actor, who provided the English voice and mo-cap for Oswell E. Spencer, Earl Spencer in Resident Evil Requiem . His other notable roles are Piero de\u0027 Medici in CBBC\u0027s series Leonardo, The Bloody Baron/Phillip Strenger in The Witcher 3: Wild Hunt, and Derrick the Executioner in Nioh.",
+                                                 "similarity":  0.6933879439003513,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/James_Clyde",
+                                                 "source_title":  "James Clyde",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4741,
+                                                 "text":  "Harry Myers â€” Roles:\n\nHarry Myers is an British theatre actor, who provided the additional English voices for Elite Guards and Zombies in Resident Evil Requiem . His other notables roles are Entharl Danthelon and Grukkoh in Baldur\u0027s Gate III, Resh in Horizon Zero Dawn, and Arnaud in A Plague\u0027s Tale: Requiem.",
+                                                 "similarity":  0.6558718485870433,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Harry_Myers",
+                                                 "source_title":  "Harry Myers",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_012",
+        "question":  "In Resident Evil Requiem, where is the lockpick located in the Custodian\u0027s Office on Care Center 1F?",
+        "reference_answer":  "It is inside the left locker on the east side.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Lockpick_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "The lockpick is located on the desk in the Custodian\u0027s Office on Care Center 1F in Resident Evil: Requiem.",
+                         "generation_seconds":  2.394
+                     },
+        "rag":  {
+                    "answer":  "According to passage [2], the lockpick is located \"Inside the left locker on the east side\" in the Custodian\u0027s Office on Care Center 1F.",
+                    "generation_seconds":  2.425,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4655,
+                                                 "text":  "Lockpick (Requiem) â€” Draws and Lockers\n\nEast Wing - Care Center 1F: On the draw in the south east corner.\n\nWest Corridor - Care Center 1F: On the draw in the north west area.\n\nGallery Corridor - Care Center 2F: On the draw on the south side.\n\nBunkroom - Care Center Basement: On the left locker on the east side.\n\nInspection Room - Care Center Basement: On the left locker in the north east corner.",
+                                                 "similarity":  0.7219342755118457,
+                                                 "source_date":  "2026-07-29",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Lockpick_(Requiem)",
+                                                 "source_title":  "Lockpick (Requiem)",
+                                                 "section_title":  "Draws and Lockers",
+                                                 "chunk_index":  2
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4654,
+                                                 "text":  "Lockpick (Requiem) â€” Lockpicks\n\nCustodian\u0027s Office - Care Center 1F: Inside the left locker on the east side\n\nLead Researcher\u0027s Office Lounge - Care Center 2F: On the small cabinet on the east side\n\nOffice - Care Center 2F: On the desk in the north west corner.\n\nBoiler Room - Care Center Basement: On the floor on the east side.\n\nService Passage - Care Center Basement: On the ground in the north west corner of the passage.",
+                                                 "similarity":  0.7198688125766739,
+                                                 "source_date":  "2026-07-29",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Lockpick_(Requiem)",
+                                                 "source_title":  "Lockpick (Requiem)",
+                                                 "section_title":  "Lockpicks",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4653,
+                                                 "text":  "Lockpick (Requiem) â€” Purpose\n\nLockpicks are found throughout Rhodes Hill Chronic Care Center , and is exclusive to Grace Ashcroft \u0027s sections. They can be used to unlock drawers and lockers, and obtain more resources needed to aid the players. However, they can only be used once before they are discarded, forcing the players to find another. There are 5 Lockpicks throughout the game.",
+                                                 "similarity":  0.6788366223768446,
+                                                 "source_date":  "2026-07-29",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Lockpick_(Requiem)",
+                                                 "source_title":  "Lockpick (Requiem)",
+                                                 "section_title":  "Purpose",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_013",
+        "question":  "In Resident Evil Requiem, how does a player unlock Grace\u0027s Report file?",
+        "reference_answer":  "By clearing the game and choosing to release Elpis.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Grace%27s_Report"
+                        ],
+        "baseline":  {
+                         "answer":  "In Resident Evil: Requiem, a player unlocks Grace\u0027s Report file by finding and reading all the files in the laboratory on the 3rd floor.",
+                         "generation_seconds":  2.429
+                     },
+        "rag":  {
+                    "answer":  "According to [1], a player unlocks Grace\u0027s Report file by clearing the game and choosing to release Elpis.",
+                    "generation_seconds":  2.391,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4628,
+                                                 "text":  "Grace\u0027s Report â€” Appears in:\n\nGrace\u0027s Report (translation:) is a file obtained in Resident Evil Requiem , by clearing the game and choosing to release Elpis. It is a collection of text and transcribed by Grace Ashcroft in her report to be submitted to her superior Nathan Dempsy , Midwestern Special Agent-in-Charge following the events of Requiem. The file can be viewed in the Bonus Menu.",
+                                                 "similarity":  0.8308448094633123,
+                                                 "source_date":  "2026-03-28",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Grace%27s_Report",
+                                                 "source_title":  "Grace\u0027s Report",
+                                                 "section_title":  "Appears in:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4434,
+                                                 "text":  "Resident Evil Requiem/gameplay â€” Grace\n\nin order to save progress, granting a limited amount of saves per playthrough. Grace also obtains a recipe to craft ink ribbons as well, requiring an ink ribbon tin and a certain amount of blood.\n\nDuring parts of Grace\u0027s gameplay, she encounters Marie , a heavily-mutated girl with incredible regenerative abilities, but an intolerance to light. Much like the T-00 , Marie will stalk Grace and try to kill her, however, she won\u0027t enter any rooms which are brightly-lit, allowing Grace a reprieve from Marie\u0027s pursuit. Because of her regeneration, it\u0027s impossible for Grace to kill Marie until the water treatment plant, with the only choice being to run and hide.",
+                                                 "similarity":  0.5614395999050389,
+                                                 "source_date":  "2026-06-12",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Resident_Evil_Requiem/gameplay",
+                                                 "source_title":  "Resident Evil Requiem/gameplay",
+                                                 "section_title":  "Grace",
+                                                 "chunk_index":  4
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4433,
+                                                 "text":  "Resident Evil Requiem/gameplay â€” Grace\n\ninto Blister Heads . Because of her lack of weapons and focus on resource management, it\u0027s recommended to avoid conflict as Grace, only fighting when need to and sneaking around Zombies or distracting them with bottles.\n\nGrace\u0027s inventory is akin to the ones found in Resident Evil 2 , Resident Evil 3 and Resident Evil 7: Biohazard . She has limited space that can be expanded with hip pouches .\n\nA unique aspect of Grace\u0027s resource management is the Blood Collector a special item that allows Grace to obtain blood from killed Zombies, buckets and transfusion bags. Blood is then used to craft a variety of items, these include handgun ammo , med injectors , hemolytic injectors and more. Though the collector can only hold 100 blood at first, Grace can obtain two special items that increase the capacity.\n\nIf playing Requiem in Standard Classic or Insanity mode, ink ribbons will become present. Much like other games in the series, ink ribbons are required in order to save progress, granting a limited amount of saves per playthrough. Grace also obtains a recipe to craft ink ribbons as well, requiring an ink ribbon tin and a certain amount of blood.",
+                                                 "similarity":  0.5473067434247298,
+                                                 "source_date":  "2026-06-12",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Resident_Evil_Requiem/gameplay",
+                                                 "source_title":  "Resident Evil Requiem/gameplay",
+                                                 "section_title":  "Grace",
+                                                 "chunk_index":  3
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_014",
+        "question":  "On what date did KÅshi Nakanishi first reveal he was working on the Resident Evil game that would later be identified as Resident Evil Requiem?",
+        "reference_answer":  "He revealed it on July 1, 2024, at CAPCOM NEXT â€“ Summer 2024.",
+        "fact_date":  "2024-07-01",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/K%C5%8Dshi_Nakanishi"
+                        ],
+        "baseline":  {
+                         "answer":  "I\u0027m not aware of any information about KÅshi Nakanishi working on a Resident Evil game called Resident Evil Requiem. In fact, there is no such game as Resident Evil Requiem. The Resident Evil series has had several games, but Requiem is not one of them.",
+                         "generation_seconds":  2.623
+                     },
+        "rag":  {
+                    "answer":  "July 1st, 2024 [1]",
+                    "generation_seconds":  2.272,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  2872,
+                                                 "text":  "KÅshi Nakanishi â€” ResumÃ©\n\nResident Evil 5 (Designer)\n\nResident Evil: The Mercenaries 3D (Creative Director)\n\nResident Evil: Revelations (Directors)\n\nResident Evil: Revelations 2 (Special Thanks)\n\nResident Evil 7: Biohazard (Director)\n\nResident Evil Requiem (Director)\n\nOn June 14, 2016, he was questioned, along with Masachika Kawata , in a CAPCOM Unity Live Q\u0026A for E3 2016 . Another interview by CAPCOM Unity followed and was posted as a blog by CAPCOM Unity staff member, Tim Turi.\n\nOn July 1st, 2024, At CAPCOM NEXT - Summer 2024 , Nakanishi revealed that he\u0027s working on another Resident Evil game possibly as director. The game was later revealed to be the 9th mainline game Resident Evil Requiem .",
+                                                 "similarity":  0.7145250609800298,
+                                                 "source_date":  "2026-05-28",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/K%C5%8Dshi_Nakanishi",
+                                                 "source_title":  "KÅshi Nakanishi",
+                                                 "section_title":  "ResumÃ©",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  2466,
+                                                 "text":  "Resident Evil (1996 game) â€” Release date(s)\n\nJP 22 March 1996\n\nNA 30 March 1996\n\nEU 1 August 1996\n\nMicrosoft Windows (PC):\n\nJP 6 December 1996\n\nNA 30 September 1997\n\nEU 17 September 1997\n\nJP 25 July 1997\n\nNA 31 August 1997\n\nEU 1 October 1997\n\nWW 26 June 2024\n\nWW 1 April 2026",
+                                                 "similarity":  0.6452337291976064,
+                                                 "source_date":  "2026-04-23",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Resident_Evil_(1996_game)",
+                                                 "source_title":  "Resident Evil (1996 game)",
+                                                 "section_title":  "Release date(s)",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  2232,
+                                                 "text":  "Keiji Inafune â€” Resident Evil\n\nIn 1996 Inafune teamed up with Shinji Mikami to produce Resident Evil 2 , which was greenlight soon after the release of the first game the same year. With the first game having sold well among non-traditional customers, Inafune supported the expansion of the franchise into other mediums to increase publicity, such as the Tokyo Marui toy line.",
+                                                 "similarity":  0.634404734898178,
+                                                 "source_date":  "2023-08-30",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Keiji_Inafune",
+                                                 "source_title":  "Keiji Inafune",
+                                                 "section_title":  "Resident Evil",
+                                                 "chunk_index":  1
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_015",
+        "question":  "Which actor voiced BSAA Commando D, Operator, and members of the Elite Guards in Resident Evil Requiem?",
+        "reference_answer":  "Bentley Kalu voiced those roles.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Bentley_Kalu"
+                        ],
+        "baseline":  {
+                         "answer":  "Michael McConnohough.",
+                         "generation_seconds":  2.313
+                     },
+        "rag":  {
+                    "answer":  "According to passage [2], Bentley Kalu provided the English voice for BSAA Commando D, Operator, and members of Elite Guards in Resident Evil Requiem.",
+                    "generation_seconds":  2.423,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4736,
+                                                 "text":  "Derek Hagen â€” Roles:\n\nDerek Hagen is an Canadian-British actor, who provided the English voice and mo-cap for BSAA Commando C and Researcher B in Resident Evil Requiem . His other notables roles are Frederick Langston in Control, and Midas in Tom Clancy\u0027s Ghost Recon.",
+                                                 "similarity":  0.7153590491200073,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Derek_Hagen",
+                                                 "source_title":  "Derek Hagen",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4737,
+                                                 "text":  "Bentley Kalu â€” Roles:\n\nBentley Kalu is an British-American actor, who provided the English voice for BSAA Commando D, Operator and members of Elite Guards in Resident Evil Requiem . His other notable role is Vannak-134 in Amazon Prime Series Halo, and his likeness has been used for Luther in Detroit Become Human.",
+                                                 "similarity":  0.7016873537488382,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Bentley_Kalu",
+                                                 "source_title":  "Bentley Kalu",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  137,
+                                                 "text":  "Oswell E. Spencer, Earl Spencer â€” Voice:\n\nAdam D. Clark (English: RE5 )\n\nTime Winters (English: Resistance )\n\nJames Clyde (English: Resident Evil Requiem )\n\nIssei Futamata (Japanese: Resistance )\n\nRyÅ«sei Nakao (Japanese: Requiem )\n\nPhilippe Ariotti (French: Resistance , Requiem )\n\nCesare Rasini (Italian: Resistance )\n\nMario Scarabelli (Italian Requiem )\n\nRudolf Danielewicz (German: Resistance , Requiem )\n\nLuis MÃ¡s (Spanish: Resistance )\n\nAlfonso VallÃ©s (Spanish: Requiem )\n\nVictor Duroc (Latin American Spanish: Requiem )\n\nNi Kang (Mandarin Chinese: Resistance )\n\nXiaobing Wang (Mandarin Chinese: Requiem )\n\nCarlos Campanile (Brazilian Portuguese: Requiem )\n\nDenis Nekrasov (Russian: Requiem )",
+                                                 "similarity":  0.6978223115854795,
+                                                 "source_date":  "2026-08-16",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Oswell_E._Spencer,_Earl_Spencer",
+                                                 "source_title":  "Oswell E. Spencer, Earl Spencer",
+                                                 "section_title":  "Voice:",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_016",
+        "question":  "Which actor provided the English voice and motion capture for BSAA Commando C and Researcher B in Resident Evil Requiem?",
+        "reference_answer":  "Derek Hagen provided the voice and motion capture.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Derek_Hagen"
+                        ],
+        "baseline":  {
+                         "answer":  "Swayze.",
+                         "generation_seconds":  2.253
+                     },
+        "rag":  {
+                    "answer":  "According to [1], Derek Hagen provided the English voice and motion capture for BSAA Commando C and Researcher B in Resident Evil Requiem.",
+                    "generation_seconds":  2.446,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4736,
+                                                 "text":  "Derek Hagen â€” Roles:\n\nDerek Hagen is an Canadian-British actor, who provided the English voice and mo-cap for BSAA Commando C and Researcher B in Resident Evil Requiem . His other notables roles are Frederick Langston in Control, and Midas in Tom Clancy\u0027s Ghost Recon.",
+                                                 "similarity":  0.7355804066532975,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Derek_Hagen",
+                                                 "source_title":  "Derek Hagen",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  137,
+                                                 "text":  "Oswell E. Spencer, Earl Spencer â€” Voice:\n\nAdam D. Clark (English: RE5 )\n\nTime Winters (English: Resistance )\n\nJames Clyde (English: Resident Evil Requiem )\n\nIssei Futamata (Japanese: Resistance )\n\nRyÅ«sei Nakao (Japanese: Requiem )\n\nPhilippe Ariotti (French: Resistance , Requiem )\n\nCesare Rasini (Italian: Resistance )\n\nMario Scarabelli (Italian Requiem )\n\nRudolf Danielewicz (German: Resistance , Requiem )\n\nLuis MÃ¡s (Spanish: Resistance )\n\nAlfonso VallÃ©s (Spanish: Requiem )\n\nVictor Duroc (Latin American Spanish: Requiem )\n\nNi Kang (Mandarin Chinese: Resistance )\n\nXiaobing Wang (Mandarin Chinese: Requiem )\n\nCarlos Campanile (Brazilian Portuguese: Requiem )\n\nDenis Nekrasov (Russian: Requiem )",
+                                                 "similarity":  0.6939509924620981,
+                                                 "source_date":  "2026-08-16",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Oswell_E._Spencer,_Earl_Spencer",
+                                                 "source_title":  "Oswell E. Spencer, Earl Spencer",
+                                                 "section_title":  "Voice:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4738,
+                                                 "text":  "Alec Newman â€” Roles:\n\nAlec Newman is an Scottish actor, who provided the English voice and mo-cap for Researcher A in Resident Evil Requiem . His other notables roles are Paul Atreides in Sci-Fi\u0027s adaptation of Frank Herbert\u0027s Dune, and Adam Smasher in Cyberpunk 2077 and Cyberpunk: Edgerunners, and Cameron \"Caz\" McLeary in Still Wakes the Deep.",
+                                                 "similarity":  0.6883640494455117,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Alec_Newman",
+                                                 "source_title":  "Alec Newman",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_017",
+        "question":  "In Resident Evil Requiem, what does the R.I.P. Knife produce more of than the Makeshift Knife or Hunting Knife?",
+        "reference_answer":  "It produces double or triple the usual amount of infected blood when used to kill an enemy.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/R.I.P._Knife"
+                        ],
+        "baseline":  {
+                         "answer":  "The R.I.P. Knife produces more Herbs than the Makeshift Knife or Hunting Knife.",
+                         "generation_seconds":  2.359
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], the R.I.P. Knife produces more infected blood upon killing an enemy with this knife, double or triple the amount the player would usually get.",
+                    "generation_seconds":  2.462,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4809,
+                                                 "text":  "R.I.P. Knife â€” Appears in\n\nThe R.I.P. Knife ( R.I.P.ãƒŠã‚¤ãƒ• , R. I. P. Naifu ) is a knife exclusive to Grace Ashcroft \u0027s arsenal in Resident Evil Requiem . However, differ from Makeshift Knife and Hunting Knife , R.I.P Knife produced more infected blood, upon killing an enemy with this knife, double or triple the amount the player would usually get.",
+                                                 "similarity":  0.7558472156524658,
+                                                 "source_date":  "2026-08-02",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/R.I.P._Knife",
+                                                 "source_title":  "R.I.P. Knife",
+                                                 "section_title":  "Appears in",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4810,
+                                                 "text":  "R.I.P. Knife â€” Gameplay\n\nR.I.P. Knife is a weapon exclusive to Insanity difficulty. Throughout the game, this weapon can only be found at Rhodes Hill Chronic Care Center in two different locations, one of which required Antique Coin to unlock them. R.I.P. Knife can also be crafted if the player had acquired Blood Specimen (Polymerized) item, allowing for its crafting recipe to be unlocked.\n\nTo craft a R.I.P. knife, the player would need 1x Scrap and 110x Infected Blood . The knife is the second most durable out of all available knives to Grace\u0027s arsenal, lasting up to 46 attacks. When paired with Stakeout Takeout Charm, A Chunk can be taken out with 2 R.I.P. Knives, and on average, dealt 3 to 4 attacks on a common Zombie compared to 8 attempts needed for S\u0026S M232 . When killing enemies with this knife, the amount of Infected Blood dropped will double or triple the set amount for each enemies.",
+                                                 "similarity":  0.6525202004599463,
+                                                 "source_date":  "2026-08-02",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/R.I.P._Knife",
+                                                 "source_title":  "R.I.P. Knife",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4640,
+                                                 "text":  "Makeshift Knife â€” Gameplay\n\nThe Makeshift Knife is a weapon made from half of a scissor that can be used as melee or defensive. When grabbed, the Makeshift Knife can free the player from an enemy\u0027s attack, though its durability will be reduced by half. The weapon can be reobtained after killing the one that was used against. However, if the player gets attacked again, with the knife being used prior to being grabbed or the knife having a low durability, the weapon will break, requiring the player to find another one, or craft one .\n\nOut of all defensive weapons for Grace, the Makeshift Knife has the lowest durability in game, but its status can be boosted with the Stakeout Takeout Charm which increases damage and durability of any knives.\n\nThe Makeshift Knife can be crafted with two Scraps, and it can also be reduced into one Scrap.",
+                                                 "similarity":  0.5386369228363037,
+                                                 "source_date":  "2026-08-03",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Makeshift_Knife",
+                                                 "source_title":  "Makeshift Knife",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_018",
+        "question":  "In Resident Evil Requiem, whose personal weapon is the Ghost Grudge magnum?",
+        "reference_answer":  "It is Victor Gideon\u0027s personal weapon.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Ghost_Grudge"
+                        ],
+        "baseline":  {
+                         "answer":  "Chris Redfield\u0027s personal weapon is the Ghost Grudge magnum in Resident Evil: Requiem.",
+                         "generation_seconds":  2.339
+                     },
+        "rag":  {
+                    "answer":  "According to [1], the Ghost Grudge is Victor Gideon\u0027s personal weapon.",
+                    "generation_seconds":  2.329,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4711,
+                                                 "text":  "Ghost Grudge â€” Appears in\n\nThe Ghost Grudge is a powerful magnum similar to the Requiem . It is Victor Gideon \u0027s personal weapon, which he modified to fire large-caliber 12.7Ã—55 mm rounds. This weapon can only be obtained, after initially completing the game and buy in Special Content shop for 1000 CP.",
+                                                 "similarity":  0.7731136083602905,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Ghost_Grudge",
+                                                 "source_title":  "Ghost Grudge",
+                                                 "section_title":  "Appears in",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4712,
+                                                 "text":  "Ghost Grudge â€” Gameplay\n\nGhost Grudge was first used by Victor Gideon in the bike chase sequence against Leon Scott Kennedy across Elevated Highway across Raccoon City . In the 2nd playthrough, Ghost Grudge can be used by Leon. However, compared to Requiem , the Ghost Grudge has a lower firepower and significantly reloaded slower but carried more precision and rate of fire, allowing players to aim enemies better as its crosshair centers much faster per shot. Like Clatter Carbine , Freya\u0027s Needle , Redemption (Requiem) and Grace Ashcroft \u0027s exclusive weapons S\u0026S M232 and B934 , the weapon is not upgradable.",
+                                                 "similarity":  0.6665363311767578,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Ghost_Grudge",
+                                                 "source_title":  "Ghost Grudge",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4816,
+                                                 "text":  "12.7x55mm Ammo â€” Appears in\n\n12.7x55mm Ammo ( 12.7Ã—55mmå¼¾ , 12. 7 Ã— 55 Mm-dan ) is a ammunition type in Resident Evil Requiem , that can only be used to reload magnum weapons such as Requiem and Ghost Grudge. The item can only be crafted by Grace, and had to be scoured by Leon in his separate sections in Rhodes Hill Chronic Care Center, East Raccoon City and ARK.",
+                                                 "similarity":  0.6113455063906624,
+                                                 "source_date":  "2026-08-14",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/12.7x55mm_Ammo",
+                                                 "source_title":  "12.7x55mm Ammo",
+                                                 "section_title":  "Appears in",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_019",
+        "question":  "In Resident Evil Requiem\u0027s Standard mode, what is the total coin value of all items available for purchase in the Parlor with Antique Coins?",
+        "reference_answer":  "The total value is 17 coins.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Antique_Coin_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "Based on my existing knowledge, I can tell you that in Resident Evil: Revelations\u0027 Standard mode, the total coin value of all items available for purchase in the Parlor with Antique Coins is 1,500.",
+                         "generation_seconds":  2.557
+                     },
+        "rag":  {
+                    "answer":  "According to passage [2], in Standard mode, the total value of all items available for purchase in the Parlor with Antique Coins is 17 coins.",
+                    "generation_seconds":  2.473,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4848,
+                                                 "text":  "Antique Coin (Requiem) â€” Purpose\n\nbecome available for purchase for 5 coins each. The total value of all items in Madhouse is 27 coins, and 36 are available in Insanity, Grace can also reduce the remaining Antique Coins to Scrap .\n\nAll antique coins can stack in a single inventory slot.",
+                                                 "similarity":  0.7724255228854334,
+                                                 "source_date":  "2026-05-24",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Antique_Coin_(Requiem)",
+                                                 "source_title":  "Antique Coin (Requiem)",
+                                                 "section_title":  "Purpose",
+                                                 "chunk_index":  1
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4847,
+                                                 "text":  "Antique Coin (Requiem) â€” Purpose\n\nAntique Coins are used to open locked cabinets in Parlor - Care Center 1F, and are present through Wrenwood Hotel, Wrenwood Street and Rhodes Hill Chronic Care Center. However, they can only be collected by Grace Ashcroft . In Standard modes, Antique Coins are only present throughout the Care Center. However, in Insanity, Antique Coins are doubled the amount and can be found in spaces, before reaching the Care Center.\n\nIn Parlor, Hip Pouch can be unlocked for 3 coins, Stabilizer and Steroids for 4 coins each, and Override Manual for 6 coins. In Standard, the total value of all items is 17 coins, and there are 27 are available in Standard, Grace can reduce the remaining Antique Coins to Scrap .\n\nOn Insanity, the Handgun Ammo and R.I.P. Knife become available for purchase for 5 coins each. The total value of all items in Madhouse is 27 coins, and 36 are available in Insanity, Grace can also reduce the remaining Antique Coins to Scrap .",
+                                                 "similarity":  0.7693771353178366,
+                                                 "source_date":  "2026-05-24",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Antique_Coin_(Requiem)",
+                                                 "source_title":  "Antique Coin (Requiem)",
+                                                 "section_title":  "Purpose",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  3795,
+                                                 "text":  "Gold â€” Resident Evil: The Darkside Chronicles\n\nIn The Darkside Chronicles , gold is only used to upgrade weapons. It appears in both the story mode and The Tofu Survivor .\n\nGold is gotten not just by picking it up from the environment, but also by destroying objects such as windows, lights, books, boxes, etc. Some objects will not give gold every time however. Just like in Resident Evil 5 , there are different types of gold: a \"coin\" and \"bar\" types, coins will generally give less gold than bars, but in later chapters, coins can give up to 3000 gold in each drop.\n\nThere are four titles related to gold in the game, they are:\n\nWell-Off - Collect a total of 50,000 gold\n\nWealthy - Collect a total of 100,000 gold\n\nUltra-Rich - Collect a total of 150,000 gold\n\nWeapon Master - Fully upgrade all weapons (requires 1,833,000 gold)\n\nAdditionally, there is a hidden \"coin shoot\" mechanic where if an object is destroyed and drops a coin of gold, it can be shot multiple times, each time it\u0027s shot the amount of gold given by the coin increases, there is however a limit on how much gold the coin will give this way, probably to avoid players from being able to gain huge chunks of gold early into the game.",
+                                                 "similarity":  0.47303064408624906,
+                                                 "source_date":  "2025-01-24",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Gold",
+                                                 "source_title":  "Gold",
+                                                 "section_title":  "Resident Evil: The Darkside Chronicles",
+                                                 "chunk_index":  1
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_020",
+        "question":  "In Resident Evil Requiem, which role did voice actor Nick Apostolides provide motion capture for?",
+        "reference_answer":  "He provided motion capture for one of the FBI agents in the intro inside the FBI office building.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Nick_Apostolides"
+                        ],
+        "baseline":  {
+                         "answer":  "Alex Wesker.",
+                         "generation_seconds":  2.253
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], Nick Apostolides provided motion capture performance for one of the FBI agents featured in the intro inside of the FBI office building in Resident Evil Requiem.",
+                    "generation_seconds":  2.46,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  3887,
+                                                 "text":  "Nick Apostolides â€” Roles:\n\nHe is the fifth actor to voice the character, and the third recurring actor, taking up the mantle from previous voice actor, Matthew Mercer .\n\nApostolides also provided the motion capture performance for the unnamed truck driver in Resident Evil 2 , the helicopter pilot featured in the post-credits scene of the Resident Evil 4: Separate Ways DLC and one of the FBI agents featured in the intro inside of the FBI office building in Resident Evil Requiem .",
+                                                 "similarity":  0.7552476671190473,
+                                                 "source_date":  "2026-04-22",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Nick_Apostolides",
+                                                 "source_title":  "Nick Apostolides",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  137,
+                                                 "text":  "Oswell E. Spencer, Earl Spencer â€” Voice:\n\nAdam D. Clark (English: RE5 )\n\nTime Winters (English: Resistance )\n\nJames Clyde (English: Resident Evil Requiem )\n\nIssei Futamata (Japanese: Resistance )\n\nRyÅ«sei Nakao (Japanese: Requiem )\n\nPhilippe Ariotti (French: Resistance , Requiem )\n\nCesare Rasini (Italian: Resistance )\n\nMario Scarabelli (Italian Requiem )\n\nRudolf Danielewicz (German: Resistance , Requiem )\n\nLuis MÃ¡s (Spanish: Resistance )\n\nAlfonso VallÃ©s (Spanish: Requiem )\n\nVictor Duroc (Latin American Spanish: Requiem )\n\nNi Kang (Mandarin Chinese: Resistance )\n\nXiaobing Wang (Mandarin Chinese: Requiem )\n\nCarlos Campanile (Brazilian Portuguese: Requiem )\n\nDenis Nekrasov (Russian: Requiem )",
+                                                 "similarity":  0.6489367291648197,
+                                                 "source_date":  "2026-08-16",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Oswell_E._Spencer,_Earl_Spencer",
+                                                 "source_title":  "Oswell E. Spencer, Earl Spencer",
+                                                 "section_title":  "Voice:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4738,
+                                                 "text":  "Alec Newman â€” Roles:\n\nAlec Newman is an Scottish actor, who provided the English voice and mo-cap for Researcher A in Resident Evil Requiem . His other notables roles are Paul Atreides in Sci-Fi\u0027s adaptation of Frank Herbert\u0027s Dune, and Adam Smasher in Cyberpunk 2077 and Cyberpunk: Edgerunners, and Cameron \"Caz\" McLeary in Still Wakes the Deep.",
+                                                 "similarity":  0.6306458335729948,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Alec_Newman",
+                                                 "source_title":  "Alec Newman",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_021",
+        "question":  "Which actor voiced Researcher A in Resident Evil Requiem?",
+        "reference_answer":  "Alec Newman voiced Researcher A.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Alec_Newman"
+                        ],
+        "baseline":  {
+                         "answer":  "Jill Harris",
+                         "generation_seconds":  2.227
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], Alec Newman provided the English voice and mo-cap for Researcher A in Resident Evil Requiem.",
+                    "generation_seconds":  2.38,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4738,
+                                                 "text":  "Alec Newman â€” Roles:\n\nAlec Newman is an Scottish actor, who provided the English voice and mo-cap for Researcher A in Resident Evil Requiem . His other notables roles are Paul Atreides in Sci-Fi\u0027s adaptation of Frank Herbert\u0027s Dune, and Adam Smasher in Cyberpunk 2077 and Cyberpunk: Edgerunners, and Cameron \"Caz\" McLeary in Still Wakes the Deep.",
+                                                 "similarity":  0.7348463535308838,
+                                                 "source_date":  "2026-03-11",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Alec_Newman",
+                                                 "source_title":  "Alec Newman",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  3887,
+                                                 "text":  "Nick Apostolides â€” Roles:\n\nHe is the fifth actor to voice the character, and the third recurring actor, taking up the mantle from previous voice actor, Matthew Mercer .\n\nApostolides also provided the motion capture performance for the unnamed truck driver in Resident Evil 2 , the helicopter pilot featured in the post-credits scene of the Resident Evil 4: Separate Ways DLC and one of the FBI agents featured in the intro inside of the FBI office building in Resident Evil Requiem .",
+                                                 "similarity":  0.6950518488883972,
+                                                 "source_date":  "2026-04-22",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Nick_Apostolides",
+                                                 "source_title":  "Nick Apostolides",
+                                                 "section_title":  "Roles:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  137,
+                                                 "text":  "Oswell E. Spencer, Earl Spencer â€” Voice:\n\nAdam D. Clark (English: RE5 )\n\nTime Winters (English: Resistance )\n\nJames Clyde (English: Resident Evil Requiem )\n\nIssei Futamata (Japanese: Resistance )\n\nRyÅ«sei Nakao (Japanese: Requiem )\n\nPhilippe Ariotti (French: Resistance , Requiem )\n\nCesare Rasini (Italian: Resistance )\n\nMario Scarabelli (Italian Requiem )\n\nRudolf Danielewicz (German: Resistance , Requiem )\n\nLuis MÃ¡s (Spanish: Resistance )\n\nAlfonso VallÃ©s (Spanish: Requiem )\n\nVictor Duroc (Latin American Spanish: Requiem )\n\nNi Kang (Mandarin Chinese: Resistance )\n\nXiaobing Wang (Mandarin Chinese: Requiem )\n\nCarlos Campanile (Brazilian Portuguese: Requiem )\n\nDenis Nekrasov (Russian: Requiem )",
+                                                 "similarity":  0.6729020080835229,
+                                                 "source_date":  "2026-08-16",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Oswell_E._Spencer,_Earl_Spencer",
+                                                 "source_title":  "Oswell E. Spencer, Earl Spencer",
+                                                 "section_title":  "Voice:",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_022",
+        "question":  "In Resident Evil Requiem, on what date did the Nurse at Rhodes Hill Chronic Care Center receive Leon Kennedy?",
+        "reference_answer":  "She received him on the night of October 8, 2026.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Nurse_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "October 13th.",
+                         "generation_seconds":  2.242
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], the Nurse at Rhodes Hill Chronic Care Center received Leon Kennedy on the night of October 8, 2026.",
+                    "generation_seconds":  2.418,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4480,
+                                                 "text":  "Nurse (Requiem) â€” Biography\n\nOne of the subordinates of Victor Gideon , she served as an assistant and worker in the reception area in Rhodes Hill Chronic Care Center , attending to visitors and patients upon their admission.\n\nOn the night of October 8, 2026, she received Leon Kennedy , who had been told that Dr. Gideon was expecting him. While accompanying Leon to one of the rooms for their meeting, she mentioned that she had only recently started working at the center and that they cared for several inpatients, some undergoing experimental treatments prescribed by Dr. Gideon.\n\nLater, after the beginning of the outbreak and the massacre at the center, she was brutally murdered in front of Leon by an infected doctor wielding a chainsaw.\n\nApparently, she was just another victim like the rest of Victor\u0027s subordinate workers and patients, sacrificed and unaware of what was really happening or what was to come at the center that night.",
+                                                 "similarity":  0.583820641040802,
+                                                 "source_date":  "2026-07-15",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Nurse_(Requiem)",
+                                                 "source_title":  "Nurse (Requiem)",
+                                                 "section_title":  "Biography",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  3485,
+                                                 "text":  "Leon Scott Kennedy â€” Raccoon City Syndrome (2026)\n\nKennedy had lost sight of Gideon but using Hughes\u0027s intel, Birkin directed him to Rhodes Hill Chronic Care Center , formerly sponsored by the Spencer Foundation before being bought by Gideon following Umbrella\u0027s collapse in 2004.\n\nArriving at the outskirts of Wrenwood, Kennedy arrived at the facility where he was welcomed by a newly recruited nurse , who told him Gideon had been expecting him. He let himself be guided to an examination room in the East Wing where he was told to wait. Unbeknownst to Kennedy, Gideon had been watching him through hidden surveillance, and ordered a Code 6 when the agent arrived. While waiting, Kennedy inspected an old photo of Gideon before alarms blared Code 6. The nurse shortly returned, asking him to be evacuated after claiming mass hysteria had affected all patients and staffs. However, shortly after, the nurse was killed by a chainsaw-wielding doctor, forcing Kennedy to battle the newly infected.",
+                                                 "similarity":  0.5376265324576786,
+                                                 "source_date":  "2026-08-02",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Leon_Scott_Kennedy",
+                                                 "source_title":  "Leon Scott Kennedy",
+                                                 "section_title":  "Raccoon City Syndrome (2026)",
+                                                 "chunk_index":  81
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4764,
+                                                 "text":  "Rhodes Hill Chronic Care Center Outbreak â€” Event\n\nFollowing Ashcroft\u0027s kidnapping from the Wrenwood Hotel, she was taken to East Wing Hospital Wards on Floor 2, and had her blood drawn with Gideon observing the process. Once a sufficient sample was drawn, Gideon had her blood tested and awaited the results throughout the night. Knowing the DSO would soon come for him, Gideon ordered Chairman Bennett to trigger Code 6 by 11:30PM, as he had accomplished his goal and no longer needed the institution. Soon after, Kennedy visited the center and was greeted by a nursing staff, with Gideon monitoring the agent through hidden cameras. Once Kennedy was escorted, Bennett triggered Code 6. However, unbeknownst to Bennett, much of the staff and patients throughout the building were all infected, though the means of transmission remained unknown. Kennedy was forced to defend himself against infected patients and staff.",
+                                                 "similarity":  0.5331692099571228,
+                                                 "source_date":  "2026-07-15",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Rhodes_Hill_Chronic_Care_Center_Outbreak",
+                                                 "source_title":  "Rhodes Hill Chronic Care Center Outbreak",
+                                                 "section_title":  "Event",
+                                                 "chunk_index":  7
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_023",
+        "question":  "In Resident Evil Requiem, which character is unable to interact with the Typewriter to use Ink Ribbons?",
+        "reference_answer":  "Leon cannot interact with the Typewriter.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Ink_Ribbon_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "Chris Redfield.",
+                         "generation_seconds":  2.304
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], it is Leon who is unable to interact with the Typewriter to use Ink Ribbons.",
+                    "generation_seconds":  2.416,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4849,
+                                                 "text":  "Ink Ribbon (Requiem) â€” Purpose\n\nIn Standard (Classic) and Insanity difficulty, manual save is disabled, forcing the players as Grace to search for Ink Ribbons or craft them to save their progress at a Typewriter . However, the players cannot interact with the Typewritter as Leon.",
+                                                 "similarity":  0.6729522943496704,
+                                                 "source_date":  "2026-08-02",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Ink_Ribbon_(Requiem)",
+                                                 "source_title":  "Ink Ribbon (Requiem)",
+                                                 "section_title":  "Purpose",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  436,
+                                                 "text":  "Ink Ribbon â€” Further Notes\n\nribbon without any ink left in it. In Outbreak File 2, Saving is unlimited but only on Easy. On Normal and above, the player can only use a specific Typewriter a limited number of times.\n\nResident Evil: Dead Aim and Resident Evil 4 \u0027s typewriters can be used an unlimited amount of times.\n\nResident Evil 5 ditched the typewriter altogether, and replaced it with a more \"modernized\" automatic checkpoint save system. When asked in an interview for Official Xbox Magazine, the game\u0027s producer commented that \"They simply couldn\u0027t find a way to fit them into the game.\".\n\nThe Ink Ribbon has been reimagined as \" Tapes \" in the Madhouse mode of Resident Evil 7: Biohazard to save the game on the voice recorders.\n\nThe Ink Ribbon in the 2019 remake of Resident Evil 2 only appears in Hardcore mode.\n\nThe Ink Ribbon in Resident Evil Requiem is only available during Grace\u0027s gameplay sections when choosing the Standard (Classic) mode difficulty, Empty Ink Ribbons are also in the game. Additionally, completing the game in under 4 hours with the good ending will unlock an Ink Ribbon with infinite uses.",
+                                                 "similarity":  0.6243924126391176,
+                                                 "source_date":  "2026-03-31",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Ink_Ribbon",
+                                                 "source_title":  "Ink Ribbon",
+                                                 "section_title":  "Further Notes",
+                                                 "chunk_index":  2
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  435,
+                                                 "text":  "Ink Ribbon â€” Further Notes\n\nBattle, the ink is green for everyone.\n\nIf Resident Evil 3: Nemesis is played on Easy mode you can get an unlimited amount and the ink is blue. In Hard mode the ink is white.\n\nIn Resident Evil CODE:Veronica , there is always an ink ribbon right of the first typewriter and three ink ribbons per saving point (typewriter).\n\nResident Evil Outbreak and Resident Evil Outbreak File #2 as well as Resident Evil 4 and Resident Evil: Dead Aim did not include any ink ribbons but still used a typewriter as the save point. In the first Outbreak, you must quit after you save and your save is deleted when you continue, making saving more similar to pausing as there you would have to start the entire level over if you died. Ironically in Resident Evil Outbreak, you can find a special item called Empty Ink Ribbon which will state that it is just an ink ribbon without any ink left in it. In Outbreak File 2, Saving is unlimited but only on Easy. On Normal and above, the player can only use a specific Typewriter a limited number of times.",
+                                                 "similarity":  0.5723303556442261,
+                                                 "source_date":  "2026-03-31",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Ink_Ribbon",
+                                                 "source_title":  "Ink Ribbon",
+                                                 "section_title":  "Further Notes",
+                                                 "chunk_index":  1
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_024",
+        "question":  "In Resident Evil Requiem, what happens to the Hatchet\u0027s durability if it is used to parry a Chainsaw attack?",
+        "reference_answer":  "The Hatchet\u0027s durability becomes fully depleted.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Chainsaw_(Requiem)"
+                        ],
+        "baseline":  {
+                         "answer":  "The Hatchet\u0027s durability is broken if it is used to parry a Chainsaw attack.",
+                         "generation_seconds":  2.38
+                     },
+        "rag":  {
+                    "answer":  "According to passage [1], if the player parries a Chainsaw attack with the Hatchet, the Hatchet\u0027s durability will be immediately depleted.",
+                    "generation_seconds":  2.395,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4642,
+                                                 "text":  "Hatchet (Requiem) â€” Gameplay\n\nSimilarly to Combat Knife in Resident Evil 4 (2023 game) . The Hatchet allows the players to perform brutal kills, albeit versatile against any enemies and weapons fired upon. Parries can be performed in two ways, the Regular Parry which Leon can damaged and pushed back enemies, and Perfect Parry which he dazed an enemy, before giving the player option to perform a finisher.\n\nThe Hatchet can perform light and heavy attacks, and counter all counterattacks by enemies. However, the Hatchet\u0027s durability will drop if used extensively, and require the players time to re-sharp with a metallic grindstone. Any melee-wielding enemies can be stunned for a few seconds if players parry, and projectile weapons shot by enemies could be deflected or destroyed if timed properly. When coming into contact with a chainsaw-wielding enemy, the Hatchet\u0027s durability will be immediately depleted if the player parries. If the player perfect parried Zombies , they would not mutated into Blister Heads . Perfect Parry is tricky to execute due to a limited window timeframe, whilst Regular Parry is more forgiving.",
+                                                 "similarity":  0.7227019667625427,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Hatchet_(Requiem)",
+                                                 "source_title":  "Hatchet (Requiem)",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4724,
+                                                 "text":  "Chainsaw (Requiem) â€” Gameplay\n\nThe weapon first make its appearance in Rhodes Hill Chronic Care Center, after the unnamed Nurse was brutally killed by the chainsaw-wielding doctor. From then, the Chainsaw is wielded wildly by the infected, and could even be thrown against Leon. Upon killing the wielding infected, the Chainsaw is to be taken with caution, as the weapon can spin wildly, damaging the player if approached wrongly. Leon can used the weapon to his advantage, and is recommended to use in close-quarter combat. If the Chainsaw is left alone near an enemy, they would attempt to pick up. The Hatchet \u0027s durability will be all depleted if parried against a Chainsaw attack.\n\nIf Leon is grappled, he would respond by ramming the chainsaw into the infected and kicks them, requiring the player to retake the weapon as the infected would try to dislodge Chainsaw, and use it against the player. The player should take precaution if the player embedded the chainsaw from behind an enemy, they would be damaged if the enemy turned around and attempted their attack. When the player leaves the Rehabilitation Ward, the Chainsaw would be lost as Leon sawed the door\u0027s iron latch.",
+                                                 "similarity":  0.6340323686599731,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Chainsaw_(Requiem)",
+                                                 "source_title":  "Chainsaw (Requiem)",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4643,
+                                                 "text":  "Hatchet (Requiem) â€” Gameplay\n\nif the player parries. If the player perfect parried Zombies , they would not mutated into Blister Heads . Perfect Parry is tricky to execute due to a limited window timeframe, whilst Regular Parry is more forgiving.\n\nThe Hatchet can also be used to pry open locked closets that Grace can not access.",
+                                                 "similarity":  0.6056214570999146,
+                                                 "source_date":  "2026-08-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Hatchet_(Requiem)",
+                                                 "source_title":  "Hatchet (Requiem)",
+                                                 "section_title":  "Gameplay",
+                                                 "chunk_index":  1
+                                             }
+                                         ]
+                }
+    },
+    {
+        "id":  "unseen_025",
+        "question":  "In Resident Evil Requiem, what report did Andrew Hughes compile that was later accessed by DSO agents Leon Kennedy and Sherry Birkin?",
+        "reference_answer":  "He compiled a report on Victor Gideon.",
+        "fact_date":  "2026-02-27",
+        "source_urls":  [
+                            "https://residentevil.fandom.com/wiki/Andrew_Hughes"
+                        ],
+        "baseline":  {
+                         "answer":  "The report compiled by Andrew Hughes was the \"Raccoon City Incident Report\".",
+                         "generation_seconds":  2.319
+                     },
+        "rag":  {
+                    "answer":  "Andrew Hughes compiled a report on Victor Gideon, which was later accessed by DSO agents Leon Scott Kennedy and Sherry Birkin. [3]",
+                    "generation_seconds":  2.465,
+                    "retrieved_chunks":  [
+                                             {
+                                                 "rank":  1,
+                                                 "chunk_id":  4628,
+                                                 "text":  "Grace\u0027s Report â€” Appears in:\n\nGrace\u0027s Report (translation:) is a file obtained in Resident Evil Requiem , by clearing the game and choosing to release Elpis. It is a collection of text and transcribed by Grace Ashcroft in her report to be submitted to her superior Nathan Dempsy , Midwestern Special Agent-in-Charge following the events of Requiem. The file can be viewed in the Bonus Menu.",
+                                                 "similarity":  0.6965368805251658,
+                                                 "source_date":  "2026-03-28",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Grace%27s_Report",
+                                                 "source_title":  "Grace\u0027s Report",
+                                                 "section_title":  "Appears in:",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  2,
+                                                 "chunk_id":  4104,
+                                                 "text":  "The Baker Incident Report â€” Introduction\n\nThe Baker Incident Report is a bonus item in Resident Evil Village included with its Trauma Pack DLC. It is a collection of text and pictures transcribed and collected by Zoe Baker for her own personal use in organizing the events that have transpired and the subsequent aftermath .",
+                                                 "similarity":  0.577065110206604,
+                                                 "source_date":  "2026-06-01",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/The_Baker_Incident_Report",
+                                                 "source_title":  "The Baker Incident Report",
+                                                 "section_title":  "Introduction",
+                                                 "chunk_index":  0
+                                             },
+                                             {
+                                                 "rank":  3,
+                                                 "chunk_id":  4743,
+                                                 "text":  "Andrew Hughes â€” Biography\n\nIn October 2026, Hughes was tasked with gathering information on former T-Virus researcher Dr. Victor Gideon , a person of interest amidst the Raccoon City Syndrome deaths nationwide. Hughes was unable to learn much outside of Gideon\u0027s biographical details, he found the researcher had evaded testifying as a witness during the Raccoon Trials and was now the director of the Rhodes Hill Chronic Care Center , a private sanatorium, and noted the institution was once sponsored by the Spencer Foundation .\n\nHughes organized his discoveries in a report which was later accessed by DSO Agents Leon Scott Kennedy and Sherry Birkin during the agency\u0027s investigations into cases of Raccoon City Syndrome .\n\nâ†‘ Resident Evil Requiem (2026), file: \" Report on Victor Gideon \".\n\nâ†‘ Resident Evil Reqiuem (2026).",
+                                                 "similarity":  0.5625800155055524,
+                                                 "source_date":  "2026-07-23",
+                                                 "source_url":  "https://residentevil.fandom.com/wiki/Andrew_Hughes",
+                                                 "source_title":  "Andrew Hughes",
+                                                 "section_title":  "Biography",
+                                                 "chunk_index":  0
+                                             }
+                                         ]
+                }
+    }
+]

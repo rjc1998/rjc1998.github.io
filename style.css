@@ -202,6 +202,18 @@ header {
 .music-visual span:nth-child(4n) { --bar-height: 46%; }
 .music-visual span:nth-child(5n) { --bar-height: 72%; }
 
+.rag-project { background: radial-gradient(circle at 78% 42%, rgba(209,46,54,.3), transparent 24%), linear-gradient(135deg, #090b0c 0%, #141819 55%, #25090b 100%); }
+.rag-visual { position:absolute; inset:17% 8% 12% 50%; display:grid; grid-template-columns:1fr 70px 1fr; align-items:center; color:#e7e2d8; font-family:"Inter",sans-serif; opacity:.82; }
+.rag-query { justify-self:end; padding:15px 20px; border:1px solid rgba(231,226,216,.65); font-size:11px; font-weight:700; letter-spacing:.16em; }
+.rag-flow { height:1px; background:#d12e36; box-shadow:0 0 12px rgba(209,46,54,.8); }
+.rag-database { position:relative; width:150px; height:120px; }
+.rag-database span { position:absolute; left:0; width:150px; height:42px; border:1px solid rgba(231,226,216,.7); border-radius:50%; background:rgba(10,12,13,.8); }
+.rag-database span:nth-child(1) { top:0; }
+.rag-database span:nth-child(2) { top:30px; }
+.rag-database span:nth-child(3) { top:60px; }
+.rag-passages { position:absolute; right:0; bottom:0; display:flex; gap:8px; }
+.rag-passages span { display:grid; place-items:center; width:66px; height:84px; border:1px solid rgba(209,46,54,.65); background:rgba(9,11,12,.75); color:#d12e36; font-size:11px; font-weight:700; }
+
 /* MOBILE */
 @media (max-width: 700px) {
   :root {
@@ -226,6 +238,8 @@ header {
     inset: 6% -10% 30% 28%;
     opacity: 0.45;
   }
+
+  .rag-visual { inset:12% -8% 34% 28%; opacity:.38; }
 }
 
 /* FOOTER */
