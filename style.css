@@ -64,6 +64,14 @@ header {
   scroll-snap-align: start;
 }
 
+/* Owner-controlled project publishing (configured on <main> in index.html). */
+main[data-show-bird="false"] [data-project="bird"],
+main[data-show-music="false"] [data-project="music"],
+main[data-show-recipe="false"] [data-project="recipe"],
+main[data-show-rag="false"] [data-project="rag"] {
+  display: none;
+}
+
 /* MEDIA (VIDEO + GIF) */
 .bg-media {
   position: absolute;
@@ -202,6 +210,73 @@ header {
 .music-visual span:nth-child(4n) { --bar-height: 46%; }
 .music-visual span:nth-child(5n) { --bar-height: 72%; }
 
+.recipe-project {
+  background:
+    linear-gradient(115deg, rgba(23,59,45,0.98) 0%, rgba(23,59,45,0.94) 44%, rgba(242,236,223,0.12) 44.1%, rgba(242,236,223,0.06) 100%),
+    #111710;
+}
+
+.recipe-visual {
+  position: absolute;
+  inset: 14% 7% 9% 50%;
+  z-index: 0;
+  color: #111710;
+  transform: rotate(2deg);
+}
+
+.recipe-index-card {
+  position: absolute;
+  inset: 4% 3% 6% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 68px);
+  background: #f2ecdf;
+  border: 1px solid #111710;
+  box-shadow: 16px 16px 0 #d94b2b;
+}
+
+.recipe-kicker,
+.recipe-source,
+.recipe-tag {
+  font-size: clamp(8px, 0.8vw, 12px);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.recipe-index-card strong {
+  margin: 24px 0 6px;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(42px, 5.8vw, 88px);
+  font-weight: 400;
+  line-height: 0.88;
+}
+
+.recipe-hangul {
+  color: #d94b2b;
+  font-size: clamp(16px, 1.8vw, 28px);
+  font-weight: 700;
+}
+
+.recipe-rule {
+  width: 100%;
+  height: 2px;
+  margin: 28px 0 14px;
+  background: #111710;
+}
+
+.recipe-tag {
+  position: absolute;
+  padding: 12px 17px;
+  color: #173b2d;
+  background: #d6df51;
+  border: 1px solid #111710;
+  transform: rotate(-5deg);
+}
+
+.recipe-tag-one { top: 0; right: -2%; }
+.recipe-tag-two { right: 12%; bottom: 0; transform: rotate(4deg); }
+
 .rag-project { background: radial-gradient(circle at 78% 42%, rgba(209,46,54,.3), transparent 24%), linear-gradient(135deg, #090b0c 0%, #141819 55%, #25090b 100%); }
 .rag-visual { position:absolute; inset:17% 8% 12% 50%; display:grid; grid-template-columns:1fr 70px 1fr; align-items:center; color:#e7e2d8; font-family:"Inter",sans-serif; opacity:.82; }
 .rag-query { justify-self:end; padding:15px 20px; border:1px solid rgba(231,226,216,.65); font-size:11px; font-weight:700; letter-spacing:.16em; }
@@ -237,6 +312,15 @@ header {
   .music-visual {
     inset: 6% -10% 30% 28%;
     opacity: 0.45;
+  }
+
+  .recipe-visual {
+    inset: 10% -10% 38% 30%;
+    opacity: 0.42;
+  }
+
+  .recipe-index-card {
+    box-shadow: 9px 9px 0 #d94b2b;
   }
 
   .rag-visual { inset:12% -8% 34% 28%; opacity:.38; }

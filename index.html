@@ -20,10 +20,20 @@
   </header>
 
   <!-- PROJECTS -->
-  <main>
+  <!--
+    OWNER-ONLY PUBLISH SETTINGS
+    Change a value to "false" to remove that project from the portfolio homepage.
+    GitHub Pages is a static host, so this does not restrict access to a demo's direct URL.
+  -->
+  <main
+    data-show-bird="true"
+    data-show-music="true"
+    data-show-recipe="true"
+    data-show-rag="true"
+  >
 
     <!-- INTERACTIVE DEMO: BIRD CLASSIFICATION -->
-    <section class="project demo-project">
+    <section class="project demo-project" data-project="bird">
       <img class="bg-media" src="Bird%20Classification%20demo/site/assets/queries/sample-01.webp" alt="A bird photograph from the classification demo">
       <div class="overlay demo-overlay"></div>
       <div class="caption">
@@ -37,7 +47,7 @@
     </section>
 
     <!-- INTERACTIVE DEMO: MUSIC CLASSIFICATION -->
-    <section class="project demo-project music-project">
+    <section class="project demo-project music-project" data-project="music">
       <div class="music-visual" aria-hidden="true">
         <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
@@ -52,8 +62,32 @@
       </div>
     </section>
 
+    <!-- INTERACTIVE DEMO: GROUNDED KOREAN RECIPES -->
+    <section class="project demo-project recipe-project" data-project="recipe">
+      <div class="recipe-visual" aria-hidden="true">
+        <div class="recipe-index-card">
+          <span class="recipe-kicker">HANSIK INDEX</span>
+          <strong>KIMCHI<br>FRIED RICE</strong>
+          <span class="recipe-hangul">김치볶음밥</span>
+          <div class="recipe-rule"></div>
+          <span class="recipe-source">VERIFIED RECIPE · GROUNDED OUTPUT</span>
+        </div>
+        <div class="recipe-tag recipe-tag-one">RETRIEVE</div>
+        <div class="recipe-tag recipe-tag-two">VERIFY</div>
+      </div>
+      <div class="overlay demo-overlay"></div>
+      <div class="caption">
+        <p class="project-label">INTERACTIVE NLP &amp; RETRIEVAL DEMO</p>
+        <h1>GROUNDING<br>KOREAN RECIPES</h1>
+        <div class="description-wrap">
+          <p>Search a verified Korean recipe collection, trace every result to its source, and compare grounded retrieval with generated model output.</p>
+        </div>
+        <a class="demo-link" href="korean-recipe-generator-demo/index.html">LAUNCH HANSIK INDEX <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </section>
+
     <!-- INTERACTIVE DEMO: RETRIEVAL-AUGMENTED GENERATION -->
-    <section class="project demo-project rag-project">
+    <section class="project demo-project rag-project" data-project="rag">
       <div class="rag-visual" aria-hidden="true">
         <div class="rag-query">QUESTION</div>
         <div class="rag-flow"></div>
