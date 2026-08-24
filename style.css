@@ -237,32 +237,53 @@ main[data-show-rag="false"] [data-project="rag"] {
 }
 
 .recipe-kicker,
-.recipe-source,
 .recipe-tag {
   font-size: clamp(8px, 0.8vw, 12px);
   font-weight: 700;
   letter-spacing: 0.14em;
 }
 
-.recipe-index-card strong {
-  margin: 24px 0 6px;
-  font-family: "Anton", sans-serif;
-  font-size: clamp(42px, 5.8vw, 88px);
-  font-weight: 400;
-  line-height: 0.88;
+.recipe-name-section {
+  margin-top: clamp(20px, 3vw, 42px);
 }
 
-.recipe-hangul {
+.recipe-template-section.recipe-name-section strong {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(36px, 5vw, 78px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.recipe-template-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.recipe-template-section strong {
+  font-size: clamp(10px, 1.1vw, 16px);
+  letter-spacing: 0.08em;
+}
+
+.recipe-template-section span {
   color: #d94b2b;
-  font-size: clamp(16px, 1.8vw, 28px);
+  font-size: clamp(18px, 2vw, 30px);
   font-weight: 700;
+  line-height: 0.65;
+  letter-spacing: 0.12em;
 }
 
 .recipe-rule {
   width: 100%;
   height: 2px;
-  margin: 28px 0 14px;
+  margin: clamp(18px, 2.5vw, 32px) 0;
   background: #111710;
+}
+
+.recipe-template-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 48px);
 }
 
 .recipe-tag {
