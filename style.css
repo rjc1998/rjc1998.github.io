@@ -282,7 +282,7 @@ main[data-show-rag="false"] [data-project="rag"] {
 
 .recipe-template-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: clamp(20px, 3vw, 48px);
 }
 
