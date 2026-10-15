@@ -18,7 +18,7 @@ Open <http://localhost:8765/Drone%20Detection%20demo/index.html>. A `file://` UR
 - Best mAP50: YOLOv8n P2/P3/P4/P5 without CBAM (81.4271% / 43.8028%).
 - Best mAP50–95: YOLOv8n P2/P5 with CBAM (80.9499% / 44.4988%).
 - Only the selected clip is downloaded; it is fully buffered before playback so seeking also works on simple local servers. Assets total approximately 92 MiB. One video decoder drives both full-frame canvases. Model switching preserves clip and time.
-- Play/pause, frame stepping, timeline seeking, slow playback, box toggles and crop guides.
+- Play/pause, frame stepping, timeline seeking, slow playback and box toggles.
 - Identical annotation-centered 128×128 native-pixel crops in both detail panels. Crops are losslessly stored from the original JPEGs in WebP sheets, avoiding overview-video compression. They are not new model inputs and do not constitute tracking.
 - Orange model boxes use the fixed 0.25 confidence threshold. Teal boxes are the saved dataset annotations; they have no confidence scores.
 

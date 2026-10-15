@@ -53,12 +53,6 @@
     }
     ctx.restore();
   }
-  function guide(ctx, crop) {
-    const factor = ctx.canvas.width / data.nativeWidth;
-    ctx.save(); ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.setLineDash([8, 6]);
-    ctx.strokeRect(crop[0]*factor, crop[1]*factor, crop[2]*factor, crop[3]*factor);
-    ctx.restore();
-  }
   function render(index) {
     if (!ready || video.readyState < 2) return;
     frameIndex = Math.max(0, Math.min(clip.frameCount - 1, index));
@@ -73,7 +67,6 @@
     for (let i = 0; i < 2; i++) {
       const ctx = contexts[i];
       ctx.drawImage(video, 0, 0, ctx.canvas.width, ctx.canvas.height);
-      if ($('crop-region').checked) guide(ctx, frame.crop);
       if ($('boxes').checked) boxes(ctx, i === 0 ? predictions : frame.gt, i === 0 ? colors.prediction : colors.truth, ctx.canvas.width / data.nativeWidth, [0, 0], false);
       const detail = contexts[i + 2];
       detail.imageSmoothingEnabled = false;
@@ -175,7 +168,7 @@
   $('next').addEventListener('click', () => seek(frameIndex + 1));
   $('timeline').addEventListener('input', event => seek(Number(event.target.value)));
   $('speed').addEventListener('change', event => { video.playbackRate = Number(event.target.value); });
-  for (const id of ['boxes', 'crop-region']) $(id).addEventListener('change', () => render(frameIndex));
+  $('boxes').addEventListener('change', () => render(frameIndex));
   video.addEventListener('seeked', () => { if (ready) render(Math.floor(video.currentTime * clip.fps)); });
   video.addEventListener('play', updatePlay);
   video.addEventListener('pause', updatePlay);

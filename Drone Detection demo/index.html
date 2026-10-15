@@ -13,11 +13,8 @@
   <header class="hero">
     <div class="hero-content">
       <a class="portfolio-link" href="../index.html">← Ryan Chang portfolio</a>
-      <p class="eyebrow">A study in small-object detection</p>
       <h1>Finding a drone<br>in the <em>distance.</em></h1>
       <p class="lede">A drone can occupy only a handful of pixels. Explore how two trained models find it, then look closer at the boxes they predict.</p>
-      <a class="text-link" href="#demo">Explore the flight samples <span aria-hidden="true">↓</span></a>
-      <div class="hero-facts"><span>RGB + motion</span><span>Two trained models</span><span>ARD-MAV</span></div>
     </div>
     <div class="hero-orbit" aria-hidden="true"></div>
   </header>
@@ -28,8 +25,7 @@
         <p>Choose a model and a flight sample. Predictions and dataset annotations share one timeline, so every comparison shows exactly the same frame.</p>
       </div>
       <div class="model-tabs" id="model-tabs" role="group" aria-label="Choose a detection model"></div>
-      <p class="model-note">Leaders among the completed runs reviewed for this demo. Scores below cover the full 28,100-frame ARD-MAV test evaluation; the clips are selected examples.</p>
-      <div class="sample-heading"><h3>Choose a flight sample</h3><span>Four selected sequences</span></div>
+      <div class="sample-heading"><h3>Choose a flight sample</h3></div>
       <div class="sample-strip" id="clip-tabs" role="group" aria-label="Choose a flight sample"></div>
       <div class="viewer" id="viewer" aria-busy="true">
         <div class="viewer-heading"><div><p class="eyebrow" id="clip-id">Loading flight samples</p><h3 id="clip-title">Preparing the comparison…</h3></div><p id="clip-description"></p></div>
@@ -60,12 +56,12 @@
           <div class="time-readout"><span id="clock">0.00 / 0.00 s</span><span id="frame-number">Frame —</span></div>
           <label class="timeline-label" for="timeline">Playback position</label>
           <input id="timeline" type="range" min="0" max="239" value="0" step="1" disabled aria-label="Playback frame">
-          <div class="options"><label>Speed <select id="speed" disabled><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select></label><label><input id="boxes" type="checkbox" checked> Bounding boxes</label><label><input id="crop-region" type="checkbox" checked> Crop guide</label></div>
+          <div class="options"><label>Speed <select id="speed" disabled><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select></label><label><input id="boxes" type="checkbox" checked> Bounding boxes</label></div>
         </div>
-        <p class="view-note">Orange: predictions at confidence ≥ 0.25. Teal: dataset annotations. Dashed outlines locate the enlarged region. Crops follow the annotation for viewing only; they are not detector inputs. Misses and extra predictions remain visible.</p>
+        <p class="view-note">Orange: predictions at confidence ≥ 0.25. Teal: dataset annotations. Crops follow the annotation for viewing only; they are not detector inputs. Misses and extra predictions remain visible.</p>
         <p class="frame-status" id="frame-status" role="status" aria-live="off"></p>
       </div>
-      <p class="sample-disclosure">Selected successful sequences from an already evaluated test split. These examples illustrate behavior, not typical performance or live inference speed. Playback follows the source video's frame rate.</p>
+      <p class="sample-disclosure">Flight samples are videos from the dataset that each model has not seen during training.</p>
     </section>
     <section class="method" aria-labelledby="method-heading">
       <div><p class="eyebrow">Reading the comparison</p><h2 id="method-heading">Finding it.<br><em>Fitting it.</em></h2><p class="method-intro">A detection needs both the right location and a useful bounding box. Tight overlap becomes harder when a drone is only a few pixels wide.</p></div>
