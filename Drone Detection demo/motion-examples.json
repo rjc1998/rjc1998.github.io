@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "maskFolder": "images2_blur7_valid_gt5",
+  "sampledFrames": 80,
+  "selection": "Every twelfth frame of the four existing clips; illustrative high target foreground and low surrounding foreground. No model changes or new inference.",
+  "nativeSize": [
+    1920,
+    1080
+  ],
+  "croppedSize": [
+    128,
+    128
+  ],
+  "sourcePixelsPreserved": true,
+  "examples": [
+    {
+      "video": "phantom09",
+      "frame": 338,
+      "stem": "phantom09_0338",
+      "crop": [
+        596,
+        104,
+        128,
+        128
+      ],
+      "gt": [
+        [
+          648.0,
+          159.0,
+          671.0,
+          177.0
+        ]
+      ],
+      "coverage": 0.9565217391304348,
+      "background": 0.036865234375,
+      "score": 0.8827912703804348,
+      "id": "example-1",
+      "paths": {
+        "rgb": "assets/motion-examples/phantom09_0338/rgb.webp",
+        "mask": "assets/motion-examples/phantom09_0338/mask.png",
+        "rgbCrop": "assets/motion-examples/phantom09_0338/rgb-crop.webp",
+        "maskCrop": "assets/motion-examples/phantom09_0338/mask-crop.png"
+      },
+      "sourceHashes": {
+        "rgb": "1211cf89a6ba398f3e150be87db53330483920bc4e86dc81069185f6cb9842a4",
+        "mask": "730f7a6ae60e40ccb510e369c88c29d0e2cbe84ecc0c577df003c37c62e311fc"
+      }
+    },
+    {
+      "video": "phantom47",
+      "frame": 2090,
+      "stem": "phantom47_2090",
+      "crop": [
+        1118,
+        210,
+        128,
+        128
+      ],
+      "gt": [
+        [
+          1165.0,
+          265.0,
+          1198.9999,
+          284.0
+        ]
+      ],
+      "coverage": 0.8498452012383901,
+      "background": 0.04583740234375,
+      "score": 0.7581703965508901,
+      "id": "example-2",
+      "paths": {
+        "rgb": "assets/motion-examples/phantom47_2090/rgb.webp",
+        "mask": "assets/motion-examples/phantom47_2090/mask.png",
+        "rgbCrop": "assets/motion-examples/phantom47_2090/rgb-crop.webp",
+        "maskCrop": "assets/motion-examples/phantom47_2090/mask-crop.png"
+      },
+      "sourceHashes": {
+        "rgb": "059f18328dc7fa338429832aa25065f45192add79e084689a3dfe59eb5f2202d",
+        "mask": "d7c111c1be3743a7761919c3b06fac1138d9d3141abb4b5f56b57158674af062"
+      }
+    },
+    {
+      "video": "phantom46",
+      "frame": 1696,
+      "stem": "phantom46_1696",
+      "crop": [
+        976,
+        491,
+        128,
+        128
+      ],
+      "gt": [
+        [
+          1037.0001,
+          552.0001,
+          1042.0,
+          557.0
+        ]
+      ],
+      "coverage": 1.0,
+      "background": 0.00396728515625,
+      "score": 0.9920654296875,
+      "id": "example-3",
+      "paths": {
+        "rgb": "assets/motion-examples/phantom46_1696/rgb.webp",
+        "mask": "assets/motion-examples/phantom46_1696/mask.png",
+        "rgbCrop": "assets/motion-examples/phantom46_1696/rgb-crop.webp",
+        "maskCrop": "assets/motion-examples/phantom46_1696/mask-crop.png"
+      },
+      "sourceHashes": {
+        "rgb": "4a5b2247ac06349b5fa4e52b0e441b32de288505385e68a9f909674760746be6",
+        "mask": "0161a81ccc5f5890d3184e96aaee9a781160c0cb3c67dfaf8bce9e58668eaccb"
+      }
+    }
+  ]
+}

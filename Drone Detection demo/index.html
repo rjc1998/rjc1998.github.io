@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explore tiny-drone detection with two trained RGB-and-motion models, synchronized ground truth, and native-pixel close-ups.">
   <title>Finding a drone in the distance · Ryan Chang</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=1f415d48d7c9">
+  <script src="app.js?v=fc56ad295b7f" defer></script>
+  <script src="motion-gallery.js?v=df68bce986c8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#demo">Skip to the interactive demo</a>
@@ -20,10 +21,71 @@
   </header>
   <main>
     <section class="demo-section" id="demo" aria-labelledby="demo-heading">
-      <div class="section-heading">
-        <div><p class="eyebrow">The detection study</p><h2 id="demo-heading">Same scene.<br>Two ways to lead.</h2></div>
-        <p>Choose a model and a flight sample. Predictions and dataset annotations share one timeline, so every comparison shows exactly the same frame.</p>
+      <div class="research-intro">
+        <h2 id="demo-heading">Investigating fusion of appearance and motion cues</h2>
+        <div class="research-copy">
+          <p>Appearance captures what a drone looks like; motion helps reveal where something is moving. From a sequence of video frames, we compensate for camera movement, compare nearby frames, and threshold the remaining changes to produce a motion mask. These masks highlight possible moving regions and are fused with RGB appearance features in the model backbone.</p>
+          <p>We tested different ways and locations to combine these cues: combining RGB and motion at the input, or processing them separately before merging features at full resolution or after early backbone stages, P1 and P2. We also explored attention at the fusion point to investigate how the model combines the two feature streams.</p>
+        </div>
       </div>
+      <section class="motion-gallery" id="motion-gallery" aria-labelledby="motion-heading">
+        <div class="motion-heading"><h3 id="motion-heading">From appearance to motion</h3><p>Compare the RGB frame with its motion mask, then inspect the same region up close.</p></div>
+        <div class="motion-choices" role="group" aria-label="Choose a motion-mask example">
+          <button type="button" data-motion-example="example-1" aria-pressed="true" aria-controls="motion-example-1">Over the field</button>
+          <button type="button" data-motion-example="example-2" aria-pressed="false" aria-controls="motion-example-2">Against the sky</button>
+          <button type="button" data-motion-example="example-3" aria-pressed="false" aria-controls="motion-example-3">A tiny distant target</button>
+        </div>
+        <div class="motion-panel" id="motion-example-1" data-motion-panel="example-1">
+          <p class="motion-frame">phantom09 · frame 338 · matching 128 × 128 px crops</p>
+          <div class="motion-pair">
+            <div class="motion-column">
+              <figure><figcaption>RGB appearance · full frame</figcaption><a href="assets/motion-examples/phantom09_0338/rgb.webp" target="_blank" rel="noopener" aria-label="Open full-resolution rgb appearance example"><img class="motion-full" src="assets/motion-examples/phantom09_0338/rgb.webp" width="1920" height="1080" loading="lazy" alt="RGB appearance for phantom09, frame 338"></a></figure>
+              <figure class="motion-detail"><figcaption>RGB appearance · enlarged crop</figcaption><img src="assets/motion-examples/phantom09_0338/rgb-crop.webp" width="128" height="128" loading="lazy" alt="Enlarged matching region of RGB appearance for phantom09, frame 338"></figure>
+            </div>
+            <div class="motion-column">
+              <figure><figcaption>Motion mask · full frame</figcaption><a href="assets/motion-examples/phantom09_0338/mask.png" target="_blank" rel="noopener" aria-label="Open full-resolution motion mask example"><img class="motion-full" src="assets/motion-examples/phantom09_0338/mask.png" width="1920" height="1080" loading="lazy" alt="Motion mask for phantom09, frame 338"></a></figure>
+              <figure class="motion-detail"><figcaption>Motion mask · enlarged crop</figcaption><img src="assets/motion-examples/phantom09_0338/mask-crop.png" width="128" height="128" loading="lazy" alt="Enlarged matching region of Motion mask for phantom09, frame 338"></figure>
+            </div>
+          </div>
+        </div>
+        <div class="motion-panel" id="motion-example-2" data-motion-panel="example-2" hidden>
+          <p class="motion-frame">phantom47 · frame 2090 · matching 128 × 128 px crops</p>
+          <div class="motion-pair">
+            <div class="motion-column">
+              <figure><figcaption>RGB appearance · full frame</figcaption><a href="assets/motion-examples/phantom47_2090/rgb.webp" target="_blank" rel="noopener" aria-label="Open full-resolution rgb appearance example"><img class="motion-full" src="assets/motion-examples/phantom47_2090/rgb.webp" width="1920" height="1080" loading="lazy" alt="RGB appearance for phantom47, frame 2090"></a></figure>
+              <figure class="motion-detail"><figcaption>RGB appearance · enlarged crop</figcaption><img src="assets/motion-examples/phantom47_2090/rgb-crop.webp" width="128" height="128" loading="lazy" alt="Enlarged matching region of RGB appearance for phantom47, frame 2090"></figure>
+            </div>
+            <div class="motion-column">
+              <figure><figcaption>Motion mask · full frame</figcaption><a href="assets/motion-examples/phantom47_2090/mask.png" target="_blank" rel="noopener" aria-label="Open full-resolution motion mask example"><img class="motion-full" src="assets/motion-examples/phantom47_2090/mask.png" width="1920" height="1080" loading="lazy" alt="Motion mask for phantom47, frame 2090"></a></figure>
+              <figure class="motion-detail"><figcaption>Motion mask · enlarged crop</figcaption><img src="assets/motion-examples/phantom47_2090/mask-crop.png" width="128" height="128" loading="lazy" alt="Enlarged matching region of Motion mask for phantom47, frame 2090"></figure>
+            </div>
+          </div>
+        </div>
+        <div class="motion-panel" id="motion-example-3" data-motion-panel="example-3" hidden>
+          <p class="motion-frame">phantom46 · frame 1696 · matching 128 × 128 px crops</p>
+          <div class="motion-pair">
+            <div class="motion-column">
+              <figure><figcaption>RGB appearance · full frame</figcaption><a href="assets/motion-examples/phantom46_1696/rgb.webp" target="_blank" rel="noopener" aria-label="Open full-resolution rgb appearance example"><img class="motion-full" src="assets/motion-examples/phantom46_1696/rgb.webp" width="1920" height="1080" loading="lazy" alt="RGB appearance for phantom46, frame 1696"></a></figure>
+              <figure class="motion-detail"><figcaption>RGB appearance · enlarged crop</figcaption><img src="assets/motion-examples/phantom46_1696/rgb-crop.webp" width="128" height="128" loading="lazy" alt="Enlarged matching region of RGB appearance for phantom46, frame 1696"></figure>
+            </div>
+            <div class="motion-column">
+              <figure><figcaption>Motion mask · full frame</figcaption><a href="assets/motion-examples/phantom46_1696/mask.png" target="_blank" rel="noopener" aria-label="Open full-resolution motion mask example"><img class="motion-full" src="assets/motion-examples/phantom46_1696/mask.png" width="1920" height="1080" loading="lazy" alt="Motion mask for phantom46, frame 1696"></a></figure>
+              <figure class="motion-detail"><figcaption>Motion mask · enlarged crop</figcaption><img src="assets/motion-examples/phantom46_1696/mask-crop.png" width="128" height="128" loading="lazy" alt="Enlarged matching region of Motion mask for phantom46, frame 1696"></figure>
+            </div>
+          </div>
+        </div>
+        <p class="motion-explanation">White regions mark changes that remain after alignment; black regions fall below the motion threshold. These examples show strong responses around the drone, but a motion mask can also contain background changes and is not an object label. Both crops use exactly the same coordinates; the saved masks are shown without enhancement.</p>
+        <details class="motion-details"><summary>How these motion masks are generated</summary><div class="details-body"><p>For a reference frame at time t, frames t−2 and t+2 are aligned to it to reduce camera-induced motion. The pipeline applies 7 × 7 Gaussian smoothing and grayscale conversion, averages valid absolute differences, and marks values greater than 5 as foreground. These are the existing binary masks used by the demo models, not masks recomputed for this page.</p><p><a href="motion-examples.json">Example frame IDs, crop coordinates and source hashes</a></p></div></details>
+      </section>
+      <section class="metric-intro" aria-labelledby="metric-heading">
+        <h3 id="metric-heading">Understanding the model scores</h3>
+        <p class="metric-definition">Mean average precision (mAP) summarizes precision and recall across confidence thresholds. Intersection over union (IoU) measures the overlap between a predicted box and its ground-truth box.</p>
+        <div class="metric-pair">
+          <article><h4>mAP50 <span>Overall detection</span></h4><p>Counts a detection as a match when box overlap reaches IoU 0.50. Its more forgiving overlap requirement makes it useful for assessing how well a model finds objects overall, without demanding a very tight box.</p></article>
+          <article><h4>mAP50–95 <span>More precise localization</span></h4><p>Averages AP at ten IoU thresholds, from 0.50 to 0.95 in steps of 0.05. The stricter thresholds make it more sensitive to how accurately the model positions and sizes each box.</p></article>
+        </div>
+        <p class="metric-footnote">Both scores account for missed objects and false detections; mAP50–95 is not a localization-only metric. Each model below displays both scores.</p>
+      </section>
       <div class="model-tabs" id="model-tabs" role="group" aria-label="Choose a detection model"></div>
       <div class="sample-heading"><h3>Choose a flight sample</h3></div>
       <div class="sample-strip" id="clip-tabs" role="group" aria-label="Choose a flight sample"></div>
@@ -63,18 +125,10 @@
       </div>
       <p class="sample-disclosure">Flight samples are videos from the dataset that each model has not seen during training.</p>
     </section>
-    <section class="method" aria-labelledby="method-heading">
-      <div><p class="eyebrow">Reading the comparison</p><h2 id="method-heading">Finding it.<br><em>Fitting it.</em></h2><p class="method-intro">A detection needs both the right location and a useful bounding box. Tight overlap becomes harder when a drone is only a few pixels wide.</p></div>
-      <div class="method-copy">
-        <article><span class="number">01</span><h3>mAP50</h3><p>Measures detection performance at an intersection-over-union threshold of 0.50. It accepts a looser fit between a predicted box and the annotation.</p></article>
-        <article><span class="number">02</span><h3>mAP50–95</h3><p>Averages detection performance across ten overlap thresholds, from 0.50 to 0.95. It rewards more precise boxes, while still accounting for missed and extra detections.</p></article>
-        <p class="method-note">“Best” describes these observed checkpoint scores, not a proven advantage across repeated training runs. The two models differ in both detection heads and attention, so this demo does not isolate the effect of either change.</p>
-      </div>
-    </section>
     <section class="provenance" aria-labelledby="provenance-heading">
       <p class="eyebrow">Behind the frames</p><h2 id="provenance-heading">A closer look at the experiment.</h2>
       <div class="provenance-grid"><p>Both YOLOv8n variants combine RGB imagery with a precomputed motion channel after P1. The four-head model uses P2/P3/P4/P5; the other uses P2/P5 with CBAM attention.</p><p>All boxes come from saved model outputs. Full-frame views are compressed for playback; the detail panels preserve lossless crops of the original dataset JPEGs. Enlarging a crop adds no new image detail.</p></div>
-      <details><summary>Evaluation, selection &amp; source details</summary><div class="details-body"><p>ARD-MAV, one drone class. Evaluation: FP32, input size 960, NMS IoU 0.50, maximum 300 detections per image. Aggregate AP uses a confidence floor of 0.001; the visual overlays use the fixed 0.25 threshold. AP and mAP are identical for this one-class task.</p><p>The evaluation contains 28,100 drone-present frames from 15 videos. It does not measure false alarms on drone-absent videos. Checkpoints were selected during training using validation mAP50–95; demo model choices use previously examined test scores. Newer pending experiments are not included.</p><p>Each example contains 240 consecutive frames present in both prediction exports. Windows favor successful detection by both models; the tiny-target sample also favors annotations below 8 native pixels in √(width × height). No predictions are interpolated or rerun on the crops.</p><p>Dataset attribution: ARD-MAV, introduced with <cite>Global-Local MAV Detection under Challenging Conditions based on Appearance and Motion</cite>. See the <a href="https://github.com/WindyLab/Global-Local-MAV-Detection" target="_blank" rel="noreferrer">dataset source</a>.</p><p><a href="demo-data.json">Frame annotations &amp; model provenance</a> · <a href="build-report.json">Asset verification record</a></p></div></details>
+      <details><summary>Evaluation, selection &amp; source details</summary><div class="details-body"><p>“Best” describes these observed checkpoint scores, not a proven advantage across repeated training runs. The two models differ in both detection heads and attention, so this demo does not isolate the effect of either change.</p><p>ARD-MAV, one drone class. Evaluation: FP32, input size 960, NMS IoU 0.50, maximum 300 detections per image. Aggregate AP uses a confidence floor of 0.001; the visual overlays use the fixed 0.25 threshold. AP and mAP are identical for this one-class task.</p><p>The evaluation contains 28,100 drone-present frames from 15 videos. It does not measure false alarms on drone-absent videos. Checkpoints were selected during training using validation mAP50–95; demo model choices use previously examined test scores. Newer pending experiments are not included.</p><p>Each example contains 240 consecutive frames present in both prediction exports. Windows favor successful detection by both models; the tiny-target sample also favors annotations below 8 native pixels in √(width × height). No predictions are interpolated or rerun on the crops.</p><p>Dataset attribution: ARD-MAV, introduced with <cite>Global-Local MAV Detection under Challenging Conditions based on Appearance and Motion</cite>. See the <a href="https://github.com/WindyLab/Global-Local-MAV-Detection" target="_blank" rel="noreferrer">dataset source</a>.</p><p><a href="demo-data.json">Frame annotations &amp; model provenance</a> · <a href="build-report.json">Asset verification record</a></p></div></details>
     </section>
   </main>
   <footer><a href="../index.html">← Back to portfolio</a><span>Drone detection · ARD-MAV · Selected examples</span></footer>

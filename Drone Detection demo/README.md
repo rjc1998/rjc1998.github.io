@@ -43,3 +43,15 @@ The generator verifies consecutive frame IDs, matching GT/label hashes between m
 ARD-MAV: Hanqing Guo, Ye Zheng, Yin Zhang, Zhi Gao and Shiyu Zhao, *Global-Local MAV Detection under Challenging Conditions based on Appearance and Motion* (2024). Official source: <https://github.com/WindyLab/Global-Local-MAV-Detection> (checked 2026-10-14).
 
 Prepared for local review only; no commit, push or deployment was performed. The official repository links the dataset and citation, but an explicit footage-redistribution license was not established in this task. Confirm permission for public excerpts before publishing. Attribution is not itself a redistribution license.
+
+## Updating browser assets
+
+The HTML references `app.js` with a content-hash query string so an updated page does not reuse an older cached script. After editing `app.js`, update that query value to the first 12 characters of its SHA-256 hash and publish the HTML and script together.
+
+## Appearance and motion examples
+
+The research introduction now includes three selectable, matched RGB/motion-mask examples with full-resolution views and identical 128×128 crops. `motion-examples.json` records frame IDs, exact coordinates, source hashes and pixel-preservation checks. `generate_motion_examples.py` sampled 80 existing masks from the four already selected video windows and exported 12 lossless images; no masks or model predictions were recomputed. The examples show high target response with relatively little surrounding foreground, rather than average mask quality.
+
+Mask processing was checked against `dataset_util/FD5_mask_valid.py`, `dataset_util/generate_mask5_valid.py`, and the dataset mask generation report: grayscale, Gaussian blur7, alignment, t−2/t/t+2 valid-neighbor absolute differences and a strict >5 threshold. Fusion descriptions were checked against the saved YOLO11/YOLO26 fusion comparison; metrics are explained above model selection.
+
+The standalone `motion-gallery.js` changes only the example panel. Update the HTML content-hash query strings whenever changing this script or `styles.css`, as well as `app.js`.

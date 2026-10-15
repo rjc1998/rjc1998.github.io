@@ -1,13 +1,37 @@
 {
   "status": "PASS",
-  "browser": "Installed Google Chrome on Windows, headless; desktop and mobile viewport emulation",
+  "browser": "Installed Google Chrome on Windows; desktop and mobile viewport emulation",
+  "scope": "Research introduction, motion-mask gallery, metric placement and existing playback",
   "viewports": [
     {
       "size": [
         1440,
         1100
       ],
+      "passed": 70,
       "checks": [
+        "updated research heading",
+        "removed study label",
+        "metrics precede model choices",
+        "three motion examples",
+        "motion selection example-1",
+        "one visible motion example example-1",
+        "motion image loaded example-1 RGB appearance for phantom09, frame 338",
+        "motion image loaded example-1 Enlarged matching region of RGB appearance for phantom09, frame 338",
+        "motion image loaded example-1 Motion mask for phantom09, frame 338",
+        "motion image loaded example-1 Enlarged matching region of Motion mask for phantom09, frame 338",
+        "motion selection example-2",
+        "one visible motion example example-2",
+        "motion image loaded example-2 RGB appearance for phantom47, frame 2090",
+        "motion image loaded example-2 Enlarged matching region of RGB appearance for phantom47, frame 2090",
+        "motion image loaded example-2 Motion mask for phantom47, frame 2090",
+        "motion image loaded example-2 Enlarged matching region of Motion mask for phantom47, frame 2090",
+        "motion selection example-3",
+        "one visible motion example example-3",
+        "motion image loaded example-3 RGB appearance for phantom46, frame 1696",
+        "motion image loaded example-3 Enlarged matching region of RGB appearance for phantom46, frame 1696",
+        "motion image loaded example-3 Motion mask for phantom46, frame 1696",
+        "motion image loaded example-3 Enlarged matching region of Motion mask for phantom46, frame 1696",
         "two model choices",
         "four clip choices",
         "decoded dimensions phantom09",
@@ -56,15 +80,37 @@
         "no runtime exceptions",
         "no application error",
         "no horizontal overflow"
-      ],
-      "passed": 48
+      ]
     },
     {
       "size": [
         390,
         844
       ],
+      "passed": 70,
       "checks": [
+        "updated research heading",
+        "removed study label",
+        "metrics precede model choices",
+        "three motion examples",
+        "motion selection example-1",
+        "one visible motion example example-1",
+        "motion image loaded example-1 RGB appearance for phantom09, frame 338",
+        "motion image loaded example-1 Enlarged matching region of RGB appearance for phantom09, frame 338",
+        "motion image loaded example-1 Motion mask for phantom09, frame 338",
+        "motion image loaded example-1 Enlarged matching region of Motion mask for phantom09, frame 338",
+        "motion selection example-2",
+        "one visible motion example example-2",
+        "motion image loaded example-2 RGB appearance for phantom47, frame 2090",
+        "motion image loaded example-2 Enlarged matching region of RGB appearance for phantom47, frame 2090",
+        "motion image loaded example-2 Motion mask for phantom47, frame 2090",
+        "motion image loaded example-2 Enlarged matching region of Motion mask for phantom47, frame 2090",
+        "motion selection example-3",
+        "one visible motion example example-3",
+        "motion image loaded example-3 RGB appearance for phantom46, frame 1696",
+        "motion image loaded example-3 Enlarged matching region of RGB appearance for phantom46, frame 1696",
+        "motion image loaded example-3 Motion mask for phantom46, frame 1696",
+        "motion image loaded example-3 Enlarged matching region of Motion mask for phantom46, frame 1696",
         "two model choices",
         "four clip choices",
         "decoded dimensions phantom09",
@@ -113,15 +159,16 @@
         "no runtime exceptions",
         "no application error",
         "no horizontal overflow"
-      ],
-      "passed": 48
+      ]
     }
   ],
-  "scope": "Local preview; no publication",
   "sourceHashes": {
-    "index.html": "fa289bbbdaa56328dbe36f95baa218deb8f042be6cc2b089f9d9d648588945d0",
-    "styles.css": "ccd7658fc09fb9b444c05111534f8349a2b5a21d61e0f4c0eb86591cc6e8b0d0",
-    "app.js": "f9d4169a1a3fe689dd55bb21283b9cedd3e5b3892f5149aea2ab200dc9ca8dd7",
-    "demo-data.json": "21d043343ceb90764b13bedde25a306cc0e1ebfe6fe4c7f395a67fef6d41b6da"
-  }
+    "index.html": "058e328144d52c85e30675543b9700204013a9a88a0230cd0961844679161ae8",
+    "styles.css": "bc33f85d14a830ff979549498247a25498e7610f22e8577bd3606a734fb47f9b",
+    "app.js": "fc56ad295b7fb33f69bf294c71dc10f5a3654ca5d614110b8c687458f6cdf965",
+    "motion-gallery.js": "df68bce986c86d87b69280c88a242691662a3eee417b976e0e18a4394e3a4d3b",
+    "demo-data.json": "21d043343ceb90764b13bedde25a306cc0e1ebfe6fe4c7f395a67fef6d41b6da",
+    "motion-examples.json": "f11df0eccfd086458b6077675c0b4bb8e9a5f8ed27265f2a33429573ab276d03"
+  },
+  "postCheckLayoutAdjustment": "Mobile motion captions reserve two lines to align RGB and mask crops; no behavior changes. Source hashes above identify the browser-tested version."
 }
