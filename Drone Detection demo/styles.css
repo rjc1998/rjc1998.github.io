@@ -17,3 +17,7 @@
 .model-heading{margin:2rem 0 1.2rem}.model-heading h3{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:400;letter-spacing:-.03em;margin-bottom:.6rem}.model-heading p{max-width:850px;font-size:.87rem;color:var(--muted);margin:0}.model-panel{min-width:0}.model-panel+.model-panel{border-left:1px solid var(--line)}.model-panel .model-tab{width:100%}.model-architecture{margin:0;padding:0 1.8rem;border-bottom:0}.model-architecture summary{line-height:1.5}.model-architecture .details-body{padding:0 0 .7rem}.model-architecture p:last-child{margin-bottom:0}.detail-view{margin-top:1rem}
 @media(max-width:900px){.model-architecture{padding:0 1.3rem}}
 @media(max-width:600px){.model-panel+.model-panel{border-left:0;border-top:1px solid var(--line)}.model-architecture{padding:0 1rem}}
+
+/* Shared target dimensions sit between the synchronized crops. */
+.crop-comparison{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) 7rem minmax(0,1fr);align-items:center;gap:.75rem}.crop-comparison .detail-view{margin:0 auto}.target-size{margin:0;text-align:center;font:.72rem/1.6 "Courier New",monospace;color:var(--muted);text-wrap:balance}
+@media(max-width:600px){.crop-comparison{grid-template-columns:minmax(0,1fr) 4.5rem minmax(0,1fr);gap:.35rem}.target-size{font-size:.62rem}}

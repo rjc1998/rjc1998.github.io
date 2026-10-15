@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "selectionRule": "240 consecutive shared frames; maximize minimum per-model mean(TP - 0.35*FP), plus 0.1*sum(means); phantom46 adds 0.8*fraction(native size <8). Candidates every 5 positions. Ties prefer earliest.",
+  "selectionRule": "Extend each original clip to round(seconds * source FPS) consecutive shared frames. Preserve its full original range and center extra context where possible; if gaps prevent this, use the nearest complete continuous window from the same video. No performance rescoring.",
   "confidence": 0.25,
   "inferenceRun": false,
   "sourcesUnchanged": true,
@@ -18,94 +18,94 @@
     {
       "video": "phantom09",
       "sourceRange": [
-        158,
-        397
+        53,
+        502
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 450,
       "fps": 29.97002997002997,
       "gtAgrees": true,
       "contiguous": true,
       "nativeSizeRange": [
         18.8,
-        25.5
+        37.8
       ],
       "counts": {
         "map50": {
-          "tp": 240,
-          "fp": 0,
-          "fn": 0
+          "tp": 434,
+          "fp": 2,
+          "fn": 16
         },
         "map5095": {
-          "tp": 240,
-          "fp": 0,
-          "fn": 0
+          "tp": 429,
+          "fp": 3,
+          "fn": 21
         }
       },
-      "bytes": 29574791
+      "bytes": 56503753
     },
     {
       "video": "phantom47",
       "sourceRange": [
-        2042,
-        2281
+        1939,
+        2385
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 447,
       "fps": 29.77,
       "gtAgrees": true,
       "contiguous": true,
       "nativeSizeRange": [
-        21.2,
+        16.4,
         42.8
       ],
       "counts": {
         "map50": {
-          "tp": 240,
-          "fp": 0,
-          "fn": 0
+          "tp": 433,
+          "fp": 8,
+          "fn": 14
         },
         "map5095": {
-          "tp": 240,
-          "fp": 0,
-          "fn": 0
+          "tp": 440,
+          "fp": 2,
+          "fn": 7
         }
       },
-      "bytes": 8972169
+      "bytes": 13541315
     },
     {
       "video": "phantom46",
       "sourceRange": [
-        1528,
-        1767
+        1347,
+        1796
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 450,
       "fps": 29.97002997002997,
       "gtAgrees": true,
       "contiguous": true,
       "nativeSizeRange": [
         4.9,
-        9.8
+        11.0
       ],
       "counts": {
         "map50": {
-          "tp": 222,
-          "fp": 9,
-          "fn": 18
+          "tp": 414,
+          "fp": 19,
+          "fn": 36
         },
         "map5095": {
-          "tp": 213,
-          "fp": 5,
-          "fn": 27
+          "tp": 403,
+          "fp": 12,
+          "fn": 47
         }
       },
-      "bytes": 25166540
+      "bytes": 42963707
     },
     {
       "video": "phantom58",
       "sourceRange": [
-        483,
-        722
+        378,
+        827
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 450,
       "fps": 29.97002997002997,
       "gtAgrees": true,
       "contiguous": true,
@@ -115,130 +115,169 @@
       ],
       "counts": {
         "map50": {
-          "tp": 240,
-          "fp": 0,
-          "fn": 0
+          "tp": 430,
+          "fp": 10,
+          "fn": 20
         },
         "map5095": {
-          "tp": 240,
-          "fp": 0,
-          "fn": 0
+          "tp": 433,
+          "fp": 7,
+          "fn": 17
         }
       },
-      "bytes": 23169248
+      "bytes": 31958514
     },
     {
       "video": "phantom05",
       "sourceRange": [
-        1448,
-        1687
+        1343,
+        1792
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 450,
       "fps": 29.97002997002997,
       "gtAgrees": true,
       "contiguous": true,
       "nativeSizeRange": [
-        14.5,
-        23.6
+        13.1,
+        28.0
       ],
       "counts": {
         "map50": {
-          "tp": 238,
-          "fp": 3,
-          "fn": 2
+          "tp": 445,
+          "fp": 14,
+          "fn": 5
         },
         "map5095": {
-          "tp": 239,
-          "fp": 16,
-          "fn": 1
+          "tp": 447,
+          "fp": 77,
+          "fn": 3
         }
       },
-      "bytes": 35142387
+      "bytes": 78560421
     },
     {
       "video": "phantom08",
       "sourceRange": [
-        588,
-        827
+        851,
+        1300
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 450,
       "fps": 29.97002997002997,
       "gtAgrees": true,
       "contiguous": true,
       "nativeSizeRange": [
-        12.2,
-        25.5
+        9.4,
+        23.3
       ],
       "counts": {
         "map50": {
-          "tp": 223,
-          "fp": 6,
-          "fn": 17
+          "tp": 344,
+          "fp": 39,
+          "fn": 106
         },
         "map5095": {
-          "tp": 226,
-          "fp": 30,
-          "fn": 14
+          "tp": 317,
+          "fp": 39,
+          "fn": 133
         }
       },
-      "bytes": 31878714
+      "bytes": 65385942
     },
     {
       "video": "phantom30",
       "sourceRange": [
-        208,
-        447
+        103,
+        552
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 450,
       "fps": 29.97002997002997,
       "gtAgrees": true,
       "contiguous": true,
       "nativeSizeRange": [
-        24.0,
-        33.0
+        23.7,
+        34.2
       ],
       "counts": {
         "map50": {
-          "tp": 237,
-          "fp": 2,
-          "fn": 3
+          "tp": 443,
+          "fp": 8,
+          "fn": 7
         },
         "map5095": {
-          "tp": 240,
-          "fp": 0,
-          "fn": 0
+          "tp": 448,
+          "fp": 1,
+          "fn": 2
         }
       },
-      "bytes": 29020873
+      "bytes": 76746744
     },
     {
       "video": "phantom41",
       "sourceRange": [
-        93,
-        332
+        3,
+        452
       ],
-      "decodedFrames": 240,
+      "decodedFrames": 450,
       "fps": 29.97002997002997,
       "gtAgrees": true,
       "contiguous": true,
       "nativeSizeRange": [
         6.5,
-        11.0
+        11.5
       ],
       "counts": {
         "map50": {
-          "tp": 215,
-          "fp": 8,
-          "fn": 25
+          "tp": 378,
+          "fp": 26,
+          "fn": 72
         },
         "map5095": {
-          "tp": 213,
-          "fp": 8,
-          "fn": 27
+          "tp": 370,
+          "fp": 21,
+          "fn": 80
         }
       },
-      "bytes": 27415569
+      "bytes": 72308728
     }
   ],
-  "publication": "LOCAL PREVIEW ONLY; dataset redistribution permission not established by this build."
+  "publication": "LOCAL PREVIEW ONLY; dataset redistribution permission not established by this build.",
+  "requestedSeconds": 15.0,
+  "codec": "VP80",
+  "replacementWindows": {
+    "phantom08": "Gaps in saved evaluated frames prevent extending the original range; use the nearest full-length continuous window."
+  },
+  "originalRanges": {
+    "phantom09": [
+      158,
+      397
+    ],
+    "phantom47": [
+      2042,
+      2281
+    ],
+    "phantom46": [
+      1528,
+      1767
+    ],
+    "phantom58": [
+      483,
+      722
+    ],
+    "phantom05": [
+      1448,
+      1687
+    ],
+    "phantom08": [
+      588,
+      827
+    ],
+    "phantom30": [
+      208,
+      447
+    ],
+    "phantom41": [
+      93,
+      332
+    ]
+  }
 }

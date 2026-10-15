@@ -1,12 +1,12 @@
 {
   "status": "PASS",
   "sourceHashes": 8,
-  "frames": 1920,
-  "modelFramePairs": 3840,
-  "predictionBoxes": 3793,
-  "losslessCropsVerified": 1920,
+  "frames": 3597,
+  "modelFramePairs": 7194,
+  "predictionBoxes": 6896,
+  "losslessCropsVerified": 3597,
   "metricsMatch": true,
-  "assetsBytes": 241089821,
+  "assetsBytes": 728807869,
   "sourceWrites": false,
   "inferenceRun": false
 }

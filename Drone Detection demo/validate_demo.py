@@ -46,7 +46,12 @@ def main():
     count=0
     for clip in data['clips']:
         assert (HERE/clip['video']).is_file() and (HERE/clip['poster']).is_file()
-        assert clip['lastSourceFrame']-clip['firstSourceFrame']+1==clip['frameCount']==240
+        assert clip['lastSourceFrame']-clip['firstSourceFrame']+1==clip['frameCount']==len(clip['frames'])
+        if 'requestedSeconds' in build:
+            assert abs(clip['duration']-build['requestedSeconds']) <= 1/clip['fps']
+            first,last=build['originalRanges'][clip['id']]
+            if clip['id'] not in build.get('replacementWindows', {}):
+                assert clip['firstSourceFrame']<=first<=last<=clip['lastSourceFrame']
         sheets=[Image.open(HERE/p).convert('RGB') for p in clip['sheets']]
         for i,frame in enumerate(clip['frames']):
             assert frame['sourceFrame']==clip['firstSourceFrame']+i

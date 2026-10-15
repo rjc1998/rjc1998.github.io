@@ -73,6 +73,8 @@
       detail.drawImage(sprite, sx, sy, data.cropSize, data.cropSize, 0, 0, 512, 512);
       if ($('boxes').checked) boxes(detail, i === 0 ? predictions : frame.gt, i === 0 ? colors.prediction : colors.truth, 512/data.cropSize, frame.crop, true);
     }
+    const [x1, y1, x2, y2] = frame.gt[0];
+    $('target-size').textContent = `${Math.round(x2 - x1)} × ${Math.round(y2 - y1)} px target`;
     $('timeline').value = String(frameIndex);
     $('clock').textContent = `${(frameIndex / clip.fps).toFixed(2)} / ${clip.duration.toFixed(2)} s`;
     $('frame-number').textContent = `Frame ${frameIndex + 1} / ${clip.frameCount}`;
@@ -173,7 +175,7 @@
   document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
   window.addEventListener('pagehide', () => { pause(); cancelAnimationFrame(fallbackClock); });
   async function init() {
-    const response = await fetch('demo-data.json?v=025740b807c2');
+    const response = await fetch('demo-data.json?v=f5df847a3ed3');
     if (!response.ok) throw new Error(`Demo data returned HTTP ${response.status}.`);
     data = await response.json();
     if (data.schema !== 1 || !data.clips.length || data.models.length !== 2) throw new Error('Demo data is incomplete.');
