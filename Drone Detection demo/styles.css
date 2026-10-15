@@ -21,3 +21,8 @@
 /* Shared target dimensions sit between the synchronized crops. */
 .crop-comparison{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) 7rem minmax(0,1fr);align-items:center;gap:.75rem}.crop-comparison .detail-view{margin:0 auto}.target-size{margin:0;text-align:center;font:.72rem/1.6 "Courier New",monospace;color:var(--muted);text-wrap:balance}
 @media(max-width:600px){.crop-comparison{grid-template-columns:minmax(0,1fr) 4.5rem minmax(0,1fr);gap:.35rem}.target-size{font-size:.62rem}}
+
+/* Flight sample heading and simplified viewer title. */
+.sample-heading{display:block;margin-bottom:1.2rem}.sample-heading h3{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:400;letter-spacing:-.03em;margin:0 0 .6rem}.sample-heading p{max-width:850px;font-size:.87rem;color:var(--muted);margin:0}.viewer-heading{display:block}
+
+.viewer-heading .confidence-note{margin:.8rem 0 0;font-size:.83rem;color:var(--muted)}

@@ -78,7 +78,6 @@
     $('timeline').value = String(frameIndex);
     $('clock').textContent = `${(frameIndex / clip.fps).toFixed(2)} / ${clip.duration.toFixed(2)} s`;
     $('frame-number').textContent = `Frame ${frameIndex + 1} / ${clip.frameCount}`;
-    $('frame-status').textContent = `${clip.id} · source frame ${frame.sourceFrame} · ${data.models.find(item => item.id === model).name}`;
   }
   function decodedFrame(_now, metadata) {
     if (ready && !video.seeking) render(Math.round(metadata.mediaTime * clip.fps));
@@ -114,15 +113,11 @@
     clip = data.clips.find(item => item.id === key);
     const selected = clip;
     markButtons($('clip-tabs'), key);
-    $('clip-id').textContent = `${key} · ${selected.duration.toFixed(1)} seconds`;
-    $('clip-title').textContent = selected.title;
-    $('clip-description').textContent = selected.description;
-    $('clip-description').hidden = !selected.description;
+    $('clip-title').textContent = selected.id;
     $('timeline').max = String(selected.frameCount - 1);
     $('timeline').value = '0';
     $('clock').textContent = `0.00 / ${selected.duration.toFixed(2)} s`;
     $('frame-number').textContent = `Frame 1 / ${selected.frameCount}`;
-    $('frame-status').textContent = '';
     try {
       // Buffer only the selected clip. A Blob gives reliable seeking even on
       // simple local servers without HTTP Range support, and avoids partial seeks.
@@ -211,8 +206,8 @@
       button.type = 'button'; button.className = 'clip-tab'; button.dataset.key = item.id;
       const picture = document.createElement('img'); picture.src = item.poster; picture.alt = ''; picture.loading = 'lazy';
       const caption = document.createElement('span');
-      const title = document.createElement('strong'); title.textContent = item.title;
-      const meta = document.createElement('small'); meta.textContent = `${item.id} · ${item.duration.toFixed(1)} s`;
+      const title = document.createElement('strong'); title.textContent = item.id;
+      const meta = document.createElement('small'); meta.textContent = `${item.duration.toFixed(1)} s`;
       caption.append(title, meta); button.append(picture, caption);
       button.addEventListener('click', () => selectClip(item.id)); $('clip-tabs').append(button);
     }
