@@ -42,7 +42,7 @@ def main():
                 if actual: assert np.allclose(actual,expected,atol=.0001)
                 predictions+=len(actual)
                 original[key]=Path(row['image'])
-        assert len(seen)==960
+        assert len(seen)==len(needed)
     count=0
     for clip in data['clips']:
         assert (HERE/clip['video']).is_file() and (HERE/clip['poster']).is_file()

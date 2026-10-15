@@ -15,10 +15,14 @@ from PIL import Image, ImageDraw
 
 HERE = Path(__file__).resolve().parent
 TARGETS = {
-    'phantom09': ('A clear encounter', 'A larger target makes the difference between finding a drone and fitting its outline easier to inspect.'),
+    'phantom09': ('A clear encounter', ''),
     'phantom47': ('Changing scale', 'Follow the same target through a short sequence and compare the two models at any frame.'),
-    'phantom46': ('Only a few pixels', 'A very small drone is difficult to see at full-frame scale. The native-pixel detail view reveals the target.'),
+    'phantom46': ('Only a few pixels', 'A very small drone is difficult to see at full-frame scale. The enlarged view reveals the target.'),
     'phantom58': ('Small target, shared view', 'Inspect a second small-target sequence with identical timing and crops for both models.'),
+    'phantom05': ('Across the cityscape', 'Follow a drone across buildings, roads and distant hills as the camera pans.'),
+    'phantom08': ('Over courts and water', 'A moving drone passes over sports courts, paths and landscaped water channels.'),
+    'phantom30': ('Among the trees', 'Inspect a drone against branches, grass and the edge of a pond.'),
+    'phantom41': ('Looking straight down', 'An overhead view places a tiny drone against pale paving beside a running track.'),
 }
 SOURCES = {
     'map50': 'runs/ard_mav/evaluations/yolov8_head_configurations_valid_gt5_test_v1/p2_p3_p4_p5',
@@ -90,20 +94,34 @@ def select_window(rows, video):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--research-root', type=Path, required=True)
+    parser.add_argument('--append', action='store_true', help='Export only missing clips, preserving existing assets and model records.')
     args = parser.parse_args()
     root = args.research_root.resolve()
     out = HERE / 'assets'
-    if out.exists():
+    if out.exists() and not args.append:
         raise SystemExit('assets/ already exists; preserve it and choose a separately versioned demo directory to rebuild.')
     rows, models, provenance, dataset = load(root)
     data_root = Path(dataset['source_root'])
-    out.mkdir()
+    out.mkdir(exist_ok=args.append)
     demo = dict(schema=1, confidence=CONFIDENCE, split='ARD-MAV test', evaluatedFrames=28100,
                 nativeWidth=1920, nativeHeight=1080, cropSize=CELL, sheetGrid=GRID,
                 selection='Selected successful continuous windows from saved test predictions; not representative accuracy samples.',
                 models=models, clips=[])
-    checks = []
+    previous_report = None
+    if args.append:
+        demo = json.loads((HERE / 'demo-data.json').read_text())
+        previous_report = json.loads((HERE / 'build-report.json').read_text())
+        assert previous_report['sourceHashes'] == provenance
+        assert demo['confidence'] == CONFIDENCE
+        for old in demo['models']:
+            assert old == next(m for m in models if m['id'] == old['id'])
+        for old in demo['clips']:
+            old['description'] = TARGETS[old['id']][1]
+    existing = {c['id'] for c in demo['clips']}
+    checks = list(previous_report['clips']) if previous_report else []
     for video, (title, description) in TARGETS.items():
+        if video in existing:
+            continue
         frames = select_window(rows, video)
         original_video = data_root / 'videos' / (video + '.mp4')
         cap = cv2.VideoCapture(str(original_video))
@@ -179,19 +197,20 @@ def main():
                            gtAgrees=True, contiguous=True, nativeSizeRange=clip['nativeSizeRange'],
                            counts=clip['counts'], bytes=movie.stat().st_size))
         print(json.dumps(checks[-1]), flush=True)
-    # Showcase poster: same original frame, a visible annotation, and a native-pixel inset.
-    first = demo['clips'][0]
-    image = Image.open(out / first['id'] / 'poster.webp').convert('RGB')
-    draw = ImageDraw.Draw(image)
-    box = first['frames'][0]['gt'][0]
-    draw.rectangle(tuple(v*2/3 for v in box), outline='#e4ae73', width=3)
-    detail = Image.open(out / first['id'] / 'detail.webp').resize((240,240), Image.Resampling.NEAREST)
-    image.paste(detail, (1000,440))
-    draw.rectangle((998,438,1242,682), outline='#e4ae73', width=3)
-    image.save(out / 'cover.webp', quality=90)
-    (HERE / 'demo-data.json').write_text(json.dumps(demo, separators=(',',':')) + '\n')
+    if not args.append:
+        # Showcase poster: same original frame, a visible annotation, and a native-pixel inset.
+        first = demo['clips'][0]
+        image = Image.open(out / first['id'] / 'poster.webp').convert('RGB')
+        draw = ImageDraw.Draw(image)
+        box = first['frames'][0]['gt'][0]
+        draw.rectangle(tuple(v*2/3 for v in box), outline='#e4ae73', width=3)
+        detail = Image.open(out / first['id'] / 'detail.webp').resize((240,240), Image.Resampling.NEAREST)
+        image.paste(detail, (1000,440))
+        draw.rectangle((998,438,1242,682), outline='#e4ae73', width=3)
+        image.save(out / 'cover.webp', quality=90)
     unchanged = all(sha(root / relative) == digest for relative, digest in provenance.items())
     assert unchanged
+    (HERE / 'demo-data.json').write_text(json.dumps(demo, separators=(',',':')) + '\n')
     report = dict(status='PASS', selectionRule='240 consecutive shared frames; maximize minimum per-model mean(TP - 0.35*FP), plus 0.1*sum(means); phantom46 adds 0.8*fraction(native size <8). Candidates every 5 positions. Ties prefer earliest.',
                   confidence=CONFIDENCE, inferenceRun=False, sourcesUnchanged=unchanged,
                   sourceHashes=provenance, clips=checks, publication='LOCAL PREVIEW ONLY; dataset redistribution permission not established by this build.')

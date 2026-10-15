@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explore tiny-drone detection with two trained RGB-and-motion models, synchronized ground truth, and native-pixel close-ups.">
   <title>Finding a drone in the distance · Ryan Chang</title>
-  <link rel="stylesheet" href="styles.css?v=1f415d48d7c9">
-  <script src="app.js?v=fc56ad295b7f" defer></script>
+  <link rel="stylesheet" href="styles.css?v=96e2e52cd573">
+  <script src="app.js?v=ff71c48b015a" defer></script>
   <script src="motion-gallery.js?v=df68bce986c8" defer></script>
 </head>
 <body>
@@ -36,7 +36,7 @@
           <button type="button" data-motion-example="example-3" aria-pressed="false" aria-controls="motion-example-3">A tiny distant target</button>
         </div>
         <div class="motion-panel" id="motion-example-1" data-motion-panel="example-1">
-          <p class="motion-frame">phantom09 · frame 338 · matching 128 × 128 px crops</p>
+          <p class="motion-frame">phantom09 · frame 338</p>
           <div class="motion-pair">
             <div class="motion-column">
               <figure><figcaption>RGB appearance · full frame</figcaption><a href="assets/motion-examples/phantom09_0338/rgb.webp" target="_blank" rel="noopener" aria-label="Open full-resolution rgb appearance example"><img class="motion-full" src="assets/motion-examples/phantom09_0338/rgb.webp" width="1920" height="1080" loading="lazy" alt="RGB appearance for phantom09, frame 338"></a></figure>
@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="motion-panel" id="motion-example-2" data-motion-panel="example-2" hidden>
-          <p class="motion-frame">phantom47 · frame 2090 · matching 128 × 128 px crops</p>
+          <p class="motion-frame">phantom47 · frame 2090</p>
           <div class="motion-pair">
             <div class="motion-column">
               <figure><figcaption>RGB appearance · full frame</figcaption><a href="assets/motion-examples/phantom47_2090/rgb.webp" target="_blank" rel="noopener" aria-label="Open full-resolution rgb appearance example"><img class="motion-full" src="assets/motion-examples/phantom47_2090/rgb.webp" width="1920" height="1080" loading="lazy" alt="RGB appearance for phantom47, frame 2090"></a></figure>
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="motion-panel" id="motion-example-3" data-motion-panel="example-3" hidden>
-          <p class="motion-frame">phantom46 · frame 1696 · matching 128 × 128 px crops</p>
+          <p class="motion-frame">phantom46 · frame 1696</p>
           <div class="motion-pair">
             <div class="motion-column">
               <figure><figcaption>RGB appearance · full frame</figcaption><a href="assets/motion-examples/phantom46_1696/rgb.webp" target="_blank" rel="noopener" aria-label="Open full-resolution rgb appearance example"><img class="motion-full" src="assets/motion-examples/phantom46_1696/rgb.webp" width="1920" height="1080" loading="lazy" alt="RGB appearance for phantom46, frame 1696"></a></figure>
@@ -75,7 +75,6 @@
           </div>
         </div>
         <p class="motion-explanation">White regions mark changes that remain after alignment; black regions fall below the motion threshold. These examples show strong responses around the drone, but a motion mask can also contain background changes and is not an object label. Both crops use exactly the same coordinates; the saved masks are shown without enhancement.</p>
-        <details class="motion-details"><summary>How these motion masks are generated</summary><div class="details-body"><p>For a reference frame at time t, frames t−2 and t+2 are aligned to it to reduce camera-induced motion. The pipeline applies 7 × 7 Gaussian smoothing and grayscale conversion, averages valid absolute differences, and marks values greater than 5 as foreground. These are the existing binary masks used by the demo models, not masks recomputed for this page.</p><p><a href="motion-examples.json">Example frame IDs, crop coordinates and source hashes</a></p></div></details>
       </section>
       <section class="metric-intro" aria-labelledby="metric-heading">
         <h3 id="metric-heading">Understanding the model scores</h3>
@@ -84,8 +83,8 @@
           <article><h4>mAP50 <span>Overall detection</span></h4><p>Counts a detection as a match when box overlap reaches IoU 0.50. Its more forgiving overlap requirement makes it useful for assessing how well a model finds objects overall, without demanding a very tight box.</p></article>
           <article><h4>mAP50–95 <span>More precise localization</span></h4><p>Averages AP at ten IoU thresholds, from 0.50 to 0.95 in steps of 0.05. The stricter thresholds make it more sensitive to how accurately the model positions and sizes each box.</p></article>
         </div>
-        <p class="metric-footnote">Both scores account for missed objects and false detections; mAP50–95 is not a localization-only metric. Each model below displays both scores.</p>
       </section>
+      <div class="model-heading"><h3>Choose a model</h3><p>These models achieved the highest mAP50 and mAP50–95, respectively, among the completed runs reviewed for this demo.</p></div>
       <div class="model-tabs" id="model-tabs" role="group" aria-label="Choose a detection model"></div>
       <div class="sample-heading"><h3>Choose a flight sample</h3></div>
       <div class="sample-strip" id="clip-tabs" role="group" aria-label="Choose a flight sample"></div>
@@ -94,18 +93,16 @@
         <div class="loading" id="loading" role="status">Loading the selected sequence…</div>
         <div class="comparison" id="comparison" hidden>
           <article class="view-column">
-            <div class="panel-heading"><span class="legend-dot prediction-dot"></span><h4>Model predictions</h4><span id="prediction-count"></span></div>
+            <div class="panel-heading"><span class="legend-dot prediction-dot"></span><h4>Model predictions</h4></div>
             <div class="overview-stage">
               <video id="source-video" muted playsinline preload="auto" tabindex="-1" aria-hidden="true"></video>
               <canvas id="prediction-view" width="1280" height="720" role="img" aria-label="Current video frame with predicted drone boxes"></canvas>
             </div>
-            <div class="detail-heading"><span>Native-pixel detail</span><span>128 × 128 px crop</span></div>
             <canvas class="detail-view" id="prediction-detail" width="512" height="512" role="img" aria-label="Enlarged original drone crop with model predictions"></canvas>
           </article>
           <article class="view-column">
-            <div class="panel-heading"><span class="legend-dot truth-dot"></span><h4>Ground-truth annotations</h4><span id="truth-count"></span></div>
+            <div class="panel-heading"><span class="legend-dot truth-dot"></span><h4>Ground-truth annotations</h4></div>
             <div class="overview-stage"><canvas id="truth-view" width="1280" height="720" role="img" aria-label="Same video frame with ground-truth boxes"></canvas></div>
-            <div class="detail-heading"><span>Same frame, same crop</span><span id="target-size"></span></div>
             <canvas class="detail-view" id="truth-detail" width="512" height="512" role="img" aria-label="Identical enlarged original drone crop with ground-truth annotations"></canvas>
           </article>
         </div>

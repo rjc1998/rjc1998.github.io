@@ -73,14 +73,10 @@
       detail.drawImage(sprite, sx, sy, data.cropSize, data.cropSize, 0, 0, 512, 512);
       if ($('boxes').checked) boxes(detail, i === 0 ? predictions : frame.gt, i === 0 ? colors.prediction : colors.truth, 512/data.cropSize, frame.crop, true);
     }
-    const gt = frame.gt[0];
-    $('target-size').textContent = `${Math.round(gt[2]-gt[0])} × ${Math.round(gt[3]-gt[1])} px target`;
-    $('prediction-count').textContent = `${predictions.length} ${predictions.length === 1 ? 'box' : 'boxes'}`;
-    $('truth-count').textContent = `${frame.gt.length} ${frame.gt.length === 1 ? 'target' : 'targets'}`;
     $('timeline').value = String(frameIndex);
     $('clock').textContent = `${(frameIndex / clip.fps).toFixed(2)} / ${clip.duration.toFixed(2)} s`;
     $('frame-number').textContent = `Frame ${frameIndex + 1} / ${clip.frameCount}`;
-    $('frame-status').textContent = `${clip.id} · source frame ${frame.sourceFrame} · ${data.models.find(item => item.id === model).name} · ${predictions.length ? `${predictions.length} prediction${predictions.length === 1 ? '' : 's'} above the fixed threshold` : 'No prediction above the fixed threshold'}`;
+    $('frame-status').textContent = `${clip.id} · source frame ${frame.sourceFrame} · ${data.models.find(item => item.id === model).name}`;
   }
   function decodedFrame(_now, metadata) {
     if (ready && !video.seeking) render(Math.round(metadata.mediaTime * clip.fps));
@@ -119,6 +115,7 @@
     $('clip-id').textContent = `${key} · ${selected.duration.toFixed(1)} seconds`;
     $('clip-title').textContent = selected.title;
     $('clip-description').textContent = selected.description;
+    $('clip-description').hidden = !selected.description;
     $('timeline').max = String(selected.frameCount - 1);
     $('timeline').value = '0';
     $('clock').textContent = `0.00 / ${selected.duration.toFixed(2)} s`;
@@ -176,15 +173,36 @@
   document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
   window.addEventListener('pagehide', () => { pause(); cancelAnimationFrame(fallbackClock); });
   async function init() {
-    const response = await fetch('demo-data.json');
+    const response = await fetch('demo-data.json?v=025740b807c2');
     if (!response.ok) throw new Error(`Demo data returned HTTP ${response.status}.`);
     data = await response.json();
-    if (data.schema !== 1 || data.clips.length !== 4 || data.models.length !== 2) throw new Error('Demo data is incomplete.');
+    if (data.schema !== 1 || !data.clips.length || data.models.length !== 2) throw new Error('Demo data is incomplete.');
+    const architectures = {
+      map50: [
+        'RGB appearance and a one-channel motion mask pass through separate convolution and C2f blocks. Their features are concatenated after P1, at half the input resolution.',
+        'A C2f block mixes the fused features, followed by the shared YOLOv8n backbone and spatial pyramid pooling (SPPF). The neck combines features across scales through upsampling, concatenation and C2f blocks.',
+        'Four detection heads use P2, P3, P4 and P5 features at strides 4, 8, 16 and 32. P2 retains a finer feature grid for small drones. This variant has no CBAM attention.'
+      ],
+      map5095: [
+        'RGB appearance and a one-channel motion mask pass through separate convolution and C2f blocks, then concatenate after P1, at half the input resolution.',
+        'CBAM (Convolutional Block Attention Module) applies channel attention and spatial attention with a 7 × 7 kernel to the concatenated features, before the retained C2f fusion block.',
+        'The shared YOLOv8n backbone, spatial pyramid pooling (SPPF) and multiscale neck feed two detection heads: P2 and P5, at strides 4 and 32. The intermediate P3 and P4 features still contribute to the neck, but do not have prediction heads.'
+      ]
+    };
     for (const item of data.models) {
       const button = document.createElement('button');
       button.type = 'button'; button.className = 'model-tab'; button.dataset.key = item.id;
       button.innerHTML = `<span class="model-badge">${item.badge}</span><strong>${item.name}</strong><span class="model-scores"><span class="${item.id === 'map50' ? 'leading' : ''}">${(item.ap50 * 100).toFixed(2)}%<small>mAP50</small></span><span class="${item.id === 'map5095' ? 'leading' : ''}">${(item.map5095 * 100).toFixed(2)}%<small>mAP50–95</small></span></span>`;
-      button.addEventListener('click', () => setModel(item.id)); $('model-tabs').append(button);
+      button.addEventListener('click', () => setModel(item.id));
+      const panel = document.createElement('div'); panel.className = 'model-panel';
+      const details = document.createElement('details'); details.className = 'model-architecture';
+      const summary = document.createElement('summary'); summary.textContent = 'Network architecture';
+      summary.setAttribute('aria-label', `Network architecture: ${item.name}`);
+      const body = document.createElement('div'); body.className = 'details-body';
+      for (const text of architectures[item.id]) {
+        const paragraph = document.createElement('p'); paragraph.textContent = text; body.append(paragraph);
+      }
+      details.append(summary, body); panel.append(button, details); $('model-tabs').append(panel);
     }
     for (const item of data.clips) {
       const button = document.createElement('button');

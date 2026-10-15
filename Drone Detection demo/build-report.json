@@ -126,6 +126,118 @@
         }
       },
       "bytes": 23169248
+    },
+    {
+      "video": "phantom05",
+      "sourceRange": [
+        1448,
+        1687
+      ],
+      "decodedFrames": 240,
+      "fps": 29.97002997002997,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        14.5,
+        23.6
+      ],
+      "counts": {
+        "map50": {
+          "tp": 238,
+          "fp": 3,
+          "fn": 2
+        },
+        "map5095": {
+          "tp": 239,
+          "fp": 16,
+          "fn": 1
+        }
+      },
+      "bytes": 35142387
+    },
+    {
+      "video": "phantom08",
+      "sourceRange": [
+        588,
+        827
+      ],
+      "decodedFrames": 240,
+      "fps": 29.97002997002997,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        12.2,
+        25.5
+      ],
+      "counts": {
+        "map50": {
+          "tp": 223,
+          "fp": 6,
+          "fn": 17
+        },
+        "map5095": {
+          "tp": 226,
+          "fp": 30,
+          "fn": 14
+        }
+      },
+      "bytes": 31878714
+    },
+    {
+      "video": "phantom30",
+      "sourceRange": [
+        208,
+        447
+      ],
+      "decodedFrames": 240,
+      "fps": 29.97002997002997,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        24.0,
+        33.0
+      ],
+      "counts": {
+        "map50": {
+          "tp": 237,
+          "fp": 2,
+          "fn": 3
+        },
+        "map5095": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "bytes": 29020873
+    },
+    {
+      "video": "phantom41",
+      "sourceRange": [
+        93,
+        332
+      ],
+      "decodedFrames": 240,
+      "fps": 29.97002997002997,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        6.5,
+        11.0
+      ],
+      "counts": {
+        "map50": {
+          "tp": 215,
+          "fp": 8,
+          "fn": 25
+        },
+        "map5095": {
+          "tp": 213,
+          "fp": 8,
+          "fn": 27
+        }
+      },
+      "bytes": 27415569
     }
   ],
   "publication": "LOCAL PREVIEW ONLY; dataset redistribution permission not established by this build."
