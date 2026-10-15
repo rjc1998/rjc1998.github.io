@@ -65,6 +65,7 @@ header {
 }
 
 /* Owner-controlled project publishing (configured on <main> in index.html). */
+main[data-show-drone="false"] [data-project="drone"],
 main[data-show-bird="false"] [data-project="bird"],
 main[data-show-music="false"] [data-project="music"],
 main[data-show-recipe="false"] [data-project="recipe"],

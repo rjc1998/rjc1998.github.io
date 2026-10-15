@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "sourceHashes": 8,
+  "frames": 960,
+  "modelFramePairs": 1920,
+  "predictionBoxes": 1889,
+  "losslessCropsVerified": 960,
+  "metricsMatch": true,
+  "assetsBytes": 96464700,
+  "sourceWrites": false,
+  "inferenceRun": false
+}

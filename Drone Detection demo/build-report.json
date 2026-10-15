@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "selectionRule": "240 consecutive shared frames; maximize minimum per-model mean(TP - 0.35*FP), plus 0.1*sum(means); phantom46 adds 0.8*fraction(native size <8). Candidates every 5 positions. Ties prefer earliest.",
+  "confidence": 0.25,
+  "inferenceRun": false,
+  "sourcesUnchanged": true,
+  "sourceHashes": {
+    "runs/ard_mav/evaluations/yolov8_head_configurations_valid_gt5_test_v1/p2_p3_p4_p5/predictions.jsonl.gz": "2b0f4ec0329bc88f4c591cae4524a5324454dc1b8807942981865081cf37f3ae",
+    "runs/ard_mav/evaluations/yolov8_head_configurations_valid_gt5_test_v1/p2_p3_p4_p5/report.json": "17bb154be917d8b03be4c3f443bcbf66acd55e57d015b311449536014f72b3bf",
+    "runs/ard_mav/evaluations/yolov8_head_configurations_valid_gt5_test_v1/p2_p3_p4_p5/metrics.json": "703e4f56887d794c0e345e702342c4a6a792d0eee04277280b9559d83625a068",
+    "runs/ard_mav/evaluations/yolov8_head_configurations_valid_gt5_test_v1/p2_p3_p4_p5/dataset.json": "3557d436a1837ba06de462e5881a425a2ff63f1e8e8c5382d45fabb5070428ac",
+    "runs/ard_mav/evaluations/cbam_top3_valid_gt5_test_v1/yolov8_p2_p5/predictions.jsonl.gz": "d9b53778ec38a29416bbad4bb621d6787893841dbaddb0be75c9e1d176c28b8f",
+    "runs/ard_mav/evaluations/cbam_top3_valid_gt5_test_v1/yolov8_p2_p5/report.json": "e68ed0df268ff57dd179432f16ddccdb266cf082d063a3b3749dd20e5d1e4030",
+    "runs/ard_mav/evaluations/cbam_top3_valid_gt5_test_v1/yolov8_p2_p5/metrics.json": "892e2bedc2e50d9348e72e5ad467386c24dedfde4a373d704aa590bffbdb7c76",
+    "runs/ard_mav/evaluations/cbam_top3_valid_gt5_test_v1/yolov8_p2_p5/dataset.json": "29b3ddb77ecff78924b018570e9362f89ebcec5fb827dcf55c344a6e2aab0139"
+  },
+  "clips": [
+    {
+      "video": "phantom09",
+      "sourceRange": [
+        158,
+        397
+      ],
+      "decodedFrames": 240,
+      "fps": 29.97002997002997,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        18.8,
+        25.5
+      ],
+      "counts": {
+        "map50": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "map5095": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "bytes": 29574791
+    },
+    {
+      "video": "phantom47",
+      "sourceRange": [
+        2042,
+        2281
+      ],
+      "decodedFrames": 240,
+      "fps": 29.77,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        21.2,
+        42.8
+      ],
+      "counts": {
+        "map50": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "map5095": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "bytes": 8972169
+    },
+    {
+      "video": "phantom46",
+      "sourceRange": [
+        1528,
+        1767
+      ],
+      "decodedFrames": 240,
+      "fps": 29.97002997002997,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        4.9,
+        9.8
+      ],
+      "counts": {
+        "map50": {
+          "tp": 222,
+          "fp": 9,
+          "fn": 18
+        },
+        "map5095": {
+          "tp": 213,
+          "fp": 5,
+          "fn": 27
+        }
+      },
+      "bytes": 25166540
+    },
+    {
+      "video": "phantom58",
+      "sourceRange": [
+        483,
+        722
+      ],
+      "decodedFrames": 240,
+      "fps": 29.97002997002997,
+      "gtAgrees": true,
+      "contiguous": true,
+      "nativeSizeRange": [
+        9.2,
+        21.2
+      ],
+      "counts": {
+        "map50": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "map5095": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "bytes": 23169248
+    }
+  ],
+  "publication": "LOCAL PREVIEW ONLY; dataset redistribution permission not established by this build."
+}
